@@ -68,7 +68,6 @@ public/fonts/arimo-bold-web.woff2
 public/fonts/arimo-regular-web.woff2
 public/images/central-coast.webp
 public/images/coastal-home.webp
-supabase/.temp/cli-latest
 supabase/migrations/20261003052136_ppe_website_foundation.sql
 supabase/migrations/20261003120635_ppe_security_hardening.sql
 supabase/migrations/20261003121839_fix_request_intake_rate_limit.sql
