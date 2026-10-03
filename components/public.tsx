@@ -65,7 +65,17 @@ export function ServiceGrid({ limit }: { limit?: number }) {
             <ServiceIcon name={s.icon} size={38} />
           </div>
           <h3>{s.name}</h3>
-          <p>{s.description}</p>
+          <p>{({
+            "electrical-repair": "Outlets, switches, and circuit repairs.",
+            "troubleshooting": "$180 visits to find the problem.",
+            "panel-upgrades": "More capacity for what’s next.",
+            "ev-charger-installation": "Charging at home or at work.",
+            lighting: "Fixtures, dimmers, and outdoor lighting.",
+            "new-construction": "Wiring for new spaces and remodels.",
+            "commercial-electrical": "Electrical work for your business.",
+            generators: "Backup power for your property.",
+            "service-plans": "Ongoing care for your electrical system.",
+          } as Record<string, string>)[s.slug]}</p>
           <span className="text-link">
             Service details <ArrowUpRight size={17} />
           </span>

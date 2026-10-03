@@ -31,11 +31,7 @@ export default function Home() {
         <div className="container hero-content">
           <span className="eyebrow">SAN LUIS OBISPO COUNTY</span>
           <h1>
-            Electrical work.
-            <br />
-            Right here on
-            <br />
-            the Central Coast.
+            Your local electrician.<br />A simpler way to get it done.
           </h1>
           <p>
             Repairs, upgrades, and installations for your home or business. Tell
@@ -48,7 +44,7 @@ export default function Home() {
       <section className="section container" id="services">
         <div className="section-heading">
           <h2>What we do</h2>
-          <p>Choose a service for details and a request form.</p>
+          <p>For your home. For your business.</p>
         </div>
         <ServiceGrid />
       </section>

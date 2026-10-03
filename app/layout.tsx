@@ -12,12 +12,6 @@ const arimo = localFont({
   variable: "--font-sans",
   display: "swap",
 });
-const display = localFont({
-  src: "../public/fonts/barlow-condensed-600.woff2",
-  weight: "600",
-  variable: "--font-display",
-  display: "swap",
-});
 export const metadata: Metadata = {
   metadataBase: new URL(business.siteUrl),
   title: {
@@ -39,7 +33,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className={`${arimo.variable} ${display.variable}`}>
+      <body className={arimo.variable}>
         <a className="skip-link" href="#main">
           Skip to content
         </a>
