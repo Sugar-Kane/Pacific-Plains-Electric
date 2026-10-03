@@ -26,7 +26,7 @@ Supabase security advisors returned **no findings** after hardening. The generat
 - Owner/admin browser workflows require a real verified account; their server boundaries and database permissions were checked, but a real owner-session UI test was not performed.
 - Production Volteira, live scheduling, AI, notifications, uploads, payment processing and appointment management are not connected and were not live-tested.
 - No Core Web Vitals field data exists. Responsive and accessibility tests do not establish real-world LCP/INP/CLS scores.
-- Custom-domain DNS is not active; Namecheap reports the domain available for registration.
+- The user has purchased the correctly spelled domain. Its DNS currently points to Namecheap parking, so the custom domain does not serve the website yet.
 
 ## Dependencies
 

@@ -126,9 +126,9 @@ The service-area content describes San Luis Obispo County without manufacturing 
 
 Repository: `Sugar-Kane/Pacific-Plains-Electric`. Vercel project: `pacific-plains-electric`, team `adams-projects-8fc7ddbf`.
 
-On October 3, 2026, Namecheap's connected tool reported `pacificplainselectric.com` available for registration at $11.28. This is a quote, not a purchase, and may change. Registration and DNS are not complete. The connected Namecheap tool supports availability checks, not purchases or DNS editing.
+The user purchased the correctly spelled `pacificplainselectric.com` on October 3, 2026. Public DNS confirms Namecheap parking records. Both the apex and www domain are attached to the Vercel project. Namecheap DNS editing still requires an authenticated browser session; the connector only supports availability checks.
 
-`www.pacificplainselectric.com` has been added to Vercel. The latest Vercel verification recommends a CNAME record for host `www` pointing to `1c45b30ae4b08ff7.vercel-dns-017.com`. Verify the current record through the Vercel domain panel before applying. Do not change nameservers or existing MX/email records unnecessarily. The bare domain redirect can be added after ownership and DNS are in place.
+`www.pacificplainselectric.com` has been added to Vercel. The latest Vercel verification recommends a CNAME record for host `www` pointing to `1c45b30ae4b08ff7.vercel-dns-017.com`. Verify the current record through the Vercel domain panel before applying. Do not change nameservers or existing MX/email records unnecessarily. For the apex, Vercel recommends two A records at @: 216.198.79.1 and 64.29.17.1. Replace Namecheap parking/URL redirect records for @ and www, preserving email records.
 
 Deployment uses Next.js on Vercel in `sfo1`, `npm ci`, and `npm run build`. Keep preview protection enabled. Promote a tested deployment only after the domain, auth callback, and owner access are ready.
 
@@ -143,7 +143,7 @@ Deployment uses Next.js on Vercel in `sfo1`, `npm ci`, and `npm run build`. Keep
 | MOCKED | Isolated provider used only by unit tests; never used for customer requests |
 | REQUIRES VOLTEIRA | Live bookings, availability, appointment management, operations, shared AI, request transfer, webhook consumer |
 | REQUIRES CREDENTIALS / CONFIGURATION | Auth email delivery and callback URLs, notification providers, any future payment/analytics integrations |
-| REQUIRES BUSINESS DECISION | Domain registration, final legal approval, real working days, fee-credit policy changes, retention policy |
+| REQUIRES BUSINESS DECISION | Final legal approval, real working days, fee-credit policy changes, retention policy |
 | REQUIRES REAL CONTENT | Completed projects/photos, verified reviews, Nicholas's detailed biography, approved insurance claims |
 | NOT YET IMPLEMENTED | Photo uploads, full CMS editing workflow, customer self-service, enabled scheduling UI, MFA/password-reset UI, monitoring, attribution, calendar exports |
 
