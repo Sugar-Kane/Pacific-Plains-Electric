@@ -10,7 +10,7 @@ The Supabase project is `xcknbrmmypjnkbuyxutm`, organization `ymdcpwdwvubghruygh
 
 ## Architecture and ownership
 
-Next.js App Router renders the public content on the server. Small client components provide navigation, theme preference, forms and admin editors. CSS variables define both themes; local Arimo body text and Barlow Condensed headings avoid runtime font requests. Optimized WebP assets use Next/Image.
+Next.js App Router renders the public content on the server. Small client components provide navigation, theme preference, forms and admin editors. CSS variables define both themes; native system typography with a local Arimo fallback avoids runtime font requests. Optimized WebP assets use Next/Image.
 
 - Website: brand, public content, SEO, preferences, access memberships, audit records, temporary request outbox.
 - Volteira: eventual authoritative customer, service, availability, appointment, job, estimate, invoice, payment, communication, and AI data.

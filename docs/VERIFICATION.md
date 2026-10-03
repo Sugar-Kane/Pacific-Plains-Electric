@@ -41,3 +41,7 @@ The Supabase dashboard's ChatGPT sign-in was attempted with the requested adamka
 ## Customer experience refresh
 
 Removed the scripted chat widget, duplicate home-page links, repetitive slogans, and empty project navigation. Added self-hosted Barlow Condensed display typography. Preserved all nine services, accessible theme controls, contact methods, request intake, RBAC, and the existing (still unconfigured) Volteira provider. The latest run passed 14 browser tests and 6 unit/security tests.
+
+## Apple-inspired layout revision
+
+Replaced condensed headings and ruled service rows with system typography, rounded two-column mobile cards, neutral light/dark surfaces, a centered hero, and compact navigation. All 14 browser tests, production build, and lint passed. Visually checked the 390px dark-mode service grid. Backend and Volteira integration behavior unchanged.
