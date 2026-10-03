@@ -77,12 +77,12 @@ export default function RequestForm({
         <CheckCircle size={40} />
         <h2 style={{ marginTop: 20 }}>Your request is saved.</h2>
         <p>
-          Thank you. Your details are available for Pacific Plains Electric to
-          review. <strong>This is not a confirmed appointment.</strong>
+          We’ve received your details for review.{" "}
+          <strong>This is not a confirmed appointment.</strong>
         </p>
         <p>
-          No automatic email or text confirmation has been sent. If you need to
-          follow up, call the work number.
+          Keep the reference below for your records. For a time-sensitive
+          request, please call.
         </p>
         <div className="notice">
           Reference: <strong>{done.slice(0, 8).toUpperCase()}</strong>

@@ -73,7 +73,7 @@ export default async function Page({
       <PageHero
         eyebrow="ELECTRICAL SERVICES · SAN LUIS OBISPO COUNTY"
         title={s.name}
-        description={s.short}
+        description={s.description}
       />
       <Breadcrumb
         items={[{ label: "Services", href: "/services" }, { label: s.name }]}
@@ -81,8 +81,7 @@ export default async function Page({
       <section className="section container two-column">
         <div>
           <ServiceIcon name={s.icon} size={52} />
-          <h2 style={{ marginTop: 25 }}>{s.short}</h2>
-          <p>{s.description}</p>
+          <h2 style={{ marginTop: 25 }}>What this service covers</h2>
           <ul className="check-list">
             {s.includes.map((x) => (
               <li key={x}>
@@ -91,7 +90,7 @@ export default async function Page({
               </li>
             ))}
           </ul>
-          <h3 style={{ marginTop: 35 }}>Start with a conversation.</h3>
+          <h3 style={{ marginTop: 35 }}>Request this service</h3>
           <p>
             Tell us about your property, the issue or project, and your
             preferred times. We’ll review your request and help coordinate the
@@ -102,7 +101,7 @@ export default async function Page({
           </Link>
         </div>
         <aside className="panel">
-          <span className="eyebrow">CLEAR FROM THE START</span>
+          <span className="eyebrow">DIAGNOSTIC PRICING</span>
           <h2>Electrical diagnostic</h2>
           <div className="price-display">
             ${business.diagnosticPrice}

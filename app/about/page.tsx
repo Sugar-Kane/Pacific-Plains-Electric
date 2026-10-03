@@ -16,8 +16,8 @@ export default function Page() {
     <>
       <PageHero
         eyebrow="ABOUT PACIFIC PLAINS"
-        title="Local. Reliable. Built for the coast."
-        description="Electrical service with a straightforward approach: understand the work, discuss the next step, and keep communication clear."
+        title="Pacific Plains Electric"
+        description="Owned by Nicholas Kane. Serving San Luis Obispo County."
       />
       <AboutSection />
       <TrustStrip />
@@ -31,7 +31,7 @@ export default function Page() {
         <p>
           For service inquiries, call{" "}
           <a href={business.workPhone.tel}>{business.workPhone.display}</a>. The
-          work number is answered by the Volteira AI phone assistant. To speak
+          work number is answered by an automated phone assistant. To speak
           directly with Nicholas, call{" "}
           <a href={business.directPhone.tel}>{business.directPhone.display}</a>.
         </p>

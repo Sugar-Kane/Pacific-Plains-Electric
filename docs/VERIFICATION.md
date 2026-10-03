@@ -6,10 +6,10 @@
 - `npm run typecheck`: no TypeScript errors.
 - `npm run lint`: no lint errors.
 - `npm run test`: 6 tests passed (diagnostic and scheduling defaults, validation, hazard escalation, webhook verifier tamper/replay rejection, test-only booking idempotency/conflict, Pacific DST).
-- `npm run test:e2e`: 13 tests passed.
+- `npm run test:e2e`: 14 tests passed.
 - Responsive widths: 375, 390, 430, 768, 1024, 1440 px; home, services, request, contact, admin fit the viewport.
 - Automated axe WCAG A/AA checks on home, request, and sign-in in light and dark: no violations. This is automated coverage, not a certification of complete WCAG conformance.
-- Theme persistence; assistant price and direct-human contact; keyboard Escape closes assistant.
+- Theme persistence; mobile navigation and Escape/focus behavior; all nine service links preselect the correct request service; phone and email links.
 - All public routes: expected status, one H1, canonical, no browser exceptions, and internal links resolve.
 - Service form: review screen, consent payload, success and failure states, same-origin validation.
 - Admin pages show sign-in to unauthenticated users; private-route noindex and security headers present.
@@ -26,7 +26,7 @@ Supabase security advisors returned **no findings** after hardening. The generat
 - Owner/admin browser workflows require a real verified account; their server boundaries and database permissions were checked, but a real owner-session UI test was not performed.
 - Production Volteira, live scheduling, AI, notifications, uploads, payment processing and appointment management are not connected and were not live-tested.
 - No Core Web Vitals field data exists. Responsive and accessibility tests do not establish real-world LCP/INP/CLS scores.
-- The user has purchased the correctly spelled domain. Its DNS currently points to Namecheap parking, so the custom domain does not serve the website yet.
+- Both correctly spelled domains are verified with Vercel and have an issued SSL certificate. www returned HTTPS 200 and its health check passed after DNS was corrected.
 
 ## Dependencies
 
@@ -37,3 +37,7 @@ Supabase security advisors returned **no findings** after hardening. The generat
 Vercel deployment `dpl_3KikmdynLAsMAG5vBB2U5dGFxWzp` reached READY. Authenticated deployment checks returned HTTP 200 for `/request-service`; `/api/health` returned `status: ok`, `schedulingEnabled: false`, and `volteira: not_connected`. Deployment protection remains enabled.
 
 The Supabase dashboard's ChatGPT sign-in was attempted with the requested adamkane13.ak@gmail.com account. OpenAI's account chooser returned a route error (400, invalid content type), so dashboard auth URL configuration remains unverified. The connected Supabase API and deployed database are working; this browser-login failure is separate from the website health check.
+
+## Customer experience refresh
+
+Removed the scripted chat widget, duplicate home-page links, repetitive slogans, and empty project navigation. Added self-hosted Barlow Condensed display typography. Preserved all nine services, accessible theme controls, contact methods, request intake, RBAC, and the existing (still unconfigured) Volteira provider. The latest run passed 14 browser tests and 6 unit/security tests.

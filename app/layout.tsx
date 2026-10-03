@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import Assistant from "@/components/assistant";
 import { business } from "@/config/business";
 import "./globals.css";
 const arimo = localFont({
@@ -11,6 +10,12 @@ const arimo = localFont({
     { path: "../public/fonts/arimo-bold-web.woff2", weight: "700" },
   ],
   variable: "--font-sans",
+  display: "swap",
+});
+const display = localFont({
+  src: "../public/fonts/barlow-condensed-600.woff2",
+  weight: "600",
+  variable: "--font-display",
   display: "swap",
 });
 export const metadata: Metadata = {
@@ -34,14 +39,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className={arimo.variable}>
+      <body className={`${arimo.variable} ${display.variable}`}>
         <a className="skip-link" href="#main">
           Skip to content
         </a>
         <Header />
         <main id="main">{children}</main>
         <Footer />
-        <Assistant />
       </body>
     </html>
   );

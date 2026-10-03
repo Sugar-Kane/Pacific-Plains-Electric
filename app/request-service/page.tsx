@@ -18,9 +18,9 @@ export default async function Page({
   return (
     <>
       <PageHero
-        eyebrow="LET’S GET STARTED"
-        title="Tell us what you need."
-        description="Online appointment scheduling is not currently enabled. Send us your service request and we’ll help coordinate your appointment."
+        eyebrow="SERVICE REQUEST"
+        title="Request electrical service"
+        description="Tell us about the job. We’ll contact you to discuss the work and confirm a time."
       />
       <section className="section container two-column">
         <RequestForm
@@ -31,7 +31,7 @@ export default async function Page({
           }
         />
         <aside className="request-aside panel">
-          <span className="eyebrow">KNOW BEFORE YOU REQUEST</span>
+          <span className="eyebrow">PRICING</span>
           <h2>Electrical diagnostic</h2>
           <div className="price-display">
             ${business.diagnosticPrice}
@@ -50,7 +50,7 @@ export default async function Page({
             <Phone size={18} />
             {business.workPhone.display}
           </a>
-          <p>24/7 AI phone assistant</p>
+          <p>Automated phone assistant · 24/7</p>
           <small>
             <ShieldCheck size={15} /> {business.license}
           </small>

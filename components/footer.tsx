@@ -10,9 +10,9 @@ export default function Footer() {
           <div>
             <Brand />
             <p>
-              Local. Reliable.
+              Electrical repairs and installations.
               <br />
-              Built for the Central Coast.
+              San Luis Obispo County.
             </p>
             <small>{business.license}</small>
           </div>
@@ -21,8 +21,7 @@ export default function Footer() {
             {[
               ["Services", "/services"],
               ["About us", "/about"],
-              ["Projects", "/projects"],
-              ["From the blog", "/blog"],
+              ["Project planning guides", "/blog"],
               ["Common questions", "/faq"],
             ].map(([t, h]) => (
               <Link key={h} href={h}>
@@ -31,14 +30,14 @@ export default function Footer() {
             ))}
           </div>
           <div>
-            <h3>Let’s get to work</h3>
+            <h3>Contact</h3>
             <a href={business.workPhone.tel}>{business.workPhone.display}</a>
-            <small>24/7 AI phone assistant</small>
+            <small>Service inquiries</small>
             <a href={"mailto:" + business.email}>{business.email}</a>
             <Link href="/request-service">Request service ↗</Link>
           </div>
           <div>
-            <h3>Our community</h3>
+            <h3>Service area</h3>
             <p>
               Serving homes and businesses in
               <br />

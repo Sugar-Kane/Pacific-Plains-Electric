@@ -14,7 +14,7 @@ export default async function Page() {
     <>
       <PageHero
         eyebrow="OUR WORK"
-        title="Work worth sharing."
+        title="Electrical projects"
         description="Panel upgrades, EV charging, lighting, residential, commercial, and new construction."
       />
       <section className="section container">
@@ -31,7 +31,7 @@ export default async function Page() {
         ) : (
           <div className="empty-state">
             <FolderOpen size={38} />
-            <h2>Project stories are on the way.</h2>
+            <h2>Ask about a similar project</h2>
             <p>
               We’ll share completed work here when project details and photos
               are ready. Have a project in mind? Let’s talk about it.

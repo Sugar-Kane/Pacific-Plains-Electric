@@ -137,11 +137,11 @@ export const faqs = [
   ],
   [
     "Can I book an appointment online?",
-    "You can send a service request online. Direct appointment scheduling is currently off. We will help coordinate a time; a request is not a confirmed appointment.",
+    "Send a service request with your preferred days or times. We’ll contact you to confirm an appointment.",
   ],
   [
     "Who answers the main phone number?",
-    "The work number is answered by the Volteira AI phone assistant. It is available 24/7. This does not mean an electrician is dispatched 24/7.",
+    "An automated assistant answers the main line 24/7. Electrician visits are arranged by appointment. For Nicholas directly, call (209) 626-9313.",
   ],
   [
     "Can I speak directly with Nicholas?",

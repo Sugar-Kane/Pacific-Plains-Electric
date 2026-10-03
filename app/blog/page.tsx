@@ -16,8 +16,8 @@ export default async function Page() {
   return (
     <>
       <PageHero
-        eyebrow="THE PACIFIC PLAINS JOURNAL"
-        title="A little electrical know-how."
+        eyebrow="PLANNING A PROJECT"
+        title="Before the work begins"
         description="Planning notes and practical questions for your next electrical project."
       />
       <section className="section container">
@@ -33,7 +33,7 @@ export default async function Page() {
                   name={["CarFront", "PanelsTopLeft", "Lamp"][i]}
                   size={72}
                 />
-                <span>PACIFIC PLAINS FIELD NOTES</span>
+                <span>PROJECT GUIDE</span>
               </div>
               <small>{a.category}</small>
               <h3>{a.title}</h3>

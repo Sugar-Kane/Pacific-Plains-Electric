@@ -15,8 +15,8 @@ export default function Page() {
     <>
       <PageHero
         eyebrow="OUR SERVICES"
-        title="Practical help. Professional work."
-        description="Electrical services for homes and businesses throughout San Luis Obispo County. Tell us what you need, and we’ll talk through the next step."
+        title="Electrical services"
+        description="Repairs and installations for homes and businesses in San Luis Obispo County."
       />
       <section className="section container">
         <ServiceGrid />

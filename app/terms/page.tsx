@@ -11,16 +11,16 @@ export default function Page() {
     <>
       <PageHero
         eyebrow="WEBSITE TERMS"
-        title="A few clear expectations."
+        title="Website terms"
         description="Please review these details when using our website."
       />
       <div className="container">
         <article className="content-narrow">
           <h2>Requests and appointments</h2>
           <p>
-            A service request is an inquiry, not a confirmed appointment. Online
-            appointment scheduling is currently disabled. An appointment must be
-            coordinated and confirmed with Pacific Plains Electric.
+            A service request is an inquiry, not a confirmed appointment.
+            Appointments are coordinated and confirmed with Pacific Plains
+            Electric.
           </p>
           <h2>Diagnostic pricing</h2>
           <p>
@@ -38,11 +38,11 @@ export default function Page() {
           </p>
           <h2>Information and emergencies</h2>
           <p>
-            Website articles and prepared assistant responses are general
-            information, not a diagnosis or instructions for doing electrical
-            work. The 24/7 AI phone assistant does not imply 24/7 electrician
-            dispatch. For an immediate threat, fire, smoke, or injury, move away
-            from the hazard and call 911.
+            Website articles are general information, not a diagnosis or
+            instructions for doing electrical work. The automated phone
+            assistant does not imply 24/7 electrician dispatch. For an immediate
+            threat, fire, smoke, or injury, move away from the hazard and call
+            911.
           </p>
           <h2>Contact</h2>
           <p>

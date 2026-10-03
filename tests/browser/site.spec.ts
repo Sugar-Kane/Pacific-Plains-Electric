@@ -102,7 +102,8 @@ for (const theme of ["light", "dark"])
       ).toEqual([]);
     }
   });
-test("theme persists and assistant escalates to Nicholas", async ({ page }) => {
+test("theme persists and mobile navigation works", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
   const initial = await page.locator("html").getAttribute("data-theme");
   await page
@@ -112,16 +113,43 @@ test("theme persists and assistant escalates to Nicholas", async ({ page }) => {
   expect(await page.locator("html").getAttribute("data-theme")).not.toBe(
     initial,
   );
+  await page.getByRole("button", { name: "Open navigation" }).click();
   await page
-    .getByRole("button", { name: "Ask Pacific Plains", exact: true })
+    .getByRole("navigation", { name: "Main navigation" })
+    .getByRole("link", { name: "Services", exact: true })
     .click();
-  await page.getByRole("button", { name: "Diagnostic pricing" }).click();
-  await expect(page.getByRole("status")).toContainText("$180");
+  await expect(page).toHaveURL(/\/services$/);
   await expect(
-    page.locator('#ppe-assistant a[href="tel:+12096269313"]'),
+    page.getByRole("button", { name: "Open navigation" }),
   ).toBeVisible();
+  await page.getByRole("button", { name: "Open navigation" }).click();
+  await page
+    .getByRole("navigation", { name: "Main navigation" })
+    .getByRole("link", { name: "About", exact: true })
+    .focus();
   await page.keyboard.press("Escape");
-  await expect(page.locator("#ppe-assistant")).toHaveCount(0);
+  await expect(
+    page.getByRole("button", { name: "Open navigation" }),
+  ).toBeFocused();
+});
+test("service links carry the selected service into the request", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const serviceLinks = await page
+    .locator(".service-card")
+    .evaluateAll((links) => links.map((link) => link.getAttribute("href")!));
+  expect(serviceLinks).toHaveLength(9);
+  for (const href of serviceLinks) {
+    await page.goto(href);
+    await page.locator('main a[href^="/request-service?service="]').click();
+    await expect(page.locator("#service")).toHaveValue(href.split("/").pop()!);
+  }
+  await page.goto("/contact");
+  await expect(page.locator('main a[href="tel:+12096269313"]')).toBeVisible();
+  await expect(
+    page.locator('main a[href="mailto:nick@pacificplainselectric.com"]'),
+  ).toBeVisible();
 });
 test("request review and submitted state use server response", async ({
   page,

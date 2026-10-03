@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowUpRight, Phone, ShieldCheck, MapPin, Check } from "lucide-react";
 import { business } from "@/config/business";
 import { services } from "@/config/content";
@@ -56,7 +55,7 @@ export function Breadcrumb({
 export function ServiceGrid({ limit }: { limit?: number }) {
   return (
     <div className="service-grid">
-      {(limit ? services.slice(0, limit) : services).map((s, i) => (
+      {(limit ? services.slice(0, limit) : services).map((s) => (
         <Link
           className="service-card"
           href={"/services/" + s.slug}
@@ -64,12 +63,11 @@ export function ServiceGrid({ limit }: { limit?: number }) {
         >
           <div className="service-card-top">
             <ServiceIcon name={s.icon} size={38} />
-            <span>0{i + 1}</span>
           </div>
           <h3>{s.name}</h3>
           <p>{s.description}</p>
           <span className="text-link">
-            Explore service <ArrowUpRight size={17} />
+            Service details <ArrowUpRight size={17} />
           </span>
         </Link>
       ))}
@@ -81,13 +79,10 @@ export function Diagnostic() {
     <section className="diagnostic">
       <div className="container diagnostic-inner">
         <div>
-          <span className="eyebrow">A CLEAR FIRST STEP</span>
-          <h2>Let’s find the problem.</h2>
+          <span className="eyebrow">DIAGNOSTIC VISITS</span>
+          <h2>Find out what’s wrong.</h2>
           <p>
-            Professional troubleshooting and evaluation of your electrical
-            issue.
-            <br />
-            Understand what’s happening before deciding what comes next.
+            An on-site visit to trace the issue and explain the repair options.
           </p>
         </div>
         <div className="diagnostic-price">
@@ -114,43 +109,22 @@ export function Diagnostic() {
 }
 export function AboutSection() {
   return (
-    <section className="section container about-grid">
-      <figure className="about-photo">
-        <Image
-          src="/images/coastal-home.webp"
-          alt="Illustration of a warmly lit California home with native landscaping"
-          fill
-          sizes="(max-width: 768px) 100vw, 50vw"
-        />
-        <figcaption>
-          Architecture illustration · not a completed project
-        </figcaption>
-        <span className="photo-label">ROOTED IN THE CENTRAL COAST</span>
-      </figure>
-      <div className="about-copy">
-        <span className="eyebrow">YOUR LOCAL ELECTRICIAN</span>
-        <h2>
-          Good work.
-          <br />
-          Clear communication.
-          <br />
-          <em>Close to home.</em>
-        </h2>
+    <section className="section container owner-section">
+      <div>
+        <span className="eyebrow">OWNER / ELECTRICIAN</span>
+        <h2>Nicholas Kane</h2>
+        <p>{business.license}</p>
+      </div>
+      <div>
         <p>
-          Pacific Plains Electric serves homes and businesses across San Luis
-          Obispo County. From a troublesome outlet to a new installation, start
-          with a conversation about what you need.
+          Pacific Plains Electric is a locally owned electrical business serving
+          San Luis Obispo County. Nicholas handles inquiries about repairs,
+          installations, and project estimates.
         </p>
-        <div className="owner">
-          <span className="owner-initials">NK</span>
-          <span>
-            <strong>Nicholas Kane</strong>
-            <small>Owner · {business.license}</small>
-          </span>
-        </div>
-        <Link href="/about" className="text-link">
-          Get to know Pacific Plains <ArrowUpRight size={18} />
-        </Link>
+        <a className="text-link" href={business.directPhone.tel}>
+          Call Nicholas: {business.directPhone.display}{" "}
+          <ArrowUpRight size={18} />
+        </a>
       </div>
     </section>
   );
@@ -186,11 +160,9 @@ export function ContactCTA() {
   return (
     <section className="contact-cta">
       <div className="container">
-        <span className="eyebrow">LET’S TALK ABOUT YOUR PROJECT</span>
-        <h2>What can we help you with?</h2>
+        <h2>Need an electrician?</h2>
         <p>
-          A repair, a new installation, or a question. We’re here to help you
-          take the next step.
+          Send the job details or give us a call. We’ll confirm a time with you.
         </p>
         <Actions />
       </div>

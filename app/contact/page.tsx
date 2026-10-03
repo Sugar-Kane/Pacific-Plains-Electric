@@ -13,8 +13,8 @@ export default function Page() {
     <>
       <PageHero
         eyebrow="CONTACT US"
-        title="Let’s talk about what you need."
-        description="Call, email, or send a service request. We’ll help you find the right next step."
+        title="Contact Nicholas & the team"
+        description="Call about a repair, discuss a project, or send the details online."
       />
       <section className="section container two-column">
         <div className="contact-list">
@@ -26,7 +26,8 @@ export default function Page() {
                 <h3>{business.workPhone.display}</h3>
               </a>
               <small>
-                24/7 AI phone assistant · not 24/7 electrician dispatch
+                Automated assistant answers 24/7. Electrician visits are by
+                appointment.
               </small>
             </div>
           </div>
@@ -79,7 +80,7 @@ export default function Page() {
             <circle cx="69" cy="142" r="7" fill="var(--gold)" />
             <circle cx="69" cy="142" r="16" stroke="var(--gold)" fill="none" />
           </svg>
-          <h3>Our corner of California.</h3>
+          <h3>San Luis Obispo County</h3>
           <p>
             <MapPin size={16} /> San Luis Obispo County
           </p>
@@ -90,7 +91,7 @@ export default function Page() {
             target="_blank"
             rel="noreferrer"
           >
-            Explore the area <ArrowUpRight size={15} />
+            View service area on Google Maps <ArrowUpRight size={15} />
           </a>
         </div>
       </section>

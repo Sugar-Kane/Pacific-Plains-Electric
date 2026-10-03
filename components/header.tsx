@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <>
       <div className="topline">
-        <span>LOCAL EXPERTISE. CENTRAL COAST ROOTS.</span>
+        <span>SAN LUIS OBISPO COUNTY</span>
         <span>California licensed · {business.license}</span>
       </div>
       <header className="header">
@@ -26,21 +26,30 @@ export default function Header() {
           <Brand />
           <nav
             aria-label="Main navigation"
+            id="main-navigation"
+            onKeyDown={(e) => {
+              if (e.key === "Escape") {
+                setOpen(false);
+                document.getElementById("navigation-toggle")?.focus();
+              }
+            }}
             className={open ? "nav open" : "nav"}
           >
             {[
               ["Home", "/"],
               ["Services", "/services"],
               ["About", "/about"],
-              ["Projects", "/projects"],
-              ["Blog", "/blog"],
               ["Contact", "/contact"],
             ].map(([label, url]) => (
               <Link
                 key={url}
                 href={url}
                 onClick={() => setOpen(false)}
-                aria-current={path === url ? "page" : undefined}
+                aria-current={
+                  (url === "/" ? path === url : path.startsWith(url))
+                    ? "page"
+                    : undefined
+                }
               >
                 {label}
               </Link>
@@ -60,13 +69,15 @@ export default function Header() {
               <Phone size={19} />
               <span>
                 <strong>{business.workPhone.display}</strong>
-                <small>24/7 AI Assistant</small>
+                <small>Service inquiries</small>
               </span>
             </a>
             <Link className="button small header-cta" href="/request-service">
               Request Service <ArrowUpRight size={16} />
             </Link>
             <button
+              id="navigation-toggle"
+              aria-controls="main-navigation"
               className="mobile-menu icon-button"
               onClick={() => setOpen(!open)}
               aria-expanded={open}
