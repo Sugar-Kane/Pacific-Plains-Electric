@@ -1892,3 +1892,19 @@ footer .brand .wordmark { color: var(--gold); }
 .map-legend span { width: 9px; height: 9px; border-radius: 50%; background: var(--green); }
 [data-theme="dark"] .map-legend span { background: #8ecbb0; }
 @media(max-width:700px) { .map-panel { padding: 32px 24px; } }
+
+.services-shortcut { white-space: nowrap; }
+.service-card:hover { transform: none; box-shadow: 0 4px 20px #00000004; }
+.service-card-actions { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; }
+.service-card-actions .text-link, .service-details-link { min-height: 44px; display: inline-flex; align-items: center; margin-top: 0; }
+.service-details-link { font-size: 12px; color: var(--secondary); text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 700px) {
+ .header-inner { gap: 8px; padding-inline: 14px; }
+ .header-actions { gap: 0; }
+ .services-shortcut.button.small { padding: 10px 13px; font-size: 12px; min-height: 44px; }
+ .header .brand strong { font-size: 11px; }
+ .header .brand svg { width: 22px; }
+ .header .brand { gap: 5px; }
+ .header .brand .wordmark { font-size: 7px; }
+ .service-card-actions { gap: 0; flex-direction: column; align-items: flex-start; }
+}

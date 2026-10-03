@@ -56,11 +56,7 @@ export function ServiceGrid({ limit }: { limit?: number }) {
   return (
     <div className="service-grid">
       {(limit ? services.slice(0, limit) : services).map((s) => (
-        <Link
-          className="service-card"
-          href={"/services/" + s.slug}
-          key={s.slug}
-        >
+        <article className="service-card" key={s.slug}>
           <div className="service-card-top">
             <ServiceIcon name={s.icon} size={38} />
           </div>
@@ -76,10 +72,11 @@ export function ServiceGrid({ limit }: { limit?: number }) {
             generators: "Backup power for your property.",
             "service-plans": "Ongoing care for your electrical system.",
           } as Record<string, string>)[s.slug]}</p>
-          <span className="text-link">
-            Service details <ArrowUpRight size={17} />
-          </span>
-        </Link>
+          <div className="service-card-actions">
+            <Link className="text-link" href={"/request-service?service=" + s.slug} aria-label={"Request " + s.name}>Request service <ArrowUpRight size={17} /></Link>
+            <Link className="service-details-link" href={"/services/" + s.slug} aria-label={"Details about " + s.name}>Details</Link>
+          </div>
+        </article>
       ))}
     </div>
   );

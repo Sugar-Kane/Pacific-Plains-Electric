@@ -5,8 +5,6 @@ import { business } from "@/config/business";
 import { faqs } from "@/config/content";
 import {
   Actions,
-  ServiceGrid,
-  Diagnostic,
   ContactCTA,
 } from "@/components/public";
 import { metadata as meta, JsonLd, businessSchema } from "@/lib/seo";
@@ -41,14 +39,6 @@ export default function Home() {
           <p className="hero-note">Nicholas Kane · {business.license}</p>
         </div>
       </section>
-      <section className="section container" id="services">
-        <div className="section-heading">
-          <h2>What we do</h2>
-          <p>For your home. For your business.</p>
-        </div>
-        <ServiceGrid />
-      </section>
-      <Diagnostic />
       <section className="section container owner-section">
         <div>
           <span className="eyebrow">OWNER / ELECTRICIAN</span>

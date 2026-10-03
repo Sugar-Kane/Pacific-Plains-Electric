@@ -37,7 +37,6 @@ export default function Header() {
           >
             {[
               ["Home", "/"],
-              ["Services", "/services"],
               ["About", "/about"],
               ["Contact", "/contact"],
             ].map(([label, url]) => (
@@ -56,6 +55,7 @@ export default function Header() {
             ))}
           </nav>
           <div className="header-actions">
+            <Link href="/services" className="button small services-shortcut" onClick={() => setOpen(false)} aria-current={path.startsWith("/services") ? "page" : undefined}>Services</Link>
             <button
               type="button"
               className="theme-toggle"

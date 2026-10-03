@@ -113,11 +113,7 @@ test("theme persists and mobile navigation works", async ({ page }) => {
   expect(await page.locator("html").getAttribute("data-theme")).not.toBe(
     initial,
   );
-  await page.getByRole("button", { name: "Open navigation" }).click();
-  await page
-    .getByRole("navigation", { name: "Main navigation" })
-    .getByRole("link", { name: "Services", exact: true })
-    .click();
+  await page.locator("header").getByRole("link", { name: "Services", exact: true }).click();
   await expect(page).toHaveURL(/\/services$/);
   await expect(
     page.getByRole("button", { name: "Open navigation" }),
@@ -135,15 +131,17 @@ test("theme persists and mobile navigation works", async ({ page }) => {
 test("service links carry the selected service into the request", async ({
   page,
 }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
-  const serviceLinks = await page
-    .locator(".service-card")
-    .evaluateAll((links) => links.map((link) => link.getAttribute("href")!));
+  await expect(page.locator(".service-card")).toHaveCount(0);
+  await page.locator("header").getByRole("link", { name: "Services", exact: true }).click();
+  const serviceLinks = await page.locator('.service-card a[href^="/request-service"]')
+    .evaluateAll(links => links.map(link => link.getAttribute("href")!));
   expect(serviceLinks).toHaveLength(9);
   for (const href of serviceLinks) {
-    await page.goto(href);
-    await page.locator('main a[href^="/request-service?service="]').click();
-    await expect(page.locator("#service")).toHaveValue(href.split("/").pop()!);
+    await page.goto("/services");
+    await page.locator(`.service-card a[href="${href}"]`).click();
+    await expect(page.locator("#service")).toHaveValue(new URL(href, "http://localhost").searchParams.get("service")!);
   }
   await page.goto("/contact");
   await expect(page.locator('main a[href="tel:+12096269313"]')).toBeVisible();
