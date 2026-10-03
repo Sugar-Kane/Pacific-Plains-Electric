@@ -31,3 +31,9 @@ Supabase security advisors returned **no findings** after hardening. The generat
 ## Dependencies
 
 `npm audit --omit=dev` reported zero production vulnerabilities. The full dependency audit reports a development-only `braces` advisory inherited through Next.js's ESLint tooling. The registry currently reports braces 3.0.3 as latest; npm proposes an unrelated major downgrade of eslint-config-next rather than a compatible patch. No forced downgrade was applied. This affects developer lint tooling, not deployed application dependencies. Recheck when a compatible update is released.
+
+## Deployed preview verification
+
+Vercel deployment `dpl_3KikmdynLAsMAG5vBB2U5dGFxWzp` reached READY. Authenticated deployment checks returned HTTP 200 for `/request-service`; `/api/health` returned `status: ok`, `schedulingEnabled: false`, and `volteira: not_connected`. Deployment protection remains enabled.
+
+The Supabase dashboard's ChatGPT sign-in was attempted with the requested adamkane13.ak@gmail.com account. OpenAI's account chooser returned a route error (400, invalid content type), so dashboard auth URL configuration remains unverified. The connected Supabase API and deployed database are working; this browser-login failure is separate from the website health check.
