@@ -1,5 +1,6 @@
-import { Phone, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react";
+import { Phone, Mail, Clock, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import CaliforniaMap from "@/components/california-map";
 import { PageHero } from "@/components/public";
 import { business } from "@/config/business";
 import { metadata as meta } from "@/lib/seo";
@@ -64,26 +65,9 @@ export default function Page() {
           </Link>
         </div>
         <div className="map-panel">
-          <svg viewBox="0 0 180 220" aria-hidden="true">
-            <path
-              d="M50 5h77l-1 76 44 85-43 45-30-17-24-40-16-27-18-26-9-40z"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.3"
-            />
-            <path
-              d="M40 110l24 9 26 46"
-              fill="none"
-              stroke="var(--gold)"
-              strokeWidth="2"
-            />
-            <circle cx="69" cy="142" r="7" fill="var(--gold)" />
-            <circle cx="69" cy="142" r="16" stroke="var(--gold)" fill="none" />
-          </svg>
+          <CaliforniaMap />
           <h3>San Luis Obispo County</h3>
-          <p>
-            <MapPin size={16} /> San Luis Obispo County
-          </p>
+          <p className="map-legend"><span /> Our Central Coast service area</p>
           <small>Service-area business · no public storefront</small>
           <a
             className="text-link"

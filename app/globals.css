@@ -1881,3 +1881,14 @@ footer .brand .wordmark { color: var(--gold); }
  .mobile-action-bar a { border: 0; border-radius: 18px; min-height: 44px; }
  .mobile-action-bar a:last-child { border-radius: 18px; }
 }
+
+.map-panel > .california-map { width: min(100%, 310px); height: auto; opacity: 1; margin-bottom: 24px; overflow: visible; }
+.california-land { fill: var(--surface); stroke: var(--secondary); stroke-width: 1.2; stroke-linejoin: round; }
+.california-county { fill: var(--green); stroke: var(--gold); stroke-width: 1; stroke-linejoin: round; }
+[data-theme="dark"] .california-county { fill: #8ecbb0; stroke: #bce7d3; }
+.ocean-label { fill: var(--secondary); font-size: 9px; letter-spacing: 2.5px; }
+.map-panel h3 { font-size: 26px; margin-bottom: 12px; }
+.map-legend { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 13px; }
+.map-legend span { width: 9px; height: 9px; border-radius: 50%; background: var(--green); }
+[data-theme="dark"] .map-legend span { background: #8ecbb0; }
+@media(max-width:700px) { .map-panel { padding: 32px 24px; } }
