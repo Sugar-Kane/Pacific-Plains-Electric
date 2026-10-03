@@ -5,6 +5,7 @@ export const business = {
   workPhone: {
     display: "(805) 626-7761",
     tel: "tel:+18056267761",
+    sms: "sms:+18056267761",
     raw: "8056267761",
     aiAnswered: true,
   },

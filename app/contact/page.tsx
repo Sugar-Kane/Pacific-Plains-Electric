@@ -26,6 +26,7 @@ export default function Page() {
               <a href={business.workPhone.tel}>
                 <h3>{business.workPhone.display}</h3>
               </a>
+              <a className="text-link" href={business.workPhone.sms}>Text {business.workPhone.display}</a>
               <small>
                 Automated assistant answers 24/7. Electrician visits are by
                 appointment.

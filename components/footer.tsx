@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Brand from "./brand";
-import { Phone, ArrowUpRight } from "lucide-react";
+import { Phone, MessageCircle, ArrowUpRight } from "lucide-react";
 import { business } from "@/config/business";
 export default function Footer() {
   return (
@@ -62,6 +62,9 @@ export default function Footer() {
       <div className="mobile-action-bar">
         <a href={business.workPhone.tel}>
           <Phone size={18} /> Call
+        </a>
+        <a href={business.workPhone.sms} aria-label="Text Pacific Plains Electric">
+          <MessageCircle size={18} /> Text
         </a>
         <Link href="/request-service">
           Request Service <ArrowUpRight size={18} />

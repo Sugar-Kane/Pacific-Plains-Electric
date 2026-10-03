@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Phone, ShieldCheck, MapPin, Check } from "lucide-react";
+import { ArrowUpRight, Phone, MessageCircle, ShieldCheck, MapPin, Check } from "lucide-react";
 import { business } from "@/config/business";
 import { services } from "@/config/content";
 import { ServiceIcon } from "./icons";
@@ -12,6 +12,9 @@ export function Actions() {
       <a className="button outline" href={business.workPhone.tel}>
         <Phone size={18} />
         {business.workPhone.display}
+      </a>
+      <a className="button outline" href={business.workPhone.sms} aria-label="Text Pacific Plains Electric">
+        <MessageCircle size={18} /> Text
       </a>
     </div>
   );
