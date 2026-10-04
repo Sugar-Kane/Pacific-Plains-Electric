@@ -10,9 +10,9 @@ export default function Page() {
   return (
     <>
       <PageHero
-        eyebrow="PRIVACY"
-        title="Your information, handled with care."
-        description="This notice describes the information collected through this website."
+        eyebrow="Legal"
+        title="Privacy notice"
+        description="What this website collects when you send a request, and how it’s used."
       />
       <div className="container">
         <article className="content-narrow">

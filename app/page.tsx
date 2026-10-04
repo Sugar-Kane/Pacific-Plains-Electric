@@ -1,11 +1,13 @@
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import { business } from "@/config/business";
-import { faqs } from "@/config/content";
 import {
   Actions,
   ContactCTA,
+  Diagnostic,
+  FaqList,
+  OwnerSection,
+  SectionHead,
+  ServiceOverview,
 } from "@/components/public";
 import { metadata as meta, JsonLd, businessSchema } from "@/lib/seo";
 export const metadata = meta(
@@ -18,62 +20,54 @@ export default function Home() {
     <>
       <JsonLd data={businessSchema} />
       <section className="hero">
-        <Image
-          src="/images/central-coast.webp"
-          alt="Illustrated Central Coast landscape"
-          fill
-          priority
-          sizes="100vw"
-        />
-        <div className="hero-wash" />
         <div className="container hero-content">
-          <span className="eyebrow">SAN LUIS OBISPO COUNTY</span>
-          <h1>
-            Your local electrician.<br />A simpler way to get it done.
-          </h1>
-          <p>
-            Repairs, upgrades, and installations for your home or business. Tell
-            us what needs doing.
+          <span className="eyebrow">San Luis Obispo County electrician</span>
+          <h1>Electrical work for Central Coast homes and businesses.</h1>
+          <p className="lede">
+            Repairs, panel upgrades, EV chargers, and lighting. Tell us about
+            the job and we’ll take it from there.
           </p>
           <Actions />
-          <p className="hero-note">Nicholas Kane · {business.license}</p>
-        </div>
-      </section>
-      <section className="section container owner-section">
-        <div>
-          <span className="eyebrow">OWNER / ELECTRICIAN</span>
-          <h2>Nicholas Kane</h2>
-        </div>
-        <div>
-          <p>
-            Pacific Plains Electric serves homes, businesses, and property
-            managers across San Luis Obispo County. Have a question about a job?
-            You can reach Nicholas directly.
+          <p className="hero-meta">
+            Owned by {business.owner} · {business.license}
           </p>
-          <a className="text-link" href={business.directPhone.tel}>
-            Call Nicholas: {business.directPhone.display}{" "}
-            <ArrowUpRight size={18} />
-          </a>
-          <Link href="/about" className="text-link">
-            About the business <ArrowUpRight size={18} />
-          </Link>
+        </div>
+        <div className="hero-image">
+          <Image
+            src="/images/central-coast.webp"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+          />
         </div>
       </section>
+      <section className="section container">
+        <SectionHead
+          eyebrow="Services"
+          title="What we can help with"
+          link={{ label: "All services", href: "/services" }}
+        />
+        <ServiceOverview
+          slugs={[
+            "electrical-repair",
+            "panel-upgrades",
+            "ev-charger-installation",
+            "lighting",
+            "new-construction",
+            "commercial-electrical",
+          ]}
+        />
+      </section>
+      <Diagnostic />
+      <OwnerSection />
       <section className="section container faq-grid">
-        <div>
-          <h2>Before you call</h2>
-          <Link href="/faq" className="text-link">
-            More questions <ArrowUpRight size={18} />
-          </Link>
-        </div>
-        <div>
-          {faqs.slice(0, 3).map(([q, a]) => (
-            <details key={q}>
-              <summary>{q}</summary>
-              <p>{a}</p>
-            </details>
-          ))}
-        </div>
+        <SectionHead
+          eyebrow="FAQ"
+          title="Common questions"
+          link={{ label: "All questions", href: "/faq" }}
+        />
+        <FaqList limit={4} />
       </section>
       <ContactCTA />
     </>

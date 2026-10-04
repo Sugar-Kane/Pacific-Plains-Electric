@@ -133,7 +133,6 @@ test("service links carry the selected service into the request", async ({
 }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
-  await expect(page.locator(".service-card")).toHaveCount(0);
   await page.locator("header").getByRole("link", { name: "Services", exact: true }).click();
   const serviceLinks = await page.locator('.service-card a[href^="/request-service"]')
     .evaluateAll(links => links.map(link => link.getAttribute("href")!));

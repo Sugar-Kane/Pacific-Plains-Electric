@@ -6,7 +6,7 @@ import {
   Lamp,
   House,
   Building2,
-  Cable,
+  Zap,
   ClipboardCheck,
 } from "lucide-react";
 const icons = {
@@ -17,7 +17,7 @@ const icons = {
   Lamp,
   House,
   Building2,
-  Cable,
+  Zap,
   ClipboardCheck,
 };
 export function ServiceIcon({
@@ -28,5 +28,5 @@ export function ServiceIcon({
   size?: number;
 }) {
   const Icon = icons[name as keyof typeof icons] || Wrench;
-  return <Icon size={size} strokeWidth={1.4} aria-hidden="true" />;
+  return <Icon size={size} strokeWidth={1.75} aria-hidden="true" />;
 }

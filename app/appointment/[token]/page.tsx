@@ -7,7 +7,7 @@ export const metadata = {
 export default function Page() {
   return (
     <section className="error-page container">
-      <span className="eyebrow">APPOINTMENT MANAGEMENT</span>
+      <span className="eyebrow">Appointments</span>
       <h1>We can’t verify this appointment link.</h1>
       <p>
         Online appointment management is not connected yet. Please contact us to

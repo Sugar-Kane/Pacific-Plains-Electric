@@ -24,7 +24,7 @@ npm run test:e2e
 
 - Public pages, themes, service intake, database permissions, CMS publishing, and RBAC are implemented.
 - Online scheduling is **OFF**. The database prevents accidental enablement.
-- The public assistant provides clearly labeled prepared answers. Live AI is not connected.
+- There is no website chat assistant. The main phone line is answered by an automated assistant; live website AI is not connected.
 - Website requests are saved in a protected intake outbox, not delivered to Volteira. No email/SMS delivery or appointment confirmation is claimed.
 - Payments, uploads, live appointment management, and operational dashboards require further integration.
 - The custom domain requires registration and DNS configuration. See the handoff.

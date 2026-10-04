@@ -13,8 +13,8 @@ export default async function Page() {
   return (
     <>
       <PageHero
-        eyebrow="OUR WORK"
-        title="Electrical projects"
+        eyebrow="Projects"
+        title="Recent projects"
         description="Panel upgrades, EV charging, lighting, residential, commercial, and new construction."
       />
       <section className="section container">
@@ -22,9 +22,9 @@ export default async function Page() {
           <div className="article-grid">
             {posts.map((p) => (
               <article className="panel" key={p.id}>
-                <small>{p.category}</small>
+                <span className="eyebrow">{p.category}</span>
                 <h2>{p.title}</h2>
-                <p style={{ whiteSpace: "pre-wrap" }}>{p.body}</p>
+                <p className="pre-wrap">{p.body}</p>
               </article>
             ))}
           </div>
@@ -33,8 +33,8 @@ export default async function Page() {
             <FolderOpen size={38} />
             <h2>Ask about a similar project</h2>
             <p>
-              We’ll share completed work here when project details and photos
-              are ready. Have a project in mind? Let’s talk about it.
+              Completed work will be posted here with photos. In the meantime,
+              ask us about a project like yours.
             </p>
           </div>
         )}

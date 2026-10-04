@@ -1,12 +1,12 @@
+import { business, diagnosticTerms } from "./business";
 export const services = [
   {
     slug: "electrical-repair",
     name: "Electrical Repair",
-    short: "Safe, dependable power. Every day.",
+    summary: "Outlets, switches, breakers, and circuits that stopped working.",
     description:
       "Help with outlets, switches, circuits, and everyday electrical problems in your home or business.",
     icon: "Wrench",
-    image: "repair",
     includes: [
       "Outlet and switch repairs",
       "Circuit issues and power interruptions",
@@ -16,11 +16,10 @@ export const services = [
   {
     slug: "troubleshooting",
     name: "Troubleshooting",
-    short: "Get to the source of the problem.",
+    summary: "An on-site visit to find the cause and explain your options.",
     description:
-      "Professional evaluation to understand what is happening and explain the next steps. Diagnostic service is $180; repair work is quoted separately.",
+      `An on-site evaluation to find what’s causing the problem and explain your options. Diagnostic visits are $${business.diagnosticPrice}; repair work is quoted separately.`,
     icon: "Search",
-    image: "repair",
     includes: [
       "On-site electrical evaluation",
       "Clear explanation of findings",
@@ -30,11 +29,10 @@ export const services = [
   {
     slug: "panel-upgrades",
     name: "Panel Upgrades",
-    short: "Ready for what comes next.",
+    summary: "More capacity for a remodel, new appliances, or an EV.",
     description:
       "Plan for the electrical demands of your home, an addition, new appliances, or an EV charger.",
     icon: "PanelsTopLeft",
-    image: "panel",
     includes: [
       "Existing panel evaluation",
       "Capacity planning for new equipment",
@@ -44,11 +42,10 @@ export const services = [
   {
     slug: "ev-charger-installation",
     name: "EV Charger Installation",
-    short: "Come home. Plug in.",
+    summary: "Home and workplace chargers, sized to your panel.",
     description:
       "Home and commercial charging planned around your vehicle, parking space, and electrical capacity.",
     icon: "CarFront",
-    image: "ev",
     includes: [
       "Charger location and circuit planning",
       "Electrical capacity evaluation",
@@ -58,11 +55,10 @@ export const services = [
   {
     slug: "lighting",
     name: "Lighting",
-    short: "Thoughtful light, inside and out.",
+    summary: "Interior fixtures, dimmers, and exterior and landscape lighting.",
     description:
       "Indoor, outdoor, and landscape lighting that makes your space comfortable and practical.",
     icon: "Lamp",
-    image: "lighting",
     includes: [
       "Interior fixtures and lighting",
       "Exterior and landscape lighting",
@@ -72,11 +68,10 @@ export const services = [
   {
     slug: "new-construction",
     name: "New Construction",
-    short: "Built right from the beginning.",
+    summary: "Wiring for new homes, additions, and remodels.",
     description:
       "Electrical planning and installation for new homes, additions, and remodeling projects.",
     icon: "House",
-    image: "construction",
     includes: [
       "New home electrical installation",
       "Remodels and additions",
@@ -86,11 +81,10 @@ export const services = [
   {
     slug: "commercial-electrical",
     name: "Commercial Electrical",
-    short: "Keep your business moving.",
+    summary: "Tenant improvements, repairs, and upgrades for businesses.",
     description:
       "Electrical services for businesses, tenant spaces, and property managers throughout San Luis Obispo County.",
     icon: "Building2",
-    image: "commercial",
     includes: [
       "Tenant improvements",
       "Commercial repairs and troubleshooting",
@@ -100,11 +94,10 @@ export const services = [
   {
     slug: "generators",
     name: "Generators",
-    short: "Plan for backup power.",
+    summary: "Backup power planning and installation for your property.",
     description:
       "Discuss backup power needs, equipment options, and installation requirements for your property.",
-    icon: "Cable",
-    image: "panel",
+    icon: "Zap",
     includes: [
       "Backup power planning",
       "Equipment and placement evaluation",
@@ -114,11 +107,10 @@ export const services = [
   {
     slug: "service-plans",
     name: "Service & Maintenance",
-    short: "Care for your electrical system.",
+    summary: "Ongoing electrical care for homes and managed properties.",
     description:
       "Talk with Nicholas about maintenance needs for your home, business, or managed property. Scope and pricing are confirmed individually.",
     icon: "ClipboardCheck",
-    image: "commercial",
     includes: [
       "Property electrical maintenance needs",
       "Preventive service planning",
@@ -129,7 +121,7 @@ export const services = [
 export const faqs = [
   [
     "How much is a diagnostic visit?",
-    "Electrical diagnostic service is $180. It covers professional troubleshooting and evaluation. Repairs and project work are additional and are discussed separately. The diagnostic fee is not automatically credited toward repairs.",
+    `A diagnostic visit is $${business.diagnosticPrice}. It covers on-site troubleshooting and an explanation of what we find. ${diagnosticTerms}`,
   ],
   [
     "Where do you work?",
@@ -141,15 +133,15 @@ export const faqs = [
   ],
   [
     "Who answers the main phone number?",
-    "An automated assistant answers the main line 24/7. Electrician visits are arranged by appointment. For Nicholas directly, call (209) 626-9313.",
+    `An automated assistant answers the main line around the clock. Electrician visits are by appointment. To reach Nicholas directly, call ${business.directPhone.display}.`,
   ],
   [
     "Can I speak directly with Nicholas?",
-    "Yes. Nicholas Kane’s direct line is (209) 626-9313. You can also email nick@pacificplainselectric.com.",
+    `Yes. Nicholas Kane’s direct line is ${business.directPhone.display}, or email ${business.email}.`,
   ],
   [
     "Are you licensed?",
-    "Pacific Plains Electric’s California contractor license is CSLB #1162180.",
+    `Yes. Pacific Plains Electric holds California contractor license ${business.license}.`,
   ],
   [
     "Do you work on homes and commercial properties?",
@@ -160,8 +152,7 @@ export const articles = [
   {
     slug: "planning-an-ev-charger",
     title: "Planning an EV charger at home",
-    category: "EV CHARGING",
-    image: "ev",
+    category: "EV charging",
     dek: "A few details to gather before you request an installation.",
     sections: [
       [
@@ -181,8 +172,7 @@ export const articles = [
   {
     slug: "when-to-discuss-a-panel-upgrade",
     title: "When to discuss a panel upgrade",
-    category: "YOUR HOME",
-    image: "panel",
+    category: "Panels",
     dek: "New appliances or a remodel? Start with your electrical capacity.",
     sections: [
       [
@@ -195,15 +185,14 @@ export const articles = [
       ],
       [
         "Keep the next step simple",
-        "Pacific Plains Electric offers diagnostic evaluation for $180. Repair and project costs are separate.",
+        `If you’re not sure where to start, a $${business.diagnosticPrice} diagnostic visit gives you a clear picture of your current system. Repair and project costs are quoted separately.`,
       ],
     ],
   },
   {
     slug: "planning-outdoor-lighting",
     title: "A practical guide to outdoor lighting",
-    category: "LIGHTING",
-    image: "lighting",
+    category: "Lighting",
     dek: "Make entrances, paths, and outdoor spaces work better after sunset.",
     sections: [
       [

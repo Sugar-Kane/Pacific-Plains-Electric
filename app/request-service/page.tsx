@@ -1,9 +1,7 @@
-import { PageHero } from "@/components/public";
+import { PageHero, PricingPanel } from "@/components/public";
 import RequestForm from "@/components/request-form";
-import { business } from "@/config/business";
 import { services } from "@/config/content";
 import { metadata as meta } from "@/lib/seo";
-import { Phone, ShieldCheck } from "lucide-react";
 export const metadata = meta(
   "Request Service",
   "Request electrical service in San Luis Obispo County. Diagnostic service is $180. Appointments are coordinated after your request.",
@@ -18,9 +16,9 @@ export default async function Page({
   return (
     <>
       <PageHero
-        eyebrow="SERVICE REQUEST"
-        title="Request electrical service"
-        description="Tell us about the job. We’ll contact you to discuss the work and confirm a time."
+        eyebrow="Request service"
+        title="Tell us about the job"
+        description="Takes about two minutes. We’ll get back to you to talk through the work and set a time."
       />
       <section className="section container two-column">
         <RequestForm
@@ -30,31 +28,12 @@ export default async function Page({
               : "troubleshooting"
           }
         />
-        <aside className="request-aside panel">
-          <span className="eyebrow">PRICING</span>
-          <h2>Electrical diagnostic</h2>
-          <div className="price-display">
-            ${business.diagnosticPrice}
-            <small> / visit</small>
-          </div>
-          <p>
-            Professional troubleshooting and evaluation. Repairs and project
-            work are additional. The fee is not automatically credited toward
-            repairs.
-          </p>
+        <PricingPanel>
           <div className="notice">
-            A request is not an appointment. We’ll coordinate the next step with
-            you.
+            Sending a request doesn’t book an appointment. We’ll confirm a time
+            with you.
           </div>
-          <a className="text-link" href={business.workPhone.tel}>
-            <Phone size={18} />
-            {business.workPhone.display}
-          </a>
-          <p>Automated phone assistant · 24/7</p>
-          <small>
-            <ShieldCheck size={15} /> {business.license}
-          </small>
-        </aside>
+        </PricingPanel>
       </section>
     </>
   );
