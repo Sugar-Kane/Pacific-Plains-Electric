@@ -1914,3 +1914,16 @@ footer .brand .wordmark { color: var(--gold); }
  .mobile-action-bar a { gap: 6px; font-size: 12px; }
  .mobile-action-bar a:last-child svg { display: none; }
 }
+
+.call-label { display: none; }
+@media (max-width:700px) {
+ .customer-actions, .hero .customer-actions, .contact-cta .customer-actions { display: grid; grid-template-columns: 1fr 1fr 1.6fr; gap: 8px; width: 100%; max-width: 400px; margin-inline: auto; }
+ .customer-actions .button, .hero .customer-actions .button { min-width: 0; min-height: 44px; padding: 11px 10px; font-size: 12px; gap: 6px; white-space: nowrap; }
+ .customer-actions .call-action { order: 0; }
+ .customer-actions .text-action { order: 1; }
+ .customer-actions .request-action { order: 2; }
+ .customer-actions .request-action svg { display: none; }
+ .customer-actions .call-number { display: none; }
+ .customer-actions .call-label { display: inline; }
+ .customer-actions svg { width: 16px; height: 16px; }
+}
