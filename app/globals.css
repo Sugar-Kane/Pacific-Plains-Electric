@@ -308,6 +308,33 @@ hr {
   flex-wrap: wrap;
   gap: 12px;
 }
+/* Call · Text · Online form, grouped under one "Request service" label */
+.request-options {
+  width: min(100%, 460px);
+  margin-inline: auto;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+.request-options-label {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+.customer-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr;
+  gap: 8px;
+}
+.customer-actions .button {
+  min-width: 0;
+  min-height: 46px;
+  padding-inline: 12px;
+}
 .icon-button {
   display: grid;
   place-items: center;
@@ -456,9 +483,6 @@ hr {
 .hero .lede {
   margin: 0 auto 32px;
   max-width: 560px;
-}
-.hero .actions {
-  justify-content: center;
 }
 .hero-meta {
   margin: 20px 0 0;
@@ -748,9 +772,6 @@ details p {
 }
 .cta-band p {
   margin-bottom: 28px;
-}
-.cta-band .actions {
-  justify-content: center;
 }
 
 /* ---------- Panels, lists, notices ---------- */
@@ -1428,7 +1449,7 @@ th {
     --gutter: 20px;
   }
   body {
-    padding-bottom: 84px;
+    padding-bottom: 112px;
   }
   .section {
     padding-block: 64px;
@@ -1551,29 +1572,12 @@ th {
     padding: 6px 2px;
   }
 
-  /* Customer actions: Call · Text · Request, one row */
-  .customer-actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1.6fr;
-    gap: 8px;
-    width: 100%;
-    max-width: 420px;
-    margin-inline: auto;
+  .request-options {
+    padding: 12px;
+    border-radius: 22px;
   }
   .customer-actions .button {
-    min-width: 0;
-    padding-inline: 10px;
     font-size: 14px;
-  }
-  .customer-actions .request-action {
-    order: 2;
-  }
-  .customer-actions .request-action svg,
-  .customer-actions .call-number {
-    display: none;
-  }
-  .customer-actions .call-label {
-    display: inline;
   }
 
   .mobile-action-bar {
@@ -1585,9 +1589,9 @@ th {
     display: grid;
     grid-template-columns: 1fr 1fr 1.6fr;
     gap: 4px;
-    padding: 6px;
+    padding: 8px;
     border: 1px solid var(--border);
-    border-radius: 999px;
+    border-radius: 24px;
     background: color-mix(in srgb, var(--surface) 94%, transparent);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -1607,10 +1611,11 @@ th {
     background: var(--brand);
     color: var(--on-brand);
   }
-}
-
-.call-label {
-  display: none;
+  .mobile-action-bar .request-options-label {
+    grid-column: 1 / -1;
+    margin: 0 0 2px;
+    font-size: 12px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

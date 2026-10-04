@@ -12,26 +12,29 @@ import { services, faqs } from "@/config/content";
 import { ServiceIcon } from "./icons";
 export function Actions() {
   return (
-    <div className="actions customer-actions">
-      <Link className="button request-action" href="/request-service">
-        Request service <ArrowRight size={18} aria-hidden="true" />
-      </Link>
-      <a
-        className="button outline call-action"
-        href={business.workPhone.tel}
-        aria-label={"Call " + business.workPhone.display}
-      >
-        <Phone size={17} aria-hidden="true" />
-        <span className="call-number">{business.workPhone.display}</span>
-        <span className="call-label">Call</span>
-      </a>
-      <a
-        className="button outline text-action"
-        href={business.workPhone.sms}
-        aria-label="Text Pacific Plains Electric"
-      >
-        <MessageCircle size={17} aria-hidden="true" /> Text
-      </a>
+    <div className="request-options" role="group" aria-label="Request service">
+      <p className="request-options-label" aria-hidden="true">
+        Request service
+      </p>
+      <div className="customer-actions">
+        <a
+          className="button outline"
+          href={business.workPhone.tel}
+          aria-label={"Call " + business.workPhone.display}
+        >
+          <Phone size={17} aria-hidden="true" /> Call
+        </a>
+        <a
+          className="button outline"
+          href={business.workPhone.sms}
+          aria-label="Text Pacific Plains Electric"
+        >
+          <MessageCircle size={17} aria-hidden="true" /> Text
+        </a>
+        <Link className="button" href="/request-service">
+          Online form
+        </Link>
+      </div>
     </div>
   );
 }

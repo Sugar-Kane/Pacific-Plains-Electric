@@ -82,14 +82,17 @@ export default function Footer() {
           </nav>
         </div>
       </footer>
-      <div className="mobile-action-bar">
+      <div className="mobile-action-bar" role="group" aria-label="Request service">
+        <p className="request-options-label" aria-hidden="true">
+          Request service
+        </p>
         <a href={business.workPhone.tel}>
           <Phone size={17} aria-hidden="true" /> Call
         </a>
         <a href={business.workPhone.sms} aria-label="Text Pacific Plains Electric">
           <MessageCircle size={17} aria-hidden="true" /> Text
         </a>
-        <Link href="/request-service">Request service</Link>
+        <Link href="/request-service">Online form</Link>
       </div>
     </>
   );
