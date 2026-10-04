@@ -5,18 +5,14 @@ import { services } from "@/config/content";
 import { ServiceIcon } from "./icons";
 export function Actions() {
   return (
-    <div className="actions customer-actions">
-      <Link className="button request-action" href="/request-service">
-        Request Service <ArrowUpRight size={18} />
-      </Link>
-      <a className="button outline call-action" href={business.workPhone.tel} aria-label={"Call " + business.workPhone.display}>
-        <Phone size={18} />
-        <span className="call-number">{business.workPhone.display}</span><span className="call-label">Call</span>
-      </a>
-      <a className="button outline text-action" href={business.workPhone.sms} aria-label="Text Pacific Plains Electric">
-        <MessageCircle size={18} /> Text
-      </a>
-    </div>
+    <section className="request-options" aria-label="Request Service">
+      <h2 className="request-options-label">Request Service</h2>
+      <div className="actions customer-actions">
+        <a className="button outline call-action" href={business.workPhone.tel} aria-label={"Call " + business.workPhone.display}><Phone size={18} /> Call</a>
+        <a className="button outline text-action" href={business.workPhone.sms} aria-label="Text Pacific Plains Electric"><MessageCircle size={18} /> Text</a>
+        <Link className="button request-action" href="/request-service">Online Form <ArrowUpRight size={18} /></Link>
+      </div>
+    </section>
   );
 }
 export function PageHero({

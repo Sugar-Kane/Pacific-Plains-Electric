@@ -59,7 +59,8 @@ export default function Footer() {
           </span>
         </div>
       </footer>
-      <div className="mobile-action-bar">
+      <section className="mobile-action-bar" aria-label="Request Service">
+        <h2 className="request-options-label">Request Service</h2>
         <a href={business.workPhone.tel}>
           <Phone size={18} /> Call
         </a>
@@ -67,9 +68,9 @@ export default function Footer() {
           <MessageCircle size={18} /> Text
         </a>
         <Link href="/request-service">
-          Request Service <ArrowUpRight size={18} />
+          Online Form <ArrowUpRight size={18} />
         </Link>
-      </div>
+      </section>
     </>
   );
 }
