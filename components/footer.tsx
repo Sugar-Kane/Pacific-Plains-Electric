@@ -1,74 +1,95 @@
 import Link from "next/link";
 import Brand from "./brand";
-import { Phone, MessageCircle, ArrowUpRight } from "lucide-react";
+import { Phone, MessageCircle } from "lucide-react";
 import { business } from "@/config/business";
+import { services } from "@/config/content";
 export default function Footer() {
   return (
     <>
-      <footer>
+      <footer className="site-footer">
         <div className="container footer-grid">
-          <div>
+          <div className="footer-about">
             <Brand />
             <p>
-              Electrical repairs and installations.
-              <br />
-              San Luis Obispo County.
+              Licensed electrical contractor serving homes and businesses in San
+              Luis Obispo County.
             </p>
             <small>{business.license}</small>
           </div>
-          <div>
-            <h3>Explore</h3>
-            {[
-              ["Services", "/services"],
-              ["About us", "/about"],
-              ["Project planning guides", "/blog"],
-              ["Common questions", "/faq"],
-            ].map(([t, h]) => (
-              <Link key={h} href={h}>
-                {t}
-              </Link>
-            ))}
-          </div>
-          <div>
-            <h3>Contact</h3>
-            <a href={business.workPhone.tel}>{business.workPhone.display}</a>
-            <small>Service inquiries</small>
-            <a href={"mailto:" + business.email}>{business.email}</a>
-            <Link href="/request-service">Request service ↗</Link>
-          </div>
-          <div>
-            <h3>Service area</h3>
-            <p>
-              Serving homes and businesses in
-              <br />
-              San Luis Obispo County, California.
-            </p>
-            <small>
-              {business.hours.display}
-              <br />
-              Appointment days confirmed individually.
-            </small>
+          <nav className="footer-col" aria-labelledby="footer-services">
+            <h2 id="footer-services">Services</h2>
+            <ul>
+              {services.slice(0, 5).map((s) => (
+                <li key={s.slug}>
+                  <Link href={"/services/" + s.slug}>{s.name}</Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/services">All services</Link>
+              </li>
+            </ul>
+          </nav>
+          <nav className="footer-col" aria-labelledby="footer-company">
+            <h2 id="footer-company">Company</h2>
+            <ul>
+              <li>
+                <Link href="/about">About</Link>
+              </li>
+              <li>
+                <Link href="/blog">Planning guides</Link>
+              </li>
+              <li>
+                <Link href="/faq">FAQ</Link>
+              </li>
+              <li>
+                <Link href="/contact">Contact</Link>
+              </li>
+              <li>
+                <Link href="/request-service">Request service</Link>
+              </li>
+            </ul>
+          </nav>
+          <div className="footer-col">
+            <h2>Get in touch</h2>
+            <ul>
+              <li>
+                <a href={business.workPhone.tel}>{business.workPhone.display}</a>
+                <small>Main line</small>
+              </li>
+              <li>
+                <a href={business.directPhone.tel}>
+                  {business.directPhone.display}
+                </a>
+                <small>Nicholas, direct</small>
+              </li>
+              <li>
+                <a href={"mailto:" + business.email}>{business.email}</a>
+              </li>
+              <li>
+                <small>{business.hours.display}</small>
+              </li>
+            </ul>
           </div>
         </div>
         <div className="container footer-bottom">
-          <small>© {new Date().getFullYear()} Pacific Plains Electric</small>
-          <span>
+          <small>
+            © {new Date().getFullYear()} {business.name}
+          </small>
+          <nav aria-label="Legal">
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>
             <Link href="/admin">Owner sign in</Link>
-          </span>
+          </nav>
         </div>
       </footer>
       <div className="mobile-action-bar">
         <a href={business.workPhone.tel}>
-          <Phone size={18} /> Call
+          <Phone size={17} aria-hidden="true" /> Call
         </a>
         <a href={business.workPhone.sms} aria-label="Text Pacific Plains Electric">
-          <MessageCircle size={18} /> Text
+          <MessageCircle size={17} aria-hidden="true" /> Text
         </a>
-        <Link href="/request-service">
-          Request Service <ArrowUpRight size={18} />
-        </Link>
+        <Link href="/request-service">Request service</Link>
       </div>
     </>
   );

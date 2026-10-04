@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { articles } from "@/config/content";
 import { business } from "@/config/business";
-import { Breadcrumb, PageHero, ContactCTA } from "@/components/public";
+import { PageHero, ContactCTA } from "@/components/public";
 import { metadata as meta, JsonLd } from "@/lib/seo";
 import { getContent } from "@/lib/content";
 export const dynamic = "force-dynamic";
@@ -51,12 +52,9 @@ export default async function Page({
         }}
       />
       <PageHero
-        eyebrow={a?.category || p!.category}
+        crumbs={[{ label: "Guides", href: "/blog" }, { label: title }]}
         title={title}
         description={a?.dek || p!.excerpt}
-      />
-      <Breadcrumb
-        items={[{ label: "Blog", href: "/blog" }, { label: title }]}
       />
       <article className="container article-body">
         {a ? (
@@ -67,14 +65,14 @@ export default async function Page({
             </section>
           ))
         ) : (
-          <p style={{ whiteSpace: "pre-wrap" }}>{p!.body}</p>
+          <p className="pre-wrap">{p!.body}</p>
         )}
         <div className="notice">
           General planning information. Electrical work should be evaluated and
-          performed by qualified professionals.
+          performed by a licensed electrician.
         </div>
         <Link className="text-link" href="/services">
-          Explore our electrical services ↗
+          See our electrical services <ArrowRight size={17} aria-hidden="true" />
         </Link>
       </article>
       <ContactCTA />

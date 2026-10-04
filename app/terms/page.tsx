@@ -10,9 +10,9 @@ export default function Page() {
   return (
     <>
       <PageHero
-        eyebrow="WEBSITE TERMS"
+        eyebrow="Legal"
         title="Website terms"
-        description="Please review these details when using our website."
+        description="The terms that apply when you use this website and send a request."
       />
       <div className="container">
         <article className="content-narrow">

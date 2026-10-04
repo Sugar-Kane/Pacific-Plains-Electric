@@ -1,5 +1,4 @@
-import { PageHero, ContactCTA } from "@/components/public";
-import { faqs } from "@/config/content";
+import { PageHero, ContactCTA, FaqList } from "@/components/public";
 import { metadata as meta } from "@/lib/seo";
 export const metadata = meta(
   "Common Questions",
@@ -10,18 +9,13 @@ export default function Page() {
   return (
     <>
       <PageHero
-        eyebrow="COMMON QUESTIONS"
-        title="A clear answer is a good start."
-        description="A few useful details before you get in touch."
+        eyebrow="FAQ"
+        title="Frequently asked questions"
+        description="Pricing, service area, scheduling, and how to reach us."
       />
       <div className="container">
         <section className="content-narrow">
-          {faqs.map(([q, a]) => (
-            <details key={q}>
-              <summary>{q}</summary>
-              <p>{a}</p>
-            </details>
-          ))}
+          <FaqList />
         </section>
       </div>
       <ContactCTA />

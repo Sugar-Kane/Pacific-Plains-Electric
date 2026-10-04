@@ -20,6 +20,9 @@ export const business = {
   serviceArea: "San Luis Obispo County, California",
   siteUrl: "https://www.pacificplainselectric.com",
 } as const;
+/** The one place the diagnostic terms are worded. Reuse it; don't restate it. */
+export const diagnosticTerms =
+  "Repairs and project work are quoted separately. The diagnostic fee is not automatically credited toward repairs.";
 export const smsDisclosure =
   "I agree to receive transactional text messages from Pacific Plains Electric about my service request and appointment. Consent is optional and is not a condition of service. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help.";
 export const days = [

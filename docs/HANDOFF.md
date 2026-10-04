@@ -2,7 +2,7 @@
 
 ## What was built
 
-The site uses warm ivory, forest green, gold, serif headings, and Central Coast imagery inspired by the supplied references. It includes Home, all nine service pages, About, Projects, Blog and three planning articles, FAQ, Contact, Request Service, privacy and terms. The schedule route directs customers to requests while scheduling is off. Appointment links fail safely with contact options until live appointment management exists.
+The site uses a cream (light) and warm charcoal (dark) palette with forest green and ochre accents, a single system sans-serif typeface, and Central Coast imagery inspired by the supplied references. All colors are defined as tokens at the top of `app/globals.css`; components use tokens only. It includes Home, all nine service pages, About, Projects, Blog and three planning articles, FAQ, Contact, Request Service, privacy and terms. The schedule route directs customers to requests while scheduling is off. Appointment links fail safely with contact options until live appointment management exists.
 
 The reference images' sample prices and contact details were replaced by the attached brief's business information: Nicholas Kane, CSLB #1162180, (805) 626-7761, direct (209) 626-9313, nick@pacificplainselectric.com, and a $180 diagnostic. The initial fee-credit setting is false. Insurance is not advertised. No reviews, years in business, completed work, addresses, or available appointments were fabricated.
 
@@ -89,7 +89,7 @@ Time handling uses `America/Los_Angeles`. Audit/request timestamps are stored in
 
 ## AI and notifications
 
-The floating helper answers only fixed approved topics and openly states that live website AI is not connected. It provides request, main phone, and Nicholas's direct line. No free-form pseudo-AI response generator exists. Real shared AI knowledge and conversation history must come from Volteira.
+The earlier floating website helper was never mounted on any page and has been removed. No website chat or pseudo-AI response generator exists. Real shared AI knowledge and conversation history must come from Volteira.
 
 The service form stops on several obvious emergency phrases and directs people to emergency services rather than providing DIY guidance. The website does not advertise 24/7 electrician dispatch.
 

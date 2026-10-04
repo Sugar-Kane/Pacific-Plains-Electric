@@ -74,8 +74,10 @@ export default function RequestForm({
   if (done)
     return (
       <div className="panel">
-        <CheckCircle size={40} />
-        <h2 style={{ marginTop: 20 }}>Your request is saved.</h2>
+        <CheckCircle
+          size={40}
+          className="success-icon" aria-hidden="true" />
+        <h2>Your request is saved.</h2>
         <p>
           We’ve received your details for review.{" "}
           <strong>This is not a confirmed appointment.</strong>
@@ -88,26 +90,26 @@ export default function RequestForm({
           Reference: <strong>{done.slice(0, 8).toUpperCase()}</strong>
         </div>
         <a className="button" href={business.workPhone.tel}>
-          <Phone size={17} /> Call {business.workPhone.display}
+          <Phone size={17} aria-hidden="true" /> Call {business.workPhone.display}
         </a>
-        <p style={{ marginTop: 20 }}>
-          <Link href="/">Return home</Link>
+        <p>
+          <Link className="text-link" href="/">Back to home</Link>
         </p>
       </div>
     );
   return (
     <div>
-      <div className="form-steps">
-        <span className={step === 1 ? "active" : ""}>
-          <b>1</b>Your request
-        </span>
-        <span className={step === 2 ? "active" : ""}>
+      <ol className="form-steps">
+        <li className={step === 1 ? "active" : ""} aria-current={step === 1 ? "step" : undefined}>
+          <b>1</b>Details
+        </li>
+        <li className={step === 2 ? "active" : ""} aria-current={step === 2 ? "step" : undefined}>
           <b>2</b>Review
-        </span>
-        <span>
-          <b>3</b>Received
-        </span>
-      </div>
+        </li>
+        <li>
+          <b>3</b>Sent
+        </li>
+      </ol>
       {error && (
         <div className="notice error" role="alert">
           {error}
@@ -123,7 +125,7 @@ export default function RequestForm({
         style={{ display: step === 1 ? "block" : "none" }}
       >
         <p className="required-note">
-          * Required fields. No account or payment needed.
+          Fields marked * are required. No account or payment needed.
         </p>
         <div className="form-grid">
           <div className="form-field full">
@@ -139,7 +141,9 @@ export default function RequestForm({
               {services.map((s) => (
                 <option value={s.slug} key={s.slug}>
                   {s.name}
-                  {s.slug === "troubleshooting" ? " · $180 diagnostic" : ""}
+                          {s.slug === "troubleshooting"
+                    ? ` · $${business.diagnosticPrice} diagnostic`
+                    : ""}
                 </option>
               ))}
             </select>
@@ -264,13 +268,8 @@ export default function RequestForm({
           />
           <span>{smsDisclosure}</span>
         </label>
-        <div className="notice">
-          Electrical diagnostic service is ${business.diagnosticPrice}. Repair
-          and project work are additional. The diagnostic fee is not
-          automatically credited toward repairs.
-        </div>
         <button className="button" type="submit">
-          Review Request <ArrowRight size={18} />
+          Review request <ArrowRight size={18} aria-hidden="true" />
         </button>
       </form>
       {step === 2 && (
@@ -308,8 +307,8 @@ export default function RequestForm({
             ))}
           </dl>
           <p className="legal-note">
-            ${business.diagnosticPrice} diagnostic fee. Repairs and project work
-            quoted separately. No payment is collected here.
+            ${business.diagnosticPrice} diagnostic visit; repairs quoted
+            separately. No payment is collected here.
           </p>
           <div className="actions">
             <button
@@ -320,12 +319,12 @@ export default function RequestForm({
               }}
               disabled={busy}
             >
-              <ArrowLeft size={17} />
+              <ArrowLeft size={17} aria-hidden="true" />
               Edit
             </button>
             <button className="button" onClick={submit} disabled={busy}>
-              {busy ? "Saving request…" : "Send Service Request"}
-              <ArrowRight size={17} />
+              {busy ? "Sending…" : "Send service request"}
+              <ArrowRight size={17} aria-hidden="true" />
             </button>
           </div>
         </div>

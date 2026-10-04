@@ -3,8 +3,8 @@ import { business } from "@/config/business";
 export default function ErrorPage({ reset }: { reset: () => void }) {
   return (
     <section className="error-page container">
-      <h1>Something didn’t load.</h1>
-      <p>Please try again, or call us for help.</p>
+      <h1>Something went wrong</h1>
+      <p>This page didn’t load. Try again, or give us a call.</p>
       <div className="actions">
         <button className="button" onClick={reset}>
           Try again
