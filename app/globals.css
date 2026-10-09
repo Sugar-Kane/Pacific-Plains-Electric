@@ -24,6 +24,8 @@
   --feature-bg: #1f4d3c;
   --hairline-on-brand: #ffffff2e;
   --story-bg: #141c18;
+  --fill-from: #1f4d3c;
+  --fill-to: #2f7a52;
   --story-stage: #3c4656;
   --scrim: #000000b3;
   --on-scrim: #ffffffe6;
@@ -63,6 +65,8 @@
   --feature-bg: #1d3a2e;
   --hairline-on-brand: #ffffff2e;
   --story-bg: #0f1412;
+  --fill-from: #2e6a52;
+  --fill-to: #357a5e;
   --story-stage: #3c4656;
   --scrim: #000000b3;
   --on-scrim: #ffffffe6;
@@ -343,10 +347,32 @@ hr {
   grid-template-columns: 1fr 1fr 1.5fr;
   gap: 8px;
 }
+/* All three look alike at rest; hovering (or focusing, or pressing on touch)
+   sweeps a green gradient in from the left. */
 .customer-actions .button {
   min-width: 0;
   min-height: 46px;
   padding-inline: 12px;
+  border-color: var(--border);
+  background-color: transparent;
+  background-image: linear-gradient(90deg, var(--fill-from), var(--fill-to));
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  color: var(--text);
+  transition:
+    background-size 0.35s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+.customer-actions .button:hover,
+.customer-actions .button:focus-visible,
+.customer-actions .button:active {
+  background-color: transparent;
+  /* Restated: .button.outline:hover's shorthand would otherwise clear it. */
+  background-image: linear-gradient(90deg, var(--fill-from), var(--fill-to));
+  background-size: 100% 100%;
+  border-color: var(--fill-from);
+  color: var(--on-brand);
 }
 .icon-button {
   display: grid;

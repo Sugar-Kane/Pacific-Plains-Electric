@@ -40,7 +40,7 @@ export function Actions() {
         >
           <MessageCircle size={17} aria-hidden="true" /> Text
         </a>
-        <Link className="button" href="/request-service">
+        <Link className="button outline" href="/request-service">
           Online form
         </Link>
       </div>
