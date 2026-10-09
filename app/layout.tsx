@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { business } from "@/config/business";
+import { JsonLd, graph, businessNode, websiteNode } from "@/lib/seo";
 import "./globals.css";
 const arimo = localFont({
   src: [
@@ -11,16 +12,25 @@ const arimo = localFont({
   ],
   variable: "--font-sans",
   display: "swap",
+  // Fallback only: most devices render the system font, so don't preload it.
+  preload: false,
 });
 export const metadata: Metadata = {
   metadataBase: new URL(business.siteUrl),
   title: {
-    default: "Pacific Plains Electric | Central Coast Electrician",
+    default: "Pacific Plains Electric | San Luis Obispo County Electrician",
     template: "%s | Pacific Plains Electric",
   },
-  description:
-    "Electrical repair, panel upgrades, EV chargers, and lighting in San Luis Obispo County. $180 diagnostic service. CSLB #1162180.",
-  icons: { icon: "/brand/favicon.svg" },
+  description: business.description,
+  applicationName: business.name,
+  icons: {
+    icon: [
+      { url: "/brand/favicon.svg", type: "image/svg+xml" },
+      { url: "/brand/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: "/brand/apple-touch-icon.png",
+  },
+  formatDetection: { telephone: false },
   robots:
     process.env.VERCEL_ENV === "preview"
       ? { index: false, follow: false }
@@ -37,6 +47,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <a className="skip-link" href="#main">
           Skip to content
         </a>
+        <JsonLd data={graph(businessNode(), websiteNode())} />
         <Header />
         <main id="main">{children}</main>
         <Footer />

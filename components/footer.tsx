@@ -2,7 +2,8 @@ import Link from "next/link";
 import Brand from "./brand";
 import { Phone, MessageCircle } from "lucide-react";
 import { business } from "@/config/business";
-import { services } from "@/config/content";
+import { listedServices } from "@/config/content";
+import { publishedAreas } from "@/config/areas";
 export default function Footer() {
   return (
     <>
@@ -10,16 +11,13 @@ export default function Footer() {
         <div className="container footer-grid">
           <div className="footer-about">
             <Brand />
-            <p>
-              Licensed electrical contractor serving homes and businesses in San
-              Luis Obispo County.
-            </p>
+            <p>{business.description}</p>
             <small>{business.license}</small>
           </div>
           <nav className="footer-col" aria-labelledby="footer-services">
             <h2 id="footer-services">Services</h2>
             <ul>
-              {services.slice(0, 5).map((s) => (
+              {listedServices.slice(0, 6).map((s) => (
                 <li key={s.slug}>
                   <Link href={"/services/" + s.slug}>{s.name}</Link>
                 </li>
@@ -27,6 +25,16 @@ export default function Footer() {
               <li>
                 <Link href="/services">All services</Link>
               </li>
+            </ul>
+          </nav>
+          <nav className="footer-col" aria-labelledby="footer-areas">
+            <h2 id="footer-areas">Service areas</h2>
+            <ul>
+              {publishedAreas.map((a) => (
+                <li key={a.slug}>
+                  <Link href={"/service-areas/" + a.slug}>{a.name}</Link>
+                </li>
+              ))}
             </ul>
           </nav>
           <nav className="footer-col" aria-labelledby="footer-company">

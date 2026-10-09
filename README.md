@@ -29,4 +29,4 @@ npm run test:e2e
 - Payments, uploads, live appointment management, and operational dashboards require further integration.
 - The custom domain requires registration and DNS configuration. See the handoff.
 
-Read [the handoff](docs/HANDOFF.md), [integration contracts](docs/VOLTEIRA.md), and [verification notes](docs/VERIFICATION.md).
+Read [the handoff](docs/HANDOFF.md), [the SEO report](docs/SEO-REPORT.md), [integration contracts](docs/VOLTEIRA.md), and [verification notes](docs/VERIFICATION.md).

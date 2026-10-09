@@ -2,8 +2,8 @@ import { PageHero } from "@/components/public";
 import { business } from "@/config/business";
 import { metadata as meta } from "@/lib/seo";
 export const metadata = meta(
-  "Privacy",
-  "How the Pacific Plains Electric website handles service inquiries and website preferences.",
+  "Privacy Notice",
+  "How the Pacific Plains Electric website collects, uses, and stores the information you send in a service request, and how to ask for a copy or deletion.",
   "/privacy",
 );
 export default function Page() {
