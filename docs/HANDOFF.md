@@ -4,7 +4,7 @@
 
 The site uses a cream (light) and warm charcoal (dark) palette with forest green and ochre accents, a single system sans-serif typeface, and Central Coast imagery inspired by the supplied references. All colors are defined as tokens at the top of `app/globals.css`; components use tokens only. It includes Home, all nine service pages, About, Projects, Blog and three planning articles, FAQ, Contact, Request Service, privacy and terms. The schedule route directs customers to requests while scheduling is off. Appointment links fail safely with contact options until live appointment management exists.
 
-The reference images' sample prices and contact details were replaced by the attached brief's business information: Nicholas Kane, CSLB #1162180, (805) 626-7761, direct (209) 626-9313, nick@pacificplainselectric.com, and a $180 diagnostic. The initial fee-credit setting is false. Insurance is not advertised. No reviews, years in business, completed work, addresses, or available appointments were fabricated.
+The reference images' sample prices and contact details were replaced by the attached brief's business information: Nicholas Kane, CSLB #1162180, (805) 626-7761, nick@pacificplainselectric.com, and a $180 diagnostic. The initial fee-credit setting is false. Insurance is not advertised. No reviews, years in business, completed work, addresses, or available appointments were fabricated.
 
 The Supabase project is `xcknbrmmypjnkbuyxutm`, organization `ymdcpwdwvubghruyghnw`. The earlier Volteira project was inspected during discovery but never changed or used for the website connection.
 

@@ -285,7 +285,7 @@ export default async function Page({
             </p>
             <p>
               Approved diagnostic price: ${business.diagnosticPrice}. Human
-              escalation: {business.directPhone.display}. It must not invent
+              escalation: {business.email}. It must not invent
               availability, pricing, or provide electrical DIY troubleshooting.
             </p>
             <div className="notice">

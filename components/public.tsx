@@ -240,8 +240,8 @@ export function OwnerSection({ aboutLink = true }: { aboutLink?: boolean }) {
           Nicholas, the owner.
         </p>
         <div className="link-stack">
-          <a className="text-link" href={business.directPhone.tel}>
-            Call Nicholas: {business.directPhone.display}
+          <a className="text-link" href={"mailto:" + business.email}>
+            Email Nicholas: {business.email}
           </a>
           {aboutLink && (
             <Link className="text-link" href="/about">

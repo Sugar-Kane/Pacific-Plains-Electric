@@ -137,10 +137,11 @@ test("service links carry the selected service into the request", async ({
     await expect(page.locator("#service")).toHaveValue(new URL(href, "http://localhost").searchParams.get("service")!);
   }
   await page.goto("/contact");
-  await expect(page.locator('main a[href="tel:+12096269313"]')).toBeVisible();
+  await expect(page.locator('main a[href="tel:+18056267761"]')).toBeVisible();
   await expect(
     page.locator('main a[href="mailto:nick@pacificplainselectric.com"]'),
   ).toBeVisible();
+  await expect(page.locator('a[href="tel:+12096269313"]')).toHaveCount(0);
 });
 test("request review and submitted state use server response", async ({
   page,

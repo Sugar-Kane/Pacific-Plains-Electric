@@ -26,7 +26,6 @@ export const business = {
     raw: "8056267761",
     aiAnswered: true,
   },
-  directPhone: { display: "(209) 626-9313", tel: "tel:+12096269313" },
   email: "nick@pacificplainselectric.com",
   timezone: "America/Los_Angeles",
   hours: {

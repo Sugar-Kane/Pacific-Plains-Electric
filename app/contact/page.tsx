@@ -49,15 +49,6 @@ export default function Page() {
               </div>
             </li>
             <li className="contact-item">
-              <Phone size={22} aria-hidden="true" />
-              <div>
-                <span className="contact-label">Nicholas Kane, direct</span>
-                <a className="contact-value" href={business.directPhone.tel}>
-                  {business.directPhone.display}
-                </a>
-              </div>
-            </li>
-            <li className="contact-item">
               <Mail size={22} aria-hidden="true" />
               <div>
                 <span className="contact-label">Email</span>
@@ -81,7 +72,7 @@ export default function Page() {
         </div>
         <div className="map-panel">
           <CaliforniaMap />
-          <h2>San Luis Obispo County</h2>
+          <h2>San Luis Obispo County and Santa Barbara</h2>
           <p className="map-legend">
             <span /> Our service area
           </p>
