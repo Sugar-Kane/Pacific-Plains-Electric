@@ -1478,6 +1478,9 @@ a.article-card:hover {
   color: var(--on-scrim);
   font-size: 11px;
 }
+.credit-short {
+  display: none;
+}
 .power-meter {
   position: absolute;
   left: 20px;
@@ -1835,10 +1838,12 @@ th {
   .power-story-body {
     display: block;
   }
+  /* Phones: a shorter pinned photo leaves room below it for a whole card. */
   .power-story-stage {
     top: 72px;
     z-index: 2;
-    height: 44vh;
+    height: 34vh;
+    height: min(34svh, 72vw);
     margin-bottom: 8px;
     overflow: visible;
   }
@@ -1854,14 +1859,34 @@ th {
     overflow: hidden;
     border-radius: var(--radius-lg);
   }
+  .credit-long {
+    display: none;
+  }
+  .credit-short {
+    display: inline;
+  }
+  .power-meter {
+    left: 14px;
+    bottom: 14px;
+  }
+  /* The last card finishes centered below the photo, then the section ends. */
+  .power-story-steps {
+    padding-bottom: 32px;
+  }
   .power-story-steps li {
     position: relative;
     z-index: 1;
-    align-items: flex-end;
-    min-height: 62vh;
+    min-height: 52vh;
+    min-height: 52svh;
   }
   .power-step-card {
-    padding: 22px;
+    padding: 20px;
+  }
+  .power-step-card h3 {
+    font-size: 20px;
+  }
+  .power-step-card p {
+    font-size: 15px;
   }
   .facts,
   .hero-facts .facts,
@@ -1967,6 +1992,12 @@ th {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     box-shadow: var(--shadow-lg);
+    transition: transform 0.3s ease, visibility 0.3s;
+  }
+  /* Out of the way while the house story fills the screen. */
+  .story-in-view .mobile-action-bar {
+    transform: translateY(calc(100% + 24px));
+    visibility: hidden;
   }
   .mobile-action-bar a {
     display: flex;
