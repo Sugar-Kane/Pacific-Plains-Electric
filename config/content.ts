@@ -590,7 +590,7 @@ export const process = [
 export const faqs: Faq[] = [
   {
     q: "What areas does Pacific Plains Electric serve?",
-    a: "Pacific Plains Electric serves homes and businesses throughout San Luis Obispo County, California, including San Luis Obispo, Arroyo Grande, Grover Beach, Pismo Beach, Nipomo, Avila Beach, Morro Bay, Atascadero, and Paso Robles. Contact us to confirm service for your address.",
+    a: "Pacific Plains Electric serves homes and businesses throughout San Luis Obispo County, California, including San Luis Obispo, Arroyo Grande, Grover Beach, Pismo Beach, Nipomo, Avila Beach, Morro Bay, Atascadero, and Paso Robles, as well as Santa Barbara. Contact us to confirm service for your address.",
   },
   {
     q: "How much does an electrician service call cost?",

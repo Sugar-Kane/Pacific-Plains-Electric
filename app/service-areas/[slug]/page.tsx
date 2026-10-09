@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowRight, Landmark } from "lucide-react";
 import { business } from "@/config/business";
-import { publishedAreas, findArea } from "@/config/areas";
+import { publishedAreas, findArea, countyOf } from "@/config/areas";
 import { findService } from "@/config/content";
 import { ServiceIcon } from "@/components/icons";
 import { PageHero, ContactCTA, PricingPanel, FaqList } from "@/components/public";
@@ -39,10 +39,12 @@ export default async function Page({ params }: Props) {
   const path = "/service-areas/" + a.slug;
   const services = a.services.map(findService).filter((x) => x !== undefined);
   const nearby = a.nearby.map(findArea).filter((x) => x !== undefined);
+  // Without close neighbors, link the rest of the service area instead.
+  const linked = nearby.length ? nearby : publishedAreas.filter((x) => x.slug !== a.slug);
   const faqs = [
     {
       q: `Does ${business.name} serve ${a.name}?`,
-      a: `Yes. ${a.name} is part of our San Luis Obispo County service area. We come to you; there is no office in ${a.name}. Contact us to confirm service for your address.`,
+      a: `Yes. ${a.name}, in ${countyOf(a)}, is part of our service area. We come to you; there is no office in ${a.name}. Contact us to confirm service for your address.`,
     },
     {
       q: `Who issues electrical permits in ${a.name}?`,
@@ -131,11 +133,13 @@ export default async function Page({ params }: Props) {
         </div>
         <FaqList items={faqs} />
       </section>
-      {nearby.length > 0 && (
+      {linked.length > 0 && (
         <section className="section container">
-          <h2 className="subhead">Nearby communities we serve</h2>
+          <h2 className="subhead">
+            {nearby.length ? "Nearby communities we serve" : "Other communities we serve"}
+          </h2>
           <ul className="related">
-            {nearby.map((n) => (
+            {linked.map((n) => (
               <li key={n.slug}>
                 <Link href={"/service-areas/" + n.slug}>{n.name}</Link>
               </li>

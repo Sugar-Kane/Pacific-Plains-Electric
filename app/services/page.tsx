@@ -35,7 +35,7 @@ export default function Page() {
       <section className="section container">
         <h2>Where we work</h2>
         <p className="lede">
-          Every service is available throughout San Luis Obispo County.{" "}
+          Every service is available throughout San Luis Obispo County and in Santa Barbara.{" "}
           <Link href="/service-areas">See all service areas</Link>.
         </p>
         <AreaLinks />

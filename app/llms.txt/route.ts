@@ -1,6 +1,6 @@
 import { business, diagnosticTerms } from "@/config/business";
 import { listedServices, answeredFaqs, articles } from "@/config/content";
-import { publishedAreas } from "@/config/areas";
+import { publishedAreas, countyOf, DEFAULT_COUNTY } from "@/config/areas";
 
 /**
  * /llms.txt: a plain-text summary of the business for AI search tools,
@@ -14,6 +14,11 @@ export function GET() {
   const hours = business.hours.days
     ? `${business.hours.days.join(", ")}, ${business.hours.display}`
     : business.hours.display;
+  const home = publishedAreas.filter((a) => countyOf(a) === DEFAULT_COUNTY);
+  const beyond = publishedAreas.filter((a) => countyOf(a) !== DEFAULT_COUNTY);
+  const area =
+    `${business.serviceArea}, including ${home.map((a) => a.name).join(", ")}` +
+    beyond.map((a) => `; also ${a.name} (${countyOf(a)})`).join("");
   const body = `# ${business.name}
 
 > ${business.name} is an electrical contractor serving ${business.serviceArea}.
@@ -23,7 +28,7 @@ ${business.description} The business is owned by ${business.owner} and licensed 
 ## Key facts
 
 - Business type: electrician / electrical contractor (residential and commercial)
-- Service area: ${business.serviceArea}, including ${publishedAreas.map((a) => a.name).join(", ")}
+- Service area: ${area}
 - Phone: ${business.workPhone.display} (main line, answered by an automated assistant)
 - Owner's direct line: ${business.directPhone.display}
 - Email: ${business.email}
