@@ -3,12 +3,12 @@ import { ArrowRight } from "lucide-react";
 import CaliforniaMap from "@/components/california-map";
 import { PageHero, ContactCTA } from "@/components/public";
 import { business } from "@/config/business";
-import { publishedAreas } from "@/config/areas";
+import { publishedAreas, countyOf, DEFAULT_COUNTY } from "@/config/areas";
 import { metadata as meta, JsonLd, graph, breadcrumbNode, webPageNode } from "@/lib/seo";
 
 export const metadata = meta(
   "Service Areas | Electrician in San Luis Obispo County",
-  "Pacific Plains Electric serves homes and businesses across San Luis Obispo County, including San Luis Obispo, Arroyo Grande, Nipomo, Pismo Beach, and Paso Robles.",
+  "Pacific Plains Electric serves homes and businesses across San Luis Obispo County and in Santa Barbara, including San Luis Obispo, Arroyo Grande, and Nipomo.",
   "/service-areas",
   { absolute: true },
 );
@@ -25,7 +25,7 @@ export default function Page() {
       <PageHero
         eyebrow="Service areas"
         title="Electrician serving San Luis Obispo County"
-        description={`${business.name} provides residential and commercial electrical services throughout San Luis Obispo County. We come to you; there is no public storefront.`}
+        description={`${business.name} provides residential and commercial electrical services throughout San Luis Obispo County and in Santa Barbara. We come to you; there is no public storefront.`}
       />
       <section className="section container two-column">
         <div>
@@ -36,7 +36,9 @@ export default function Page() {
                 <Link className="area-card" href={"/service-areas/" + a.slug}>
                   <strong>{a.name}</strong>
                   <span>
-                    {a.setting === "coastal"
+                    {countyOf(a) !== DEFAULT_COUNTY
+                      ? countyOf(a)
+                      : a.setting === "coastal"
                       ? "Coastal"
                       : a.setting === "inland"
                         ? "North County"

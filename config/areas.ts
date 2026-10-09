@@ -1,5 +1,5 @@
 /**
- * Communities in the San Luis Obispo County service area.
+ * Communities in the service area: San Luis Obispo County, plus Santa Barbara.
  *
  * TODO(owner): confirm each community is one you want to take work in. To stop
  * publishing a page, set `published: false`; it disappears from the site,
@@ -16,6 +16,8 @@ export type Area = {
   /** Incorporated city, or unincorporated community under the County. */
   kind: "city" | "community";
   permitAuthority: string;
+  /** County the community is in; defaults to San Luis Obispo County. */
+  county?: string;
   wikipedia: string;
   setting: "coastal" | "inland" | "central";
   intro: string;
@@ -26,6 +28,8 @@ export type Area = {
 };
 
 const county = "the County of San Luis Obispo Planning & Building Department";
+export const DEFAULT_COUNTY = "San Luis Obispo County";
+export const countyOf = (a: Pick<Area, "county">) => a.county ?? DEFAULT_COUNTY;
 
 export const areas: Area[] = [
   {
@@ -270,6 +274,34 @@ export const areas: Area[] = [
     ],
     services: ["commercial-electrical", "panel-upgrades", "dedicated-circuits", "generators", "lighting"],
     nearby: ["atascadero"],
+  },
+  {
+    slug: "santa-barbara",
+    name: "Santa Barbara",
+    published: true,
+    kind: "city",
+    county: "Santa Barbara County",
+    permitAuthority: "the City of Santa Barbara's building department",
+    wikipedia: "https://en.wikipedia.org/wiki/Santa_Barbara,_California",
+    setting: "coastal",
+    intro:
+      "Pacific Plains Electric provides residential and commercial electrical services in Santa Barbara, from repairs and remodel wiring in older homes to panel upgrades, EV chargers, and backup power.",
+    considerations: [
+      {
+        title: "Older and historic homes",
+        body: "Many Santa Barbara homes are decades old, and original wiring, small panels, and ungrounded outlets are common. Homes in the city's historic districts may also need design review for visible exterior changes, so it helps to plan fixture and equipment locations early.",
+      },
+      {
+        title: "Power shutoffs and backup power",
+        body: "Southern California Edison, the utility here, can turn off power in high fire-risk areas during dangerous weather, including parts of the foothills. A generator connected through a transfer switch or approved interlock keeps essentials running without backfeeding the utility line.",
+      },
+      {
+        title: "Salt air near the coast",
+        body: "Exterior fixtures, outdoor outlets, and panel connections close to the water corrode faster than inland. Weather-resistant devices and in-use covers hold up better.",
+      },
+    ],
+    services: ["remodel-electrical", "panel-upgrades", "generators", "ev-charger-installation", "lighting"],
+    nearby: [],
   },
 ];
 

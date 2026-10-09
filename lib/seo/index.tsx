@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { business } from "@/config/business";
-import { publishedAreas } from "@/config/areas";
+import { publishedAreas, countyOf } from "@/config/areas";
 import { listedServices, type Article, type Service } from "@/config/content";
 
 const SITE = business.siteUrl;
@@ -95,6 +95,7 @@ export function businessNode() {
         "@type": a.kind === "city" ? "City" : "Place",
         name: `${a.name}, CA`,
         sameAs: a.wikipedia,
+        containedInPlace: { "@type": "AdministrativeArea", name: countyOf(a) },
       })),
     ],
     contactPoint: {

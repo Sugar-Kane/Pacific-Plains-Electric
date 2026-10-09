@@ -73,7 +73,7 @@ export default function Home() {
       <section className="section container">
         <SectionHead
           eyebrow="Service areas"
-          title="Serving homes and businesses across San Luis Obispo County"
+          title="Serving San Luis Obispo County and Santa Barbara"
           link={{ label: "All service areas", href: "/service-areas" }}
         />
         <AreaLinks />

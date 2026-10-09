@@ -115,7 +115,7 @@ export default async function Page({ params }: Props) {
         <h2>Where we offer {s.name}</h2>
         <p className="lede">
           {business.name} serves {s.audience.toLowerCase()} customers
-          throughout San Luis Obispo County, including:
+          throughout San Luis Obispo County and in Santa Barbara, including:
         </p>
         <AreaLinks />
       </section>
