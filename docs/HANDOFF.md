@@ -10,6 +10,8 @@ The Supabase project is `xcknbrmmypjnkbuyxutm`, organization `ymdcpwdwvubghruygh
 
 ## Architecture and ownership
 
+The home page includes a scroll-driven photo section (`components/powered-house.tsx`). A real night photo of a house lights up in five steps as the visitor scrolls (exterior sconces, upstairs, downstairs, facade and lawn, pool), with each step linking to a related service. `scripts/build-house-story.mjs` builds a lights-off frame and one soft mask per light group from `assets/story/house-night.webp`; the page stacks the original photo through each mask and fades the layers in order. The final frame is the untouched original. The current photo is a CC0 stock photo and is captioned as such; replace it with a night photo of a completed Pacific Plains Electric job when one exists (see ASSETS.md).
+
 Next.js App Router renders the public content on the server. Small client components provide navigation, theme preference, forms and admin editors. CSS variables define both themes; native system typography with a local Arimo fallback avoids runtime font requests. Optimized WebP assets use Next/Image.
 
 - Website: brand, public content, SEO, preferences, access memberships, audit records, temporary request outbox.

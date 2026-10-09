@@ -23,6 +23,10 @@
   --accent-soft: #d6ab5f;
   --feature-bg: #1f4d3c;
   --hairline-on-brand: #ffffff2e;
+  --story-bg: #141c18;
+  --story-stage: #3c4656;
+  --scrim: #000000b3;
+  --on-scrim: #ffffffe6;
   /* Footer */
   --footer-bg: #1b2a23;
   --footer-text: #f2ede3;
@@ -58,6 +62,10 @@
   --accent-soft: #d6ab5f;
   --feature-bg: #1d3a2e;
   --hairline-on-brand: #ffffff2e;
+  --story-bg: #0f1412;
+  --story-stage: #3c4656;
+  --scrim: #000000b3;
+  --on-scrim: #ffffffe6;
   --footer-bg: #0c0f0d;
   --footer-text: #f2ede3;
   --footer-text-2: #b3b1a6;
@@ -1222,6 +1230,138 @@ a.article-card:hover {
   display: none;
 }
 
+/* ---------- Powered house (scroll story) ---------- */
+.power-story {
+  padding-top: 96px;
+  background: var(--story-bg);
+  color: var(--footer-text);
+}
+.power-story .eyebrow {
+  color: var(--accent-soft);
+}
+.power-story .lede,
+.power-story p {
+  color: var(--footer-text-2);
+}
+.power-story-intro {
+  max-width: 720px;
+  margin-bottom: 24px;
+}
+.power-story-body {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  grid-template-areas: "steps stage";
+  gap: 48px;
+}
+.power-story-stage {
+  grid-area: stage;
+  position: sticky;
+  top: 88px;
+  height: calc(100vh - 112px);
+  max-height: 760px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--story-stage);
+}
+.power-story-stage {
+  margin: 0;
+}
+/* Photo layers share one box, fit and position so every mask lines up. */
+.house-photo {
+  position: absolute;
+  inset: 0;
+}
+.house-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 55% 50%;
+}
+.house-light {
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-position: 55% 50%;
+  mask-position: 55% 50%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  will-change: opacity;
+}
+.photo-credit {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  max-width: calc(100% - 24px);
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--scrim);
+  color: var(--on-scrim);
+  font-size: 11px;
+}
+.power-meter {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  display: flex;
+  gap: 6px;
+}
+.power-meter span {
+  width: 28px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--hairline-on-brand);
+  transition: background 0.3s;
+}
+.power-meter span.on {
+  background: var(--accent-soft);
+}
+.power-story-steps {
+  grid-area: steps;
+  margin: 0;
+  padding: 0 0 30vh;
+  list-style: none;
+}
+.power-story-steps li {
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+}
+/* Inactive cards recede through border and heading color, not opacity,
+   so every line of text keeps AA contrast. */
+.power-step-card {
+  padding: 28px;
+  border: 1px solid var(--footer-border);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--story-bg) 88%, transparent);
+  transition: border-color 0.3s;
+}
+.power-step-card h3 {
+  color: var(--footer-text-2);
+  font-size: 24px;
+  transition: color 0.3s;
+}
+.power-story-steps li.active .power-step-card {
+  border-color: var(--accent-soft);
+}
+.power-story-steps li.active h3 {
+  color: var(--footer-text);
+}
+.power-step-card p {
+  margin-bottom: 8px;
+}
+.power-step-card .text-link {
+  color: var(--accent-soft);
+}
+.power-step-number {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--accent-soft);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
 /* ---------- Admin ---------- */
 .admin-wrap {
   min-height: 65vh;
@@ -1501,6 +1641,40 @@ th {
     width: 44px;
     height: 44px;
     margin-bottom: 16px;
+  }
+  .power-story {
+    padding-top: 64px;
+  }
+  .power-story-body {
+    display: block;
+  }
+  .power-story-stage {
+    top: 72px;
+    z-index: 2;
+    height: 44vh;
+    margin-bottom: 8px;
+    overflow: visible;
+  }
+  /* Mask the strip above the pinned stage so cards scrolling past stay hidden. */
+  .power-story-stage::before {
+    content: "";
+    position: absolute;
+    inset: -80px calc(-1 * var(--gutter)) auto;
+    height: 80px;
+    background: var(--story-bg);
+  }
+  .house-photo {
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+  }
+  .power-story-steps li {
+    position: relative;
+    z-index: 1;
+    align-items: flex-end;
+    min-height: 62vh;
+  }
+  .power-step-card {
+    padding: 22px;
   }
   /* Home overview: compact rows instead of tall cards */
   a.service-card {
