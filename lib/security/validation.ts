@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { services } from "@/config/content";
+import { requestable } from "@/config/content";
 export const requestSchema = z.object({
   idempotencyKey: z.uuid(),
   firstName: z.string().trim().min(1).max(80),
@@ -17,7 +17,9 @@ export const requestSchema = z.object({
   address: z.string().trim().min(5).max(200),
   city: z.string().trim().min(2).max(80),
   postalCode: z.string().regex(/^\d{5}(?:-\d{4})?$/),
-  service: z.string().refine((s) => services.some((x) => x.slug === s)),
+  service: z
+    .string()
+    .refine((s) => (requestable as readonly string[]).includes(s)),
   description: z.string().trim().min(10).max(2000),
   preferredTimes: z.string().trim().max(300),
   contactMethod: z.enum(["phone", "email"]),

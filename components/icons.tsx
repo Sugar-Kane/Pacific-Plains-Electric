@@ -8,6 +8,8 @@ import {
   Building2,
   Zap,
   ClipboardCheck,
+  Plug,
+  Cable,
 } from "lucide-react";
 const icons = {
   Wrench,
@@ -19,6 +21,8 @@ const icons = {
   Building2,
   Zap,
   ClipboardCheck,
+  Plug,
+  Cable,
 };
 export function ServiceIcon({
   name,

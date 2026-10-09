@@ -3,34 +3,39 @@ import { business } from "@/config/business";
 import PoweredHouse from "@/components/powered-house";
 import {
   Actions,
+  AreaLinks,
   ContactCTA,
   Diagnostic,
+  Facts,
   FaqList,
   OwnerSection,
+  Reviews,
   SectionHead,
   ServiceOverview,
 } from "@/components/public";
-import { metadata as meta, JsonLd, businessSchema } from "@/lib/seo";
+import { metadata as meta, JsonLd, graph, webPageNode } from "@/lib/seo";
 export const metadata = meta(
-  "Central Coast Electrician",
-  "Electrical repairs and installations in San Luis Obispo County. $180 diagnostic visits. CSLB #1162180.",
+  "Pacific Plains Electric | San Luis Obispo County Electrician",
+  "Licensed electrician serving San Luis Obispo County. Troubleshooting, repairs, panel upgrades, EV chargers, and lighting for homes and businesses.",
   "/",
+  { absolute: true },
 );
 export default function Home() {
   return (
     <>
-      <JsonLd data={businessSchema} />
+      <JsonLd data={graph(webPageNode("/", business.name))} />
       <section className="hero">
         <div className="container hero-content">
-          <span className="eyebrow">San Luis Obispo County electrician</span>
-          <h1>Electrical work for Central Coast homes and businesses.</h1>
+          <span className="eyebrow">Licensed electrical contractor · {business.license}</span>
+          <h1>Electrician serving San Luis Obispo County</h1>
           <p className="lede">
-            Repairs, panel upgrades, EV chargers, and lighting. Tell us about
-            the job and we’ll take it from there.
+            {business.name} provides residential and commercial electrical
+            services across the county, from troubleshooting and repairs to
+            panel upgrades, EV chargers, and lighting.
           </p>
           <Actions />
           <p className="hero-meta">
-            Owned by {business.owner} · {business.license}
+            Owned by {business.owner} · ${business.diagnosticPrice} diagnostic visits
           </p>
         </div>
         <div className="hero-image">
@@ -43,6 +48,9 @@ export default function Home() {
           />
         </div>
       </section>
+      <section className="container hero-facts" aria-label="At a glance">
+        <Facts />
+      </section>
       <PoweredHouse />
       <section className="section container">
         <SectionHead
@@ -52,17 +60,26 @@ export default function Home() {
         />
         <ServiceOverview
           slugs={[
+            "troubleshooting",
             "electrical-repair",
             "panel-upgrades",
             "ev-charger-installation",
             "lighting",
-            "new-construction",
             "commercial-electrical",
           ]}
         />
       </section>
       <Diagnostic />
+      <section className="section container">
+        <SectionHead
+          eyebrow="Service areas"
+          title="Serving homes and businesses across San Luis Obispo County"
+          link={{ label: "All service areas", href: "/service-areas" }}
+        />
+        <AreaLinks />
+      </section>
       <OwnerSection />
+      <Reviews />
       <section className="section container faq-grid">
         <SectionHead
           eyebrow="FAQ"

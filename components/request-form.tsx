@@ -2,7 +2,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { ArrowRight, CheckCircle, ArrowLeft, Phone } from "lucide-react";
-import { services } from "@/config/content";
+import { requestableServices as services } from "@/config/content";
 import { business, smsDisclosure } from "@/config/business";
 export default function RequestForm({
   initialService,

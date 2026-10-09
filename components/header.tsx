@@ -7,6 +7,7 @@ import Brand from "./brand";
 import { business } from "@/config/business";
 export const navigation = [
   ["Services", "/services"],
+  ["Service areas", "/service-areas"],
   ["About", "/about"],
   ["Guides", "/blog"],
   ["FAQ", "/faq"],

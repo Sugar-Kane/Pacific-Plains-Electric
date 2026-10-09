@@ -3,7 +3,7 @@ import { metadata as meta } from "@/lib/seo";
 import { business } from "@/config/business";
 export const metadata = meta(
   "Website Terms",
-  "Terms for website service inquiries, diagnostic pricing, and general information.",
+  "Terms for using the Pacific Plains Electric website: service requests, the $180 diagnostic visit, general information in guides, and emergencies.",
   "/terms",
 );
 export default function Page() {

@@ -1,10 +1,10 @@
 import { PageHero, PricingPanel } from "@/components/public";
 import RequestForm from "@/components/request-form";
-import { services } from "@/config/content";
+import { findService } from "@/config/content";
 import { metadata as meta } from "@/lib/seo";
 export const metadata = meta(
-  "Request Service",
-  "Request electrical service in San Luis Obispo County. Diagnostic service is $180. Appointments are coordinated after your request.",
+  "Request Electrical Service",
+  "Request electrical service from Pacific Plains Electric in San Luis Obispo County. Diagnostic visits are $180, and we'll contact you to confirm a time.",
   "/request-service",
 );
 export default async function Page({
@@ -22,11 +22,7 @@ export default async function Page({
       />
       <section className="section container two-column">
         <RequestForm
-          initialService={
-            services.some((s) => s.slug === service)
-              ? service!
-              : "troubleshooting"
-          }
+          initialService={(service && findService(service)?.requestAs) || "troubleshooting"}
         />
         <PricingPanel>
           <div className="notice">

@@ -1,25 +1,19 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
+import { services, listedServices, articles } from "../../config/content";
+import { publishedAreas } from "../../config/areas";
 const routes = [
   "/",
   "/services",
-  "/services/electrical-repair",
-  "/services/troubleshooting",
-  "/services/panel-upgrades",
-  "/services/ev-charger-installation",
-  "/services/lighting",
-  "/services/new-construction",
-  "/services/commercial-electrical",
-  "/services/generators",
-  "/services/service-plans",
+  ...services.map((s) => "/services/" + s.slug),
+  "/service-areas",
+  ...publishedAreas.map((a) => "/service-areas/" + a.slug),
   "/about",
   "/contact",
   "/faq",
   "/projects",
   "/blog",
-  "/blog/planning-an-ev-charger",
-  "/blog/when-to-discuss-a-panel-upgrade",
-  "/blog/planning-outdoor-lighting",
+  ...articles.map((a) => "/blog/" + a.slug),
   "/request-service",
   "/privacy",
   "/terms",
@@ -136,10 +130,10 @@ test("service links carry the selected service into the request", async ({
   await page.locator("header").getByRole("link", { name: "Services", exact: true }).click();
   const serviceLinks = await page.locator('.service-card a[href^="/request-service"]')
     .evaluateAll(links => links.map(link => link.getAttribute("href")!));
-  expect(serviceLinks).toHaveLength(9);
-  for (const href of serviceLinks) {
+  expect(serviceLinks).toHaveLength(listedServices.length);
+  for (const [i, href] of serviceLinks.entries()) {
     await page.goto("/services");
-    await page.locator(`.service-card a[href="${href}"]`).click();
+    await page.locator('.service-card a[href^="/request-service"]').nth(i).click();
     await expect(page.locator("#service")).toHaveValue(new URL(href, "http://localhost").searchParams.get("service")!);
   }
   await page.goto("/contact");
@@ -245,7 +239,12 @@ test("private routes and unsafe submissions fail closed", async ({
   const privatePage = await request.get("/appointment/guess");
   expect(privatePage.headers()["x-robots-tag"]).toContain("noindex");
   const map = await request.get("/sitemap.xml");
-  expect(await map.text()).not.toContain("/admin");
+  const mapText = await map.text();
+  expect(mapText).not.toContain("/admin");
+  expect(mapText).toContain("/service-areas/nipomo");
+  const llms = await request.get("/llms.txt");
+  expect(llms.status()).toBe(200);
+  expect(await llms.text()).toContain("electrical contractor serving San Luis Obispo County");
   const robot = await request.get("/robots.txt");
   expect(await robot.text()).toContain("/appointment/");
   const home = await request.get("/");

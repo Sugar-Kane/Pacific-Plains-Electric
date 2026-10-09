@@ -3,37 +3,32 @@ import { ArrowRight } from "lucide-react";
 import { articles } from "@/config/content";
 import { PageHero, ContactCTA } from "@/components/public";
 import { ServiceIcon } from "@/components/icons";
-import { metadata as meta } from "@/lib/seo";
+import { metadata as meta, JsonLd, graph, breadcrumbNode, webPageNode } from "@/lib/seo";
 import { getContent } from "@/lib/content";
 export const dynamic = "force-dynamic";
-const art: Record<string, string> = {
-  "planning-an-ev-charger": "CarFront",
-  "when-to-discuss-a-panel-upgrade": "PanelsTopLeft",
-  "planning-outdoor-lighting": "Lamp",
-};
 export const metadata = meta(
-  "Planning Guides",
-  "Practical electrical planning notes for Central Coast homeowners, from EV charging to outdoor lighting.",
+  "Electrical Planning Guides",
+  "Practical guides for San Luis Obispo County homeowners: breaker trips, panel upgrades, 100 vs 200 amp service, EV chargers, GFCI and AFCI, and outdoor lighting.",
   "/blog",
 );
 export default async function Page() {
   const posts = await getContent("article");
   const cards = [
-    ...articles.map((a) => ({
-      slug: a.slug,
-      category: a.category,
-      title: a.title,
-      excerpt: a.dek,
-      icon: art[a.slug],
-    })),
-    ...posts.map((p) => ({ ...p, icon: undefined })),
+    ...articles.map((a) => ({ slug: a.slug, category: a.category, title: a.title, excerpt: a.dek, icon: a.icon })),
+    ...posts.map((p) => ({ slug: p.slug, category: p.category, title: p.title, excerpt: p.excerpt, icon: undefined })),
   ];
   return (
     <>
+      <JsonLd
+        data={graph(
+          webPageNode("/blog", "Planning guides", { "@type": "CollectionPage" }),
+          breadcrumbNode([{ name: "Guides", path: "/blog" }]),
+        )}
+      />
       <PageHero
         eyebrow="Guides"
-        title="Planning guides"
-        description="Short, practical notes to help you plan an electrical project before you call."
+        title="Electrical planning guides"
+        description="Short, practical answers to the questions we hear most from homeowners in San Luis Obispo County."
       />
       <section className="section container">
         <div className="article-grid">

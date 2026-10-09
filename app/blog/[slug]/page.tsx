@@ -1,79 +1,90 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { articles } from "@/config/content";
-import { business } from "@/config/business";
+import { findArticle, findService } from "@/config/content";
 import { PageHero, ContactCTA } from "@/components/public";
-import { metadata as meta, JsonLd } from "@/lib/seo";
+import { metadata as meta, JsonLd, graph, articleNode, breadcrumbNode } from "@/lib/seo";
 import { getContent } from "@/lib/content";
 export const dynamic = "force-dynamic";
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-  const a = articles.find((a) => a.slug === slug);
-  const p = a
-    ? null
-    : (await getContent("article")).find((a) => a.slug === slug);
-  return a
-    ? meta(a.title, a.dek, "/blog/" + slug)
-    : p
-      ? meta(
-          p.seo_title || p.title,
-          p.seo_description || p.excerpt,
-          "/blog/" + slug,
-        )
-      : { title: "Article not found" };
+type Props = { params: Promise<{ slug: string }> };
+
+async function load(slug: string) {
+  const a = findArticle(slug);
+  if (a) return { kind: "static" as const, a };
+  const p = (await getContent("article")).find((x) => x.slug === slug);
+  return p ? { kind: "cms" as const, p } : null;
 }
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+
+export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
-  const a = articles.find((a) => a.slug === slug);
-  const p = a
-    ? null
-    : (await getContent("article")).find((a) => a.slug === slug);
-  if (!a && !p) notFound();
-  const title = a?.title || p!.title;
+  const found = await load(slug);
+  if (!found) return { title: "Article not found" };
+  return found.kind === "static"
+    ? meta(found.a.title, found.a.metaDescription, "/blog/" + slug)
+    : meta(
+        found.p.seo_title || found.p.title,
+        found.p.seo_description || found.p.excerpt,
+        "/blog/" + slug,
+      );
+}
+
+export default async function Page({ params }: Props) {
+  const { slug } = await params;
+  const found = await load(slug);
+  if (!found) notFound();
+  const title = found.kind === "static" ? found.a.title : found.p.title;
+  const related =
+    found.kind === "static"
+      ? found.a.related.map(findService).filter((x) => x !== undefined)
+      : [];
   return (
     <>
       <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "Article",
-          headline: title,
-          author: { "@type": "Organization", name: business.name },
-          publisher: { "@type": "Organization", name: business.name },
-          mainEntityOfPage: business.siteUrl + "/blog/" + slug,
-        }}
+        data={graph(
+          ...(found.kind === "static" ? [articleNode(found.a)] : []),
+          breadcrumbNode([
+            { name: "Guides", path: "/blog" },
+            { name: title, path: "/blog/" + slug },
+          ]),
+        )}
       />
       <PageHero
         crumbs={[{ label: "Guides", href: "/blog" }, { label: title }]}
         title={title}
-        description={a?.dek || p!.excerpt}
+        description={found.kind === "static" ? found.a.dek : found.p.excerpt}
       />
       <article className="container article-body">
-        {a ? (
-          a.sections.map(([h, b]) => (
+        {found.kind === "static" ? (
+          found.a.sections.map(([h, b]) => (
             <section key={h}>
               <h2>{h}</h2>
               <p>{b}</p>
             </section>
           ))
         ) : (
-          <p className="pre-wrap">{p!.body}</p>
+          <p className="pre-wrap">{found.p.body}</p>
         )}
         <div className="notice">
           General planning information. Electrical work should be evaluated and
           performed by a licensed electrician.
         </div>
-        <Link className="text-link" href="/services">
-          See our electrical services <ArrowRight size={17} aria-hidden="true" />
-        </Link>
+        {related.length > 0 && (
+          <>
+            <h2 className="subhead">Related services</h2>
+            <ul className="related">
+              {related.map((s) => (
+                <li key={s.slug}>
+                  <Link href={"/services/" + s.slug}>{s.name}</Link>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+        <p className="after-list">
+          <Link className="text-link" href="/blog">
+            All guides <ArrowRight size={17} aria-hidden="true" />
+          </Link>
+        </p>
       </article>
       <ContactCTA />
     </>

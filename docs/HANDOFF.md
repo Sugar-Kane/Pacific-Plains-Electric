@@ -8,6 +8,10 @@ The reference images' sample prices and contact details were replaced by the att
 
 The Supabase project is `xcknbrmmypjnkbuyxutm`, organization `ymdcpwdwvubghruyghnw`. The earlier Volteira project was inspected during discovery but never changed or used for the website connection.
 
+## SEO and business entity
+
+`config/business.ts` is the single source for the business entity (name, description, phones, email, hours, license, service area, profile and review links); `config/areas.ts` lists the service-area communities and `config/content.ts` the services, FAQs, and guides. Pages, JSON-LD, the sitemap, and `/llms.txt` are generated from them. Unknown facts are `TODO(owner)` values that stay off the site until set. See `docs/SEO-REPORT.md` for the full report, owner TODOs, Google Business Profile setup, and directory checklist, and `docs/REVIEWS.md` for the review workflow. `node scripts/seo-audit.mjs <url>` checks a running build.
+
 ## Architecture and ownership
 
 The home page includes a scroll-driven photo section (`components/powered-house.tsx`). A real night photo of a house lights up in five steps as the visitor scrolls (exterior sconces, upstairs, downstairs, facade and lawn, pool), with each step linking to a related service. `scripts/build-house-story.mjs` builds a lights-off frame and one soft mask per light group from `assets/story/house-night.webp`; the page stacks the original photo through each mask and fades the layers in order. The final frame is the untouched original. The current photo is a CC0 stock photo and is captioned as such; replace it with a night photo of a completed Pacific Plains Electric job when one exists (see ASSETS.md).

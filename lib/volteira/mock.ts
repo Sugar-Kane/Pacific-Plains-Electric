@@ -1,6 +1,6 @@
 import type { VolteiraProvider, Result, Appointment } from "./types";
 import { business } from "@/config/business";
-import { services } from "@/config/content";
+import { requestableServices as services } from "@/config/content";
 /** Test-only in-memory provider. Never selected by deployed website routes. */
 export class MockVolteiraProvider implements VolteiraProvider {
   private appointments = new Map<string, Appointment>();

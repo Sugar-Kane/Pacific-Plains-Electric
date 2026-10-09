@@ -3,15 +3,21 @@ import Link from "next/link";
 import CaliforniaMap from "@/components/california-map";
 import { PageHero } from "@/components/public";
 import { business } from "@/config/business";
-import { metadata as meta } from "@/lib/seo";
+import { metadata as meta, JsonLd, graph, breadcrumbNode, webPageNode } from "@/lib/seo";
 export const metadata = meta(
-  "Contact Us",
-  "Contact Pacific Plains Electric at (805) 626-7761 for electrical services in San Luis Obispo County.",
+  "Contact",
+  "Contact Pacific Plains Electric, a licensed electrician in San Luis Obispo County. Call or text (805) 626-7761, email, or send a service request online.",
   "/contact",
 );
 export default function Page() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          webPageNode("/contact", "Contact Pacific Plains Electric", { "@type": "ContactPage" }),
+          breadcrumbNode([{ name: "Contact", path: "/contact" }]),
+        )}
+      />
       <PageHero
         eyebrow="Contact"
         title="Get in touch"

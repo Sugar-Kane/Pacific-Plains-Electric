@@ -6,9 +6,18 @@ import {
   ShieldCheck,
   MapPin,
   ReceiptText,
+  Clock,
+  Star,
 } from "lucide-react";
 import { business, diagnosticTerms } from "@/config/business";
-import { services, faqs } from "@/config/content";
+import {
+  listedServices,
+  findService,
+  process,
+  answeredFaqs,
+} from "@/config/content";
+import { publishedAreas } from "@/config/areas";
+import { reviews } from "@/config/reviews";
 import { ServiceIcon } from "./icons";
 export function Actions() {
   return (
@@ -31,7 +40,7 @@ export function Actions() {
         >
           <MessageCircle size={17} aria-hidden="true" /> Text
         </a>
-        <Link className="button" href="/request-service">
+        <Link className="button outline" href="/request-service">
           Online form
         </Link>
       </div>
@@ -84,16 +93,18 @@ export function SectionHead({
   eyebrow,
   title,
   link,
+  id,
 }: {
   eyebrow: string;
   title: string;
   link?: { label: string; href: string };
+  id?: string;
 }) {
   return (
     <div className="section-head">
       <div>
         <span className="eyebrow">{eyebrow}</span>
-        <h2>{title}</h2>
+        <h2 id={id}>{title}</h2>
       </div>
       {link && (
         <Link className="text-link" href={link.href}>
@@ -107,7 +118,7 @@ export function SectionHead({
 export function ServiceGrid() {
   return (
     <div className="service-grid">
-      {services.map((s) => (
+      {listedServices.map((s) => (
         <article className="service-card" key={s.slug}>
           <span className="service-icon">
             <ServiceIcon name={s.icon} size={24} />
@@ -117,7 +128,7 @@ export function ServiceGrid() {
           <div className="service-card-actions">
             <Link
               className="text-link"
-              href={"/request-service?service=" + s.slug}
+              href={"/request-service?service=" + s.requestAs}
               aria-label={"Request " + s.name}
             >
               Request service <ArrowRight size={17} aria-hidden="true" />
@@ -140,7 +151,7 @@ export function ServiceOverview({ slugs }: { slugs: string[] }) {
   return (
     <div className="service-grid">
       {slugs.map((slug) => {
-        const s = services.find((x) => x.slug === slug)!;
+        const s = findService(slug)!;
         return (
           <Link className="service-card" href={"/services/" + s.slug} key={slug}>
             <span className="service-icon">
@@ -262,17 +273,30 @@ export function Facts() {
       <li>
         <MapPin size={24} aria-hidden="true" />
         <div>
-          <strong>Local to the Central Coast</strong>
-          <span>San Luis Obispo County</span>
+          <strong>Serving San Luis Obispo County</strong>
+          <span>Homes and businesses across the county</span>
+        </div>
+      </li>
+      <li>
+        <Clock size={24} aria-hidden="true" />
+        <div>
+          <strong>Office hours</strong>
+          <span>{business.hours.display}</span>
         </div>
       </li>
     </ul>
   );
 }
-export function FaqList({ limit }: { limit?: number }) {
+export function FaqList({
+  items = answeredFaqs,
+  limit,
+}: {
+  items?: { q: string; a: string }[];
+  limit?: number;
+}) {
   return (
     <div className="faq-list">
-      {(limit ? faqs.slice(0, limit) : faqs).map(([q, a]) => (
+      {(limit ? items.slice(0, limit) : items).map(({ q, a }) => (
         <details key={q}>
           <summary>{q}</summary>
           <p>{a}</p>
@@ -289,6 +313,77 @@ export function ContactCTA() {
         <p>Send the details or give us a call. We’ll follow up to set a time.</p>
         <Actions />
       </div>
+    </section>
+  );
+}
+
+export function ProcessSteps() {
+  return (
+    <ol className="process">
+      {process.map((p, i) => (
+        <li key={p.title}>
+          <span className="process-number">{i + 1}</span>
+          <h3>{p.title}</h3>
+          <p>{p.body}</p>
+        </li>
+      ))}
+    </ol>
+  );
+}
+export function AreaLinks({ exclude }: { exclude?: string }) {
+  return (
+    <ul className="area-links">
+      {publishedAreas
+        .filter((a) => a.slug !== exclude)
+        .map((a) => (
+          <li key={a.slug}>
+            <Link href={"/service-areas/" + a.slug}>
+              <MapPin size={16} aria-hidden="true" /> {a.name}
+            </Link>
+          </li>
+        ))}
+    </ul>
+  );
+}
+/** Renders only real reviews from config/reviews.ts, and only when there are some. */
+export function Reviews() {
+  if (!reviews.length && !business.googleReviewUrl) return null;
+  return (
+    <section className="section container" aria-labelledby="reviews-title">
+      <SectionHead eyebrow="Reviews" title="What customers say" id="reviews-title" />
+      {reviews.length > 0 && (
+        <ul className="review-list">
+          {reviews.map((r) => (
+            <li key={r.quote} className="review-card">
+              <blockquote>“{r.quote}”</blockquote>
+              <p className="review-meta">
+                {r.name}
+                {r.area && ` · ${r.area}`}
+                {r.url ? (
+                  <>
+                    {" · "}
+                    <a href={r.url} rel="noopener noreferrer" target="_blank">
+                      {r.source}
+                    </a>
+                  </>
+                ) : (
+                  ` · ${r.source}`
+                )}
+              </p>
+            </li>
+          ))}
+        </ul>
+      )}
+      {business.googleReviewUrl && (
+        <a
+          className="button outline"
+          href={business.googleReviewUrl}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <Star size={17} aria-hidden="true" /> Leave a Google review
+        </a>
+      )}
     </section>
   );
 }
