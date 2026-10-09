@@ -53,42 +53,75 @@ export default function PoweredHouse() {
   useEffect(() => {
     const list = stepsRef.current;
     const el = stage.current;
-    if (!list || !el) return;
+    const section = el?.closest("section");
+    if (!list || !el || !section) return;
+    const root = document.documentElement;
     const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const stacked = matchMedia("(max-width: 700px)");
     let frame = 0;
     let target = 0;
-    let shown = -1;
+    let shown = Number.NaN;
+    let lastActive = -1;
 
-    const paint = (p: number) => {
-      // Each light group fades in over the first 60% of its step.
-      steps.forEach((_, i) => {
-        const t = (p * steps.length - i) / 0.6;
-        el.style.setProperty(`--light-${i}`, String(Math.min(1, Math.max(0, t))));
+    /**
+     * Continuous step position: 2 means card 3 sits on the focus line.
+     * The focus line is the middle of the space the cards scroll through:
+     * the viewport on desktop, the area below the pinned photo on phones.
+     */
+    const measure = () => {
+      const top = stacked.matches ? el.getBoundingClientRect().bottom : 0;
+      const focus = (top + innerHeight) / 2;
+      const centers = Array.from(list.children, (li) => {
+        const r = li.firstElementChild!.getBoundingClientRect();
+        return r.top + r.height / 2;
       });
+      const n = centers.length;
+      const gap = Math.max(1, centers[1] - centers[0]);
+      let pos: number;
+      if (focus <= centers[0]) pos = (focus - centers[0]) / gap;
+      else if (focus >= centers[n - 1]) pos = n - 1 + (focus - centers[n - 1]) / gap;
+      else {
+        const i = centers.findIndex((c, k) => focus >= c && focus < centers[k + 1]);
+        pos = i + (focus - centers[i]) / Math.max(1, centers[i + 1] - centers[i]);
+      }
+      target = pos;
+      const s = section.getBoundingClientRect();
+      // Phones: tuck the fixed action bar away while the story fills the screen.
+      root.classList.toggle("story-in-view", s.top < innerHeight * 0.4 && s.bottom > innerHeight * 0.8);
     };
+
+    const paint = (pos: number) => {
+      // Each light group finishes coming on as its card reaches the focus line.
+      steps.forEach((_, i) => {
+        el.style.setProperty(`--light-${i}`, String(Math.min(1, Math.max(0, pos - i + 1))));
+      });
+      const a = Math.min(steps.length - 1, Math.max(0, Math.round(pos)));
+      if (a !== lastActive) setActive((lastActive = a));
+    };
+
     const tick = () => {
       frame = 0;
-      const next = reducedMotion || shown < 0 ? target : shown + (target - shown) * 0.18;
-      shown = Math.abs(target - next) < 0.001 ? target : next;
+      measure();
+      const next =
+        reducedMotion || Number.isNaN(shown) ? target : shown + (target - shown) * 0.2;
+      shown = Math.abs(target - next) < 0.002 ? target : next;
       paint(shown);
       if (shown !== target) frame = requestAnimationFrame(tick);
     };
-    const update = () => {
-      const r = list.getBoundingClientRect();
-      // 0 when the first step reaches 60% of the viewport, 1 as the last one leaves.
-      const p = (innerHeight * 0.6 - r.top) / Math.max(1, r.height - innerHeight * 0.2);
-      target = Math.min(1, Math.max(0, p));
-      setActive(Math.min(steps.length - 1, Math.floor(target * steps.length)));
+    const schedule = () => {
       if (!frame) frame = requestAnimationFrame(tick);
     };
 
-    update();
-    addEventListener("scroll", update, { passive: true });
-    addEventListener("resize", update);
+    schedule();
+    addEventListener("scroll", schedule, { passive: true });
+    addEventListener("resize", schedule);
+    stacked.addEventListener("change", schedule);
     return () => {
       cancelAnimationFrame(frame);
-      removeEventListener("scroll", update);
-      removeEventListener("resize", update);
+      removeEventListener("scroll", schedule);
+      removeEventListener("resize", schedule);
+      stacked.removeEventListener("change", schedule);
+      root.classList.remove("story-in-view");
     };
   }, []);
 
@@ -134,7 +167,10 @@ export default function PoweredHouse() {
             ))}
           </div>
           <figcaption className="photo-credit">
-            Stock photo (CC0), not a Pacific Plains Electric project
+            <span className="credit-long">
+              Stock photo (CC0), not a Pacific Plains Electric project
+            </span>
+            <span className="credit-short">Stock photo, not our project</span>
           </figcaption>
         </figure>
         <ol className="power-story-steps" ref={stepsRef}>
