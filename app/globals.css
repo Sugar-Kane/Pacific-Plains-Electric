@@ -25,6 +25,8 @@
   --hairline-on-brand: #ffffff2e;
   --story-bg: #141c18;
   --story-stage: #3c4656;
+  --scrim: #000000b3;
+  --on-scrim: #ffffffe6;
   /* Footer */
   --footer-bg: #1b2a23;
   --footer-text: #f2ede3;
@@ -62,6 +64,8 @@
   --hairline-on-brand: #ffffff2e;
   --story-bg: #0f1412;
   --story-stage: #3c4656;
+  --scrim: #000000b3;
+  --on-scrim: #ffffffe6;
   --footer-bg: #0c0f0d;
   --footer-text: #f2ede3;
   --footer-text-2: #b3b1a6;
@@ -1259,10 +1263,41 @@ a.article-card:hover {
   border-radius: var(--radius-lg);
   background: var(--story-stage);
 }
-.power-story-stage canvas {
-  display: block;
+.power-story-stage {
+  margin: 0;
+}
+/* Photo layers share one box, fit and position so every mask lines up. */
+.house-photo {
+  position: absolute;
+  inset: 0;
+}
+.house-photo img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: 55% 50%;
+}
+.house-light {
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-position: 55% 50%;
+  mask-position: 55% 50%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  will-change: opacity;
+}
+.photo-credit {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  max-width: calc(100% - 24px);
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--scrim);
+  color: var(--on-scrim);
+  font-size: 11px;
 }
 .power-meter {
   position: absolute;
@@ -1325,18 +1360,6 @@ a.article-card:hover {
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.1em;
-}
-/* No WebGL: the steps still read as a plain list. */
-.no-webgl .power-story-stage {
-  display: none;
-}
-.no-webgl .power-story-body {
-  grid-template-columns: minmax(0, 720px);
-  grid-template-areas: "steps";
-}
-.no-webgl .power-story-steps li {
-  min-height: 0;
-  margin-bottom: 16px;
 }
 
 /* ---------- Admin ---------- */
@@ -1640,7 +1663,8 @@ th {
     height: 80px;
     background: var(--story-bg);
   }
-  .power-story-stage canvas {
+  .house-photo {
+    overflow: hidden;
     border-radius: var(--radius-lg);
   }
   .power-story-steps li {
