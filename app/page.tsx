@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { business } from "@/config/business";
+import PoweredHouse from "@/components/powered-house";
 import {
   Actions,
   ContactCTA,
@@ -42,6 +43,7 @@ export default function Home() {
           />
         </div>
       </section>
+      <PoweredHouse />
       <section className="section container">
         <SectionHead
           eyebrow="Services"

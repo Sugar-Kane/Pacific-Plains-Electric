@@ -10,6 +10,8 @@ The Supabase project is `xcknbrmmypjnkbuyxutm`, organization `ymdcpwdwvubghruygh
 
 ## Architecture and ownership
 
+The home page includes a scroll-driven 3D section (`components/powered-house.tsx`, scene in `components/powered-house-scene.ts`, built with three.js). A low-poly house powers up as the visitor scrolls: service drop, panel, rooms, EV charger, then outdoor lighting, with each step linking to its service page. The scene is built in code (no model files), loads only when the section nears the viewport, renders only while scrolling, honors reduced motion, and falls back to a plain list of steps when WebGL is unavailable.
+
 Next.js App Router renders the public content on the server. Small client components provide navigation, theme preference, forms and admin editors. CSS variables define both themes; native system typography with a local Arimo fallback avoids runtime font requests. Optimized WebP assets use Next/Image.
 
 - Website: brand, public content, SEO, preferences, access memberships, audit records, temporary request outbox.
