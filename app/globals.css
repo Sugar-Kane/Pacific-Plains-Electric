@@ -952,6 +952,16 @@ details p {
   stroke-width: 1;
   stroke-linejoin: round;
 }
+.map-city circle {
+  fill: var(--brand-ink);
+  stroke: var(--surface);
+  stroke-width: 1.5;
+}
+.map-city text {
+  fill: var(--text);
+  font-size: 11px;
+  font-weight: 600;
+}
 .ocean-label {
   fill: var(--text-2);
   font-size: 9px;

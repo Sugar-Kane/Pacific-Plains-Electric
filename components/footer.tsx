@@ -65,12 +65,6 @@ export default function Footer() {
                 <small>Main line</small>
               </li>
               <li>
-                <a href={business.directPhone.tel}>
-                  {business.directPhone.display}
-                </a>
-                <small>Nicholas, direct</small>
-              </li>
-              <li>
                 <a href={"mailto:" + business.email}>{business.email}</a>
               </li>
               <li>

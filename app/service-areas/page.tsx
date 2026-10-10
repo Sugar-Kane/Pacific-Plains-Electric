@@ -60,7 +60,7 @@ export default function Page() {
         </div>
         <div className="map-panel">
           <CaliforniaMap />
-          <h2>San Luis Obispo County</h2>
+          <h2>San Luis Obispo County and Santa Barbara</h2>
           <p className="map-legend">
             <span /> Our service area
           </p>

@@ -30,7 +30,6 @@ ${business.description} The business is owned by ${business.owner} and licensed 
 - Business type: electrician / electrical contractor (residential and commercial)
 - Service area: ${area}
 - Phone: ${business.workPhone.display} (main line, answered by an automated assistant)
-- Owner's direct line: ${business.directPhone.display}
 - Email: ${business.email}
 - Hours: ${hours}
 - Diagnostic visit: $${business.diagnosticPrice}. ${diagnosticTerms}

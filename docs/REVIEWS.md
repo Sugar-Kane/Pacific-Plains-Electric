@@ -37,7 +37,7 @@ Google Business Profile → **Ask for reviews** → copy the short link. Save it
 >
 > {link}
 >
-> If anything about the work isn't right, reply to this email or call (209) 626-9313 and I'll take care of it.
+> If anything about the work isn't right, reply to this email and I'll take care of it.
 >
 > Nicholas Kane
 > Pacific Plains Electric · CSLB #1162180

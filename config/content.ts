@@ -627,7 +627,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "Who answers the main phone number?",
-    a: `An automated assistant answers the main line, ${business.workPhone.display}. To reach ${business.owner} directly, call ${business.directPhone.display} or email ${business.email}.`,
+    a: `An automated assistant answers the main line, ${business.workPhone.display}. To reach ${business.owner} directly, email ${business.email}.`,
   },
   {
     q: "Are you insured?",

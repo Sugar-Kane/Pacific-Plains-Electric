@@ -62,9 +62,7 @@ export default function Page() {
             For service, call the main line at{" "}
             <a href={business.workPhone.tel}>{business.workPhone.display}</a>.
             It’s answered by an automated phone assistant, so you can call any
-            time. To speak with Nicholas directly, call{" "}
-            <a href={business.directPhone.tel}>{business.directPhone.display}</a>{" "}
-            or email <a href={"mailto:" + business.email}>{business.email}</a>.
+            time. To reach Nicholas directly, email <a href={"mailto:" + business.email}>{business.email}</a>.
             Office hours are {business.hours.display}, and visits are scheduled
             by appointment.
           </p>
