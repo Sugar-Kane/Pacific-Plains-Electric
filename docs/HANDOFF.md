@@ -99,7 +99,7 @@ The earlier floating website helper was never mounted on any page and has been r
 
 The service form stops on several obvious emergency phrases and directs people to emergency services rather than providing DIY guidance. The website does not advertise 24/7 electrician dispatch.
 
-No notification provider is configured. The UI never says an email/SMS was sent. Transactional contact consent is required; optional SMS consent is separate, not preselected, and records disclosure text. No marketing enrollment or payment collection is included.
+New requests are emailed to the owner (business email in `config/business.ts`, or `REQUEST_EMAIL_TO`) through Resend once `RESEND_API_KEY` and `REQUEST_EMAIL_FROM` are set in Vercel. The email is plain text, replies go to the customer, and the request reference is the idempotency key, so a retried submission does not send twice. If sending fails, the request is still saved and the failure is logged. Setup: create a Resend account, add the domain `pacificplainselectric.com`, add the DNS records Resend lists at Namecheap (they sit alongside the existing email-forwarding records), then set the two variables, for example `REQUEST_EMAIL_FROM="Pacific Plains Electric <requests@pacificplainselectric.com>"`, and redeploy. No confirmation is sent to customers, and the UI never says one was. Transactional contact consent is required; optional SMS consent is separate, not preselected, and records disclosure text. No marketing enrollment or payment collection is included.
 
 ## Environment variables
 
