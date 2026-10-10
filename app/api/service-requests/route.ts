@@ -1,7 +1,8 @@
-import { NextResponse } from "next/server";
+import { NextResponse, after } from "next/server";
 import { requestSchema, hazardMessage } from "@/lib/security/validation";
 import { publicDb } from "@/lib/auth/server";
 import { smsDisclosure } from "@/config/business";
+import { sendRequestEmail } from "@/lib/notify/request-email";
 export async function POST(req: Request) {
   const origin = req.headers.get("origin");
   const expected = new URL(req.url).protocol + "//" + req.headers.get("host");
@@ -59,6 +60,8 @@ export async function POST(req: Request) {
         { status: limited ? 429 : 503 },
       );
     }
+    // Email the owner after responding, so the customer isn't kept waiting.
+    after(() => sendRequestEmail(input, String(data)));
     return NextResponse.json(
       {
         reference: data,
