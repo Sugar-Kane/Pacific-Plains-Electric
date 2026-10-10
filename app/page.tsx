@@ -15,8 +15,8 @@ import {
 } from "@/components/public";
 import { metadata as meta, JsonLd, graph, webPageNode } from "@/lib/seo";
 export const metadata = meta(
-  "Pacific Plains Electric | San Luis Obispo County Electrician",
-  "Licensed electrician serving San Luis Obispo County. Troubleshooting, repairs, panel upgrades, EV chargers, and lighting for homes and businesses.",
+  "Pacific Plains Electric | SLO & Santa Barbara County Electrician",
+  "Licensed electrician serving San Luis Obispo and Santa Barbara Counties. Troubleshooting, repairs, panel upgrades, EV chargers, and lighting for homes and businesses.",
   "/",
   { absolute: true },
 );
@@ -27,10 +27,10 @@ export default function Home() {
       <section className="hero">
         <div className="container hero-content">
           <span className="eyebrow">Licensed electrical contractor · {business.license}</span>
-          <h1>Electrician serving San Luis Obispo County</h1>
+          <h1>Electrician serving San Luis Obispo and Santa Barbara Counties</h1>
           <p className="lede">
             {business.name} provides residential and commercial electrical
-            services across the county, from troubleshooting and repairs to
+            services across the Central Coast, from troubleshooting and repairs to
             panel upgrades, EV chargers, and lighting.
           </p>
           <Actions />
