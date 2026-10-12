@@ -20,7 +20,7 @@ export default async function Page({
         title="Request electrical service"
         description="Tell us what you need and how to reach you. We’ll contact you to discuss the details and confirm next steps."
       />
-      <section className="section container two-column">
+      <section className="section container two-column request-layout">
         <RequestForm
           initialService={
             (service &&
