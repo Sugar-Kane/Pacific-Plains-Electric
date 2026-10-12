@@ -250,6 +250,18 @@ export default function RequestForm({
             </small>
           </div>
         </div>
+            <div className="form-field full">
+              <label htmlFor="contactMethod">Preferred contact method</label>
+              <select
+                id="contactMethod"
+                value={values.contactMethod}
+                onChange={(e) => update("contactMethod", e.target.value)}
+              >
+                <option value="phone">Phone call</option>
+                <option value="text">Text message</option>
+                {values.email && <option value="email">Email</option>}
+              </select>
+            </div>
         <details className="optional-details">
           <summary>Add email or preferred contact times (optional)</summary>
           <div className="form-grid">
@@ -264,7 +276,7 @@ export default function RequestForm({
                 value={values.email || ""}
                 onChange={(e) => {
                   update("email", e.target.value);
-                  if (!e.target.value) update("contactMethod", "phone");
+                  if (!e.target.value && values.contactMethod === "email") update("contactMethod", "phone");
                 }}
               />
             </div>
@@ -283,17 +295,7 @@ export default function RequestForm({
                 We’ll confirm a time with you. This is not a reservation.
               </small>
             </div>
-            <div className="form-field full">
-              <label htmlFor="contactMethod">Preferred contact method</label>
-              <select
-                id="contactMethod"
-                value={values.contactMethod}
-                onChange={(e) => update("contactMethod", e.target.value)}
-              >
-                <option value="phone">Phone call</option>
-                {values.email && <option value="email">Email</option>}
-              </select>
-            </div>
+
           </div>
         </details>
         <div className="honeypot" aria-hidden="true">
@@ -329,9 +331,10 @@ export default function RequestForm({
           <input
             type="checkbox"
             checked={sms}
+            required={values.contactMethod === "text"}
             onChange={(e) => setSms(e.target.checked)}
           />
-          <span>{smsDisclosure}</span>
+          <span>{smsDisclosure}{values.contactMethod === "text" && " Select this consent to receive a text response, or choose Phone call instead."}</span>
         </label>
       </fieldset>
       <p className="notice">

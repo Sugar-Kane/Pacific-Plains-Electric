@@ -2,6 +2,7 @@ import Link from "next/link";
 import {
   ArrowRight,
   Phone,
+  MessageSquare,
   ShieldCheck,
   MapPin,
   ReceiptText,
@@ -31,6 +32,9 @@ export function Actions() {
       </Link>
       <a className="button outline" href={business.workPhone.tel}>
         <Phone size={17} aria-hidden="true" /> Call {business.workPhone.display}
+      </a>
+      <a className="button outline" href={business.workPhone.sms}>
+        <MessageSquare size={17} aria-hidden="true" /> Text Us
       </a>
     </div>
   );

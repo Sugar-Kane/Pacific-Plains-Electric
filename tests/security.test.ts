@@ -142,3 +142,8 @@ test("all authorized ZIPs are recognized, with ZIP+4 and boundary handling", asy
   assert.ok(crossCountyZips.includes("93252"));
   assert.match(coverageMessage("10001"), /still send a request/);
 });
+
+test("text preference requires explicit SMS consent", () => {
+  assert.equal(requestSchema.safeParse({ ...request, contactMethod: "text", smsConsent: false }).success, false);
+  assert.equal(requestSchema.safeParse({ ...request, contactMethod: "text", smsConsent: true }).success, true);
+});
