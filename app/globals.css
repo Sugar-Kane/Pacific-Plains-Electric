@@ -2172,7 +2172,7 @@ a {
   .mobile-action-bar {
     position: fixed;
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1fr 1.5fr;
     left: 12px;
     right: 12px;
     bottom: calc(12px + env(safe-area-inset-bottom));

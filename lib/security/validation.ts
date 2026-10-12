@@ -33,7 +33,7 @@ export const requestSchema = z
       .refine((s) => (requestable as readonly string[]).includes(s)),
     description: z.string().trim().max(2000).default(""),
     preferredTimes: z.string().trim().max(300),
-    contactMethod: z.enum(["phone", "email"]),
+    contactMethod: z.enum(["phone", "email", "text"]),
     transactionalConsent: z.literal(true),
     smsConsent: z.boolean(),
     website: z.string().max(0),
@@ -41,6 +41,10 @@ export const requestSchema = z
   .refine((v) => !!(v.city || v.postalCode), {
     message: "Enter your city or ZIP code.",
     path: ["city"],
+  })
+  .refine((v) => v.contactMethod !== "text" || v.smsConsent, {
+    message: "Please agree to text messages or choose Phone call.",
+    path: ["smsConsent"],
   })
   .refine((v) => v.contactMethod !== "email" || !!v.email, {
     message: "Enter an email address or choose a phone call.",

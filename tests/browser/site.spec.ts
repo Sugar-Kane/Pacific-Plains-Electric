@@ -290,6 +290,7 @@ test("diagnostic policy, example, mobile actions and guide are preserved", async
   await expect(
     page.locator(".mobile-action-bar").getByRole("link", { name: "Call Now" }),
   ).toHaveAttribute("href", "tel:+18056267761");
+  await expect(page.locator(".mobile-action-bar").getByRole("link", { name: "Text", exact: true })).toHaveAttribute("href", "sms:+18056267761");
   await page
     .locator(".mobile-action-bar")
     .getByRole("link", { name: "Request Service" })

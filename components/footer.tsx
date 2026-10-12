@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Brand from "./brand";
-import { Phone } from "lucide-react";
+import { Phone, MessageSquare } from "lucide-react";
 import { business } from "@/config/business";
 import { listedServices } from "@/config/content";
 import { publishedAreas } from "@/config/areas";
@@ -93,6 +93,9 @@ export default function Footer() {
       >
         <a href={business.workPhone.tel}>
           <Phone size={17} aria-hidden="true" /> Call Now
+        </a>
+        <a href={business.workPhone.sms}>
+          <MessageSquare size={17} aria-hidden="true" /> Text
         </a>
         <Link className="mobile-request" href="/request-service">
           Request Service

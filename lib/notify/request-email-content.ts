@@ -30,7 +30,9 @@ export function buildRequestEmail(
     ``,
     `Reference: ${reference}`,
     `This is not a confirmed appointment. The customer has not been sent a confirmation.`,
-    input.email
+    input.contactMethod === "text"
+      ? "Text the customer at the phone number above; SMS consent is recorded."
+      : input.email
       ? `Reply to this email to reach the customer directly.`
       : `Call the customer at the phone number above.`,
   ];
