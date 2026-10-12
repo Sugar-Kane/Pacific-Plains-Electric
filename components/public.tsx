@@ -2,13 +2,13 @@ import Link from "next/link";
 import {
   ArrowRight,
   Phone,
-  MessageCircle,
   ShieldCheck,
   MapPin,
   ReceiptText,
   Clock,
   Star,
 } from "lucide-react";
+import { intakeCategories } from "@/config/intake";
 import { business, diagnosticTerms } from "@/config/business";
 import {
   listedServices,
@@ -21,29 +21,39 @@ import { reviews } from "@/config/reviews";
 import { ServiceIcon } from "./icons";
 export function Actions() {
   return (
-    <div className="request-options" role="group" aria-label="Request service">
-      <p className="request-options-label" aria-hidden="true">
-        Request service
-      </p>
-      <div className="customer-actions">
-        <a
-          className="button outline"
-          href={business.workPhone.tel}
-          aria-label={"Call " + business.workPhone.display}
+    <div
+      className="actions primary-actions"
+      role="group"
+      aria-label="Contact Pacific Plains Electric"
+    >
+      <Link className="button" href="/request-service">
+        Request Service <ArrowRight size={17} aria-hidden="true" />
+      </Link>
+      <a className="button outline" href={business.workPhone.tel}>
+        <Phone size={17} aria-hidden="true" /> Call {business.workPhone.display}
+      </a>
+    </div>
+  );
+}
+export function ServiceChoices() {
+  return (
+    <div className="service-grid service-choices">
+      {intakeCategories.map((s) => (
+        <Link
+          className="service-card"
+          href={"/request-service?service=" + s.slug}
+          key={s.slug}
         >
-          <Phone size={17} aria-hidden="true" /> Call
-        </a>
-        <a
-          className="button outline"
-          href={business.workPhone.sms}
-          aria-label="Text Pacific Plains Electric"
-        >
-          <MessageCircle size={17} aria-hidden="true" /> Text
-        </a>
-        <Link className="button outline" href="/request-service">
-          Online form
+          <span className="service-icon">
+            <ServiceIcon name={s.icon} size={24} />
+          </span>
+          <h3>{s.name}</h3>
+          <p>{s.summary}</p>
+          <span className="service-card-more">
+            {s.action} <ArrowRight size={17} aria-hidden="true" />
+          </span>
         </Link>
-      </div>
+      ))}
     </div>
   );
 }
@@ -153,7 +163,11 @@ export function ServiceOverview({ slugs }: { slugs: string[] }) {
       {slugs.map((slug) => {
         const s = findService(slug)!;
         return (
-          <Link className="service-card" href={"/services/" + s.slug} key={slug}>
+          <Link
+            className="service-card"
+            href={"/services/" + s.slug}
+            key={slug}
+          >
             <span className="service-icon">
               <ServiceIcon name={s.icon} size={24} />
             </span>
@@ -178,27 +192,52 @@ export function Price() {
 }
 export function Diagnostic() {
   return (
-    <section className="section">
+    <section className="section" aria-labelledby="diagnostic-title">
       <div className="container">
         <div className="diagnostic">
           <div>
-            <span className="eyebrow">Diagnostic visits</span>
-            <h2>Not sure what’s wrong? Start here.</h2>
+            <span className="eyebrow">Electrical Diagnostic Visit: $180</span>
+            <h2 id="diagnostic-title">
+              Your $180 diagnostic fee goes toward your repair.
+            </h2>
             <p>
-              We come out, trace the problem, and explain the repair options
-              before any work begins.
+              Not sure what’s causing your electrical problem? We’ll inspect the
+              issue, identify the likely cause, and explain your repair options.
+            </p>
+            <p className="diagnostic-policy">{diagnosticTerms}</p>
+            <Link
+              className="button on-brand"
+              href="/request-service?service=troubleshooting"
+            >
+              Request a Diagnostic
+            </Link>
+          </div>
+          <div className="credit-example">
+            <h3>A simple example</h3>
+            <dl>
+              <div>
+                <dt>Diagnostic visit paid</dt>
+                <dd>$180</dd>
+              </div>
+              <div>
+                <dt>Follow-up repair quote</dt>
+                <dd>$500</dd>
+              </div>
+              <div>
+                <dt>Diagnostic payment credited</dt>
+                <dd>−$180</dd>
+              </div>
+              <div className="credit-balance">
+                <dt>Remaining repair balance</dt>
+                <dd>$320</dd>
+              </div>
+            </dl>
+            <p>
+              Example only, not a repair estimate. You pay $180 for the
+              diagnostic visit, then $320 for the approved repair in this
+              example: $500 total. The credit applies your prior payment once.
             </p>
           </div>
-          <div className="diagnostic-price">
-            <Price />
-            <p>{diagnosticTerms}</p>
-          </div>
-          <Link
-            className="button on-brand"
-            href="/request-service?service=troubleshooting"
-          >
-            Request a diagnostic
-          </Link>
         </div>
       </div>
     </section>
@@ -228,16 +267,26 @@ export function OwnerSection({ aboutLink = true }: { aboutLink?: boolean }) {
   return (
     <section className="section container owner-section">
       <div>
-        <span className="eyebrow">Owner and electrician</span>
+        <span className="eyebrow">Meet your electrician</span>
         <h2>Nicholas Kane</h2>
-        <p className="owner-role">California licensed · {business.license}</p>
+        <p className="owner-role">
+          Owner, Pacific Plains Electric · {business.license}
+        </p>
+        <a
+          className="text-link"
+          href={business.licenseUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Verify license #1162180 with CSLB
+        </a>
       </div>
       <div>
         <p className="lede">
           Pacific Plains Electric is a locally owned contractor serving homes,
-          businesses, and property managers across San Luis Obispo County.
-          Questions about repairs, installations, and estimates go straight to
-          Nicholas, the owner.
+          businesses, and property managers across San Luis Obispo and Santa
+          Barbara counties. Questions about repairs, installations, and
+          estimates go straight to Nicholas, the owner.
         </p>
         <div className="link-stack">
           <a className="text-link" href={"mailto:" + business.email}>
@@ -267,7 +316,10 @@ export function Facts() {
         <ReceiptText size={24} aria-hidden="true" />
         <div>
           <strong>Upfront diagnostic price</strong>
-          <span>${business.diagnosticPrice} per visit, repairs quoted separately</span>
+          <span>
+            ${business.diagnosticPrice}, credited toward qualifying approved
+            follow-up repairs
+          </span>
         </div>
       </li>
       <li>
@@ -310,7 +362,9 @@ export function ContactCTA() {
     <section className="cta-band">
       <div className="container">
         <h2>Have a job in mind?</h2>
-        <p>Send the details or give us a call. We’ll follow up to set a time.</p>
+        <p>
+          Send the details or give us a call. We’ll follow up to set a time.
+        </p>
         <Actions />
       </div>
     </section>
@@ -350,7 +404,11 @@ export function Reviews() {
   if (!reviews.length && !business.googleReviewUrl) return null;
   return (
     <section className="section container" aria-labelledby="reviews-title">
-      <SectionHead eyebrow="Reviews" title="What customers say" id="reviews-title" />
+      <SectionHead
+        eyebrow="Reviews"
+        title="What customers say"
+        id="reviews-title"
+      />
       {reviews.length > 0 && (
         <ul className="review-list">
           {reviews.map((r) => (

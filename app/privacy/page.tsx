@@ -19,9 +19,10 @@ export default function Page() {
           <h2>Service inquiries</h2>
           <p>
             When you submit a service request, we collect the contact
-            information, service address, project description, preferred times,
-            and communication choices you provide. We use these details to
-            review and respond to your request and coordinate service.
+            information, city or ZIP code, optional project description,
+            preferred times, and communication choices you provide. We use these
+            details to review and respond to your request and coordinate
+            service.
           </p>
           <h2>Storage and service providers</h2>
           <p>

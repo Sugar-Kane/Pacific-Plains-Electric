@@ -1,245 +1,310 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { ArrowRight, CheckCircle, ArrowLeft, Phone } from "lucide-react";
-import { requestableServices as services } from "@/config/content";
-import { business, smsDisclosure } from "@/config/business";
+import { ArrowRight, CheckCircle, Phone } from "lucide-react";
+import { intakeCategories, intakeServiceName } from "@/config/intake";
+import { coverageMessage } from "@/config/coverage";
+import { business, diagnosticTerms, smsDisclosure } from "@/config/business";
+
 export default function RequestForm({
   initialService,
 }: {
   initialService: string;
 }) {
-  const [step, setStep] = useState(1);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [done, setDone] = useState("");
+  const [location, setLocation] = useState("");
   const [values, setValues] = useState<Record<string, string>>({
-    service: initialService || "troubleshooting",
+    service: initialService,
     contactMethod: "phone",
   });
   const [sms, setSms] = useState(false);
   const [consent, setConsent] = useState(false);
-  const key = useRef("");
-  const form = useRef<HTMLFormElement>(null);
-  function field(
-    label: string,
-    name: string,
-    type = "text",
-    autoComplete?: string,
-  ) {
-    return (
-      <div className="form-field">
-        <label htmlFor={name}>{label} *</label>
-        <input
-          id={name}
-          name={name}
-          type={type}
-          autoComplete={autoComplete}
-          required
-          maxLength={name === "email" ? 254 : 200}
-          value={values[name] || ""}
-          onChange={(e) => setValues({ ...values, [name]: e.target.value })}
-        />
-      </div>
-    );
-  }
+  // Keep the same key and payload after uncertain network failures. An explicit
+  // rejection permits editing; an uncertain outcome offers an exact safe retry.
+  const attempt = useRef<{
+    key: string;
+    payload: Record<string, unknown>;
+  } | null>(null);
+  const sending = useRef(false);
+  const [uncertain, setUncertain] = useState(false);
+  const resultHeading = useRef<HTMLHeadingElement>(null);
+  const errorBox = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (done) resultHeading.current?.focus();
+  }, [done]);
+  useEffect(() => {
+    if (error) errorBox.current?.focus();
+  }, [error]);
+  const update = (name: string, value: string) =>
+    setValues((v) => ({ ...v, [name]: value }));
   async function submit() {
+    if (sending.current) return;
+    sending.current = true;
     setBusy(true);
     setError("");
-    if (!key.current) key.current = crypto.randomUUID();
+    if (!attempt.current) {
+      const trimmed = location.trim();
+      const isZip = /^\d{5}(?:-\d{4})?$/.test(trimmed);
+      attempt.current = {
+        key: crypto.randomUUID(),
+        payload: {
+          ...values,
+          firstName: values.firstName?.trim(),
+          lastName: "",
+          email: values.email || "",
+          address: "",
+          city: isZip ? "" : trimmed,
+          postalCode: isZip ? trimmed : "",
+          description: values.description || "",
+          preferredTimes: values.preferredTimes || "",
+          website: values.website || "",
+          smsConsent: sms,
+          transactionalConsent: consent,
+        },
+      };
+    }
     try {
       const response = await fetch("/api/service-requests", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          ...values,
-          idempotencyKey: key.current,
-          preferredTimes: values.preferredTimes || "",
-          website: values.website || "",
-          smsConsent: sms,
-          transactionalConsent: consent,
+          ...attempt.current.payload,
+          idempotencyKey: attempt.current.key,
         }),
+        signal: AbortSignal.timeout(15000),
       });
       const result = await response.json();
-      if (!response.ok)
-        throw new Error(result.error || "Unable to save your request.");
+      if (!response.ok) {
+        // Validation errors cannot have created a request. Server failures may
+        // occur after saving, so retain the exact attempt for a safe retry.
+        if ([400, 403, 413, 415, 422, 429].includes(response.status))
+          attempt.current = null;
+        throw new Error(
+          result.error ||
+            "We couldn’t confirm your request. Please retry or call us.",
+        );
+      }
+      if (
+        result.status !== "received" ||
+        typeof result.reference !== "string" ||
+        !/^[0-9a-f-]{36}$/i.test(result.reference)
+      ) {
+        throw new Error(
+          "We couldn’t confirm your request. Please retry or call us.",
+        );
+      }
       setDone(result.reference);
-      setStep(3);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Please try again.");
+      setUncertain(!!attempt.current);
+      setError(
+        e instanceof Error &&
+          e.name !== "TimeoutError" &&
+          e.name !== "TypeError"
+          ? e.message
+          : "We couldn’t confirm your request. Check your connection, then retry or call us.",
+      );
     } finally {
+      sending.current = false;
       setBusy(false);
     }
   }
   if (done)
     return (
       <div className="panel">
-        <CheckCircle
-          size={40}
-          className="success-icon" aria-hidden="true" />
-        <h2>Your request is saved.</h2>
+        <CheckCircle size={40} className="success-icon" aria-hidden="true" />
+        <h2 ref={resultHeading} tabIndex={-1}>
+          Your request has been received
+        </h2>
         <p>
-          We’ve received your details for review.{" "}
-          <strong>This is not a confirmed appointment.</strong>
+          Thank you for contacting Pacific Plains Electric. We’ll contact you to
+          discuss your electrical needs and confirm the next steps.
         </p>
         <p>
-          Keep the reference below for your records. For a time-sensitive
-          request, please call.
+          <strong>This is not a confirmed appointment.</strong>
         </p>
         <div className="notice">
           Reference: <strong>{done.slice(0, 8).toUpperCase()}</strong>
         </div>
+        <p>{diagnosticTerms}</p>
         <a className="button" href={business.workPhone.tel}>
-          <Phone size={17} aria-hidden="true" /> Call {business.workPhone.display}
+          <Phone size={17} aria-hidden="true" /> Call{" "}
+          {business.workPhone.display}
         </a>
         <p>
-          <Link className="text-link" href="/">Back to home</Link>
+          <Link className="text-link" href="/">
+            Back to home
+          </Link>
         </p>
       </div>
     );
   return (
-    <div>
-      <ol className="form-steps">
-        <li className={step === 1 ? "active" : ""} aria-current={step === 1 ? "step" : undefined}>
-          <b>1</b>Details
-        </li>
-        <li className={step === 2 ? "active" : ""} aria-current={step === 2 ? "step" : undefined}>
-          <b>2</b>Review
-        </li>
-        <li>
-          <b>3</b>Sent
-        </li>
-      </ol>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        void submit();
+      }}
+      aria-busy={busy}
+    >
+      <p className="required-note">
+        Fields marked * are required. No account or payment needed.
+      </p>
       {error && (
-        <div className="notice error" role="alert">
-          {error}
+        <div className="notice error" role="alert" tabIndex={-1} ref={errorBox}>
+          <p>{error}</p>
+          {uncertain && (
+            <p>
+              Your details are kept below. Retry sends the same request to
+              prevent duplicates. To change details while its status is
+              uncertain, please call.
+            </p>
+          )}
+          <a className="text-link" href={business.workPhone.tel}>
+            Call {business.workPhone.display}
+          </a>
         </div>
       )}
-      <form
-        ref={form}
-        onSubmit={(e) => {
-          e.preventDefault();
-          setError("");
-          setStep(2);
-        }}
-        style={{ display: step === 1 ? "block" : "none" }}
-      >
-        <p className="required-note">
-          Fields marked * are required. No account or payment needed.
-        </p>
+      <fieldset className="intake-fields" disabled={busy || uncertain}>
+        <legend className="sr-only">Service request details</legend>
         <div className="form-grid">
           <div className="form-field full">
-            <label htmlFor="service">What can we help with? *</label>
+            <label htmlFor="service">What do you need help with? *</label>
             <select
               id="service"
-              required
+              name="service"
               value={values.service}
-              onChange={(e) =>
-                setValues({ ...values, service: e.target.value })
-              }
+              onChange={(e) => update("service", e.target.value)}
+              required
             >
-              {services.map((s) => (
+              {!intakeCategories.some((s) => s.slug === initialService) && (
+                <option value={initialService}>
+                  {intakeServiceName(initialService)}
+                </option>
+              )}
+              {intakeCategories.map((s) => (
                 <option value={s.slug} key={s.slug}>
                   {s.name}
-                          {s.slug === "troubleshooting"
-                    ? ` · $${business.diagnosticPrice} diagnostic`
-                    : ""}
                 </option>
               ))}
             </select>
           </div>
-          {field("First name", "firstName", "text", "given-name")}
-          {field("Last name", "lastName", "text", "family-name")}
-          {field("Phone", "phone", "tel", "tel")}
-          {field("Email", "email", "email", "email")}
           <div className="form-field full">
-            <label htmlFor="address">Service address *</label>
-            <input
-              id="address"
-              autoComplete="street-address"
-              required
-              minLength={5}
-              maxLength={200}
-              value={values.address || ""}
-              onChange={(e) =>
-                setValues({ ...values, address: e.target.value })
-              }
-            />
-          </div>
-          {field("City", "city", "text", "address-level2")}
-          <div className="form-field">
-            <label htmlFor="postalCode">California ZIP code *</label>
-            <input
-              id="postalCode"
-              inputMode="numeric"
-              autoComplete="postal-code"
-              pattern="[0-9]{5}(-[0-9]{4})?"
-              required
-              maxLength={10}
-              value={values.postalCode || ""}
-              onChange={(e) =>
-                setValues({ ...values, postalCode: e.target.value })
-              }
-            />
-          </div>
-          <div className="form-field full">
-            <label htmlFor="description">Tell us what’s going on *</label>
+            <label htmlFor="description">
+              Tell us what’s happening (optional)
+            </label>
             <textarea
               id="description"
+              name="description"
+              maxLength={2000}
+              value={values.description || ""}
+              onChange={(e) => update("description", e.target.value)}
+              placeholder="For example, two outlets in my kitchen stopped working."
+              aria-describedby="description-help"
+            />
+            <small id="description-help">
+              Please don’t include payment information or access codes.
+            </small>
+          </div>
+          <div className="form-field">
+            <label htmlFor="firstName">Your name *</label>
+            <input
+              id="firstName"
+              name="firstName"
+              autoComplete="name"
+              required
+              maxLength={80}
+              value={values.firstName || ""}
+              onChange={(e) => update("firstName", e.target.value)}
+            />
+          </div>
+          <div className="form-field">
+            <label htmlFor="phone">Phone number *</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autoComplete="tel"
               required
               minLength={10}
-              maxLength={2000}
-              placeholder="Describe the issue or your plans for the project."
-              value={values.description || ""}
-              onChange={(e) =>
-                setValues({ ...values, description: e.target.value })
-              }
+              maxLength={25}
+              value={values.phone || ""}
+              onChange={(e) => update("phone", e.target.value)}
             />
-            <small>
-              Please do not include payment information or access codes.
-            </small>
           </div>
           <div className="form-field full">
-            <label htmlFor="preferredTimes">Preferred days or times</label>
+            <label htmlFor="location">City or ZIP code *</label>
             <input
-              id="preferredTimes"
-              maxLength={300}
-              placeholder="For example, weekday mornings"
-              value={values.preferredTimes || ""}
-              onChange={(e) =>
-                setValues({ ...values, preferredTimes: e.target.value })
-              }
+              id="location"
+              name="location"
+              autoComplete="address-level2"
+              required
+              minLength={2}
+              maxLength={80}
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+              aria-describedby="coverage-note"
             />
-            <small>
-              Preferences are not a reservation. Times will be coordinated with
-              you.
+            <small id="coverage-note" role="status">
+              {coverageMessage(location)}
             </small>
           </div>
-          <div className="form-field full">
-            <label htmlFor="contactMethod">Preferred contact method</label>
-            <select
-              id="contactMethod"
-              value={values.contactMethod}
-              onChange={(e) =>
-                setValues({ ...values, contactMethod: e.target.value })
-              }
-            >
-              <option value="phone">Phone call</option>
-              <option value="email">Email</option>
-            </select>
+        </div>
+        <details className="optional-details">
+          <summary>Add email or preferred contact times (optional)</summary>
+          <div className="form-grid">
+            <div className="form-field full">
+              <label htmlFor="email">Email (optional)</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autoComplete="email"
+                maxLength={254}
+                value={values.email || ""}
+                onChange={(e) => {
+                  update("email", e.target.value);
+                  if (!e.target.value) update("contactMethod", "phone");
+                }}
+              />
+            </div>
+            <div className="form-field full">
+              <label htmlFor="preferredTimes">
+                Preferred days or times (optional)
+              </label>
+              <input
+                id="preferredTimes"
+                maxLength={300}
+                value={values.preferredTimes || ""}
+                onChange={(e) => update("preferredTimes", e.target.value)}
+                placeholder="For example, weekday mornings"
+              />
+              <small>
+                We’ll confirm a time with you. This is not a reservation.
+              </small>
+            </div>
+            <div className="form-field full">
+              <label htmlFor="contactMethod">Preferred contact method</label>
+              <select
+                id="contactMethod"
+                value={values.contactMethod}
+                onChange={(e) => update("contactMethod", e.target.value)}
+              >
+                <option value="phone">Phone call</option>
+                {values.email && <option value="email">Email</option>}
+              </select>
+            </div>
           </div>
-          <div className="honeypot" aria-hidden="true">
-            <label htmlFor="website">Website</label>
-            <input
-              id="website"
-              tabIndex={-1}
-              autoComplete="off"
-              value={values.website || ""}
-              onChange={(e) =>
-                setValues({ ...values, website: e.target.value })
-              }
-            />
-          </div>
+        </details>
+        <div className="honeypot" aria-hidden="true">
+          <label htmlFor="website">Website</label>
+          <input
+            id="website"
+            tabIndex={-1}
+            autoComplete="off"
+            value={values.website || ""}
+            onChange={(e) => update("website", e.target.value)}
+          />
         </div>
         <label className="checkbox">
           <input
@@ -268,67 +333,14 @@ export default function RequestForm({
           />
           <span>{smsDisclosure}</span>
         </label>
-        <button className="button" type="submit">
-          Review request <ArrowRight size={18} aria-hidden="true" />
-        </button>
-      </form>
-      {step === 2 && (
-        <div className="panel">
-          <h2>Check the details.</h2>
-          <p>
-            No appointment or charge will be created by sending this request.
-          </p>
-          <dl>
-            {[
-              [
-                "Service",
-                services.find((s) => s.slug === values.service)?.name,
-              ],
-              ["Name", values.firstName + " " + values.lastName],
-              ["Phone", values.phone],
-              ["Email", values.email],
-              [
-                "Address",
-                values.address +
-                  ", " +
-                  values.city +
-                  ", CA " +
-                  values.postalCode,
-              ],
-              ["Description", values.description],
-              ["Preferences", values.preferredTimes || "None specified"],
-              ["Contact", values.contactMethod],
-              ["SMS consent", sms ? "Yes" : "No"],
-            ].map(([label, value]) => (
-              <div className="review-row" key={label}>
-                <dt>{label}</dt>
-                <dd>{value}</dd>
-              </div>
-            ))}
-          </dl>
-          <p className="legal-note">
-            ${business.diagnosticPrice} diagnostic visit; repairs quoted
-            separately. No payment is collected here.
-          </p>
-          <div className="actions">
-            <button
-              className="button outline"
-              onClick={() => {
-                setStep(1);
-                key.current = "";
-              }}
-              disabled={busy}
-            >
-              <ArrowLeft size={17} aria-hidden="true" />
-              Edit
-            </button>
-            <button className="button" onClick={submit} disabled={busy}>
-              {busy ? "Sending…" : "Send service request"}
-              <ArrowRight size={17} aria-hidden="true" />
-            </button>
-          </div>
-        </div>
-      )}
-    </div>
+      </fieldset>
+      <p className="notice">
+        $180 diagnostic visit. {diagnosticTerms} No payment is collected here.
+      </p>
+      <button className="button" type="submit" disabled={busy}>
+        {busy ? "Sending…" : uncertain ? "Retry My Request" : "Send My Request"}
+        <ArrowRight size={18} aria-hidden="true" />
+      </button>
+    </form>
   );
 }

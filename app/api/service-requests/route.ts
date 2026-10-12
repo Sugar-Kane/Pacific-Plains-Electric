@@ -1,7 +1,7 @@
 import { NextResponse, after } from "next/server";
 import { requestSchema, hazardMessage } from "@/lib/security/validation";
 import { publicDb } from "@/lib/auth/server";
-import { smsDisclosure } from "@/config/business";
+import { smsDisclosure, diagnosticTerms } from "@/config/business";
 import { sendRequestEmail } from "@/lib/notify/request-email";
 export async function POST(req: Request) {
   const origin = req.headers.get("origin");
@@ -66,8 +66,7 @@ export async function POST(req: Request) {
       {
         reference: data,
         status: "received",
-        message:
-          "Your request is saved for review. It is not a confirmed appointment. No email or text confirmation has been sent.",
+        message: `Your request has been received. We’ll contact you to discuss the next steps. This is not a confirmed appointment. ${diagnosticTerms}`,
       },
       { status: 201 },
     );

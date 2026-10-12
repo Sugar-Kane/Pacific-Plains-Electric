@@ -1,3 +1,5 @@
+> Historical baseline. For the October 11, 2026 homeowner redesign, current diagnostic credit policy, county ZIP coverage, and test results, see [UX-REDESIGN.md](UX-REDESIGN.md).
+
 # Pacific Plains Electric — handoff
 
 ## What was built

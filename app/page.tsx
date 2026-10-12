@@ -1,17 +1,16 @@
-import Image from "next/image";
+import { answeredFaqs } from "@/config/content";
 import { business } from "@/config/business";
-import PoweredHouse from "@/components/powered-house";
 import {
   Actions,
   AreaLinks,
   ContactCTA,
   Diagnostic,
-  Facts,
   FaqList,
   OwnerSection,
   Reviews,
   SectionHead,
-  ServiceOverview,
+  ServiceChoices,
+  ProcessSteps,
 } from "@/components/public";
 import { metadata as meta, JsonLd, graph, webPageNode } from "@/lib/seo";
 export const metadata = meta(
@@ -20,62 +19,60 @@ export const metadata = meta(
   "/",
   { absolute: true },
 );
+const homeFaqs = [
+  answeredFaqs[1],
+  answeredFaqs.find((f) => f.q.includes("schedule"))!,
+  answeredFaqs[0],
+  answeredFaqs[2],
+];
 export default function Home() {
   return (
     <>
       <JsonLd data={graph(webPageNode("/", business.name))} />
       <section className="hero">
         <div className="container hero-content">
-          <span className="eyebrow">Licensed electrical contractor · {business.license}</span>
-          <h1>Electrician serving San Luis Obispo and Santa Barbara Counties</h1>
+          <span className="eyebrow">
+            Licensed electrical contractor · {business.license}
+          </span>
+          <h1>
+            Need an Electrician?
+            <br />
+            We Can Help.
+          </h1>
           <p className="lede">
-            {business.name} provides residential and commercial electrical
-            services across the Central Coast, from troubleshooting and repairs to
-            panel upgrades, EV chargers, and lighting.
+            Electrical repairs, troubleshooting, panel upgrades, EV chargers,
+            and more throughout San Luis Obispo and Santa Barbara counties.
           </p>
           <Actions />
           <p className="hero-meta">
-            Owned by {business.owner} · ${business.diagnosticPrice} diagnostic visits
+            Owned by {business.owner} · $180 diagnostic visit, credited toward
+            qualifying approved follow-up repairs.
           </p>
         </div>
-        <div className="hero-image">
-          <Image
-            src="/images/central-coast.webp"
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-          />
-        </div>
       </section>
-      <section className="container hero-facts" aria-label="At a glance">
-        <Facts />
-      </section>
-      <PoweredHouse />
-      <section className="section container">
+      <section className="section container home-services">
         <SectionHead
-          eyebrow="Services"
-          title="What we can help with"
-          link={{ label: "All services", href: "/services" }}
+          eyebrow="Electrical services"
+          title="What do you need help with?"
+          link={{ label: "View all services", href: "/services" }}
         />
-        <ServiceOverview
-          slugs={[
-            "troubleshooting",
-            "electrical-repair",
-            "panel-upgrades",
-            "ev-charger-installation",
-            "lighting",
-            "commercial-electrical",
-          ]}
-        />
+        <ServiceChoices />
+      </section>
+      <section className="section container">
+        <SectionHead eyebrow="Three simple steps" title="How it works" />
+        <ProcessSteps />
       </section>
       <Diagnostic />
       <section className="section container">
         <SectionHead
           eyebrow="Service areas"
-          title="Serving San Luis Obispo County and Santa Barbara"
+          title="Proudly serving the Central Coast"
           link={{ label: "All service areas", href: "/service-areas" }}
         />
+        <p>
+          Electrical services throughout San Luis Obispo and Santa Barbara
+          counties. Contact us to confirm coverage for your address.
+        </p>
         <AreaLinks />
       </section>
       <OwnerSection />
@@ -86,7 +83,7 @@ export default function Home() {
           title="Common questions"
           link={{ label: "All questions", href: "/faq" }}
         />
-        <FaqList limit={4} />
+        <FaqList items={homeFaqs} />
       </section>
       <ContactCTA />
     </>

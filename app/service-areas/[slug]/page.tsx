@@ -1,11 +1,16 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowRight, Landmark } from "lucide-react";
-import { business } from "@/config/business";
+import { business, diagnosticTerms } from "@/config/business";
 import { publishedAreas, findArea, countyOf } from "@/config/areas";
 import { findService } from "@/config/content";
 import { ServiceIcon } from "@/components/icons";
-import { PageHero, ContactCTA, PricingPanel, FaqList } from "@/components/public";
+import {
+  PageHero,
+  ContactCTA,
+  PricingPanel,
+  FaqList,
+} from "@/components/public";
 import {
   metadata as meta,
   JsonLd,
@@ -40,7 +45,9 @@ export default async function Page({ params }: Props) {
   const services = a.services.map(findService).filter((x) => x !== undefined);
   const nearby = a.nearby.map(findArea).filter((x) => x !== undefined);
   // Without close neighbors, link the rest of the service area instead.
-  const linked = nearby.length ? nearby : publishedAreas.filter((x) => x.slug !== a.slug);
+  const linked = nearby.length
+    ? nearby
+    : publishedAreas.filter((x) => x.slug !== a.slug);
   const faqs = [
     {
       q: `Does ${business.name} serve ${a.name}?`,
@@ -55,7 +62,7 @@ export default async function Page({ params }: Props) {
     },
     {
       q: `How much is a diagnostic visit in ${a.name}?`,
-      a: `A diagnostic visit is $${business.diagnosticPrice}, the same throughout our service area. Repairs and project work are quoted separately.`,
+      a: `A diagnostic visit is $${business.diagnosticPrice}, the same throughout our service area. ${diagnosticTerms}`,
     },
   ];
   return (
@@ -64,7 +71,11 @@ export default async function Page({ params }: Props) {
         data={graph(
           webPageNode(path, `Electrician in ${a.name}, CA`, {
             about: { "@id": BUSINESS_ID },
-            mentions: { "@type": "Place", name: `${a.name}, CA`, sameAs: a.wikipedia },
+            mentions: {
+              "@type": "Place",
+              name: `${a.name}, CA`,
+              sameAs: a.wikipedia,
+            },
           }),
           breadcrumbNode([
             { name: "Service areas", path: "/service-areas" },
@@ -74,7 +85,10 @@ export default async function Page({ params }: Props) {
         )}
       />
       <PageHero
-        crumbs={[{ label: "Service areas", href: "/service-areas" }, { label: a.name }]}
+        crumbs={[
+          { label: "Service areas", href: "/service-areas" },
+          { label: a.name },
+        ]}
         title={`Electrician in ${a.name}, CA`}
         description={a.intro}
       />
@@ -88,7 +102,8 @@ export default async function Page({ params }: Props) {
             </div>
           ))}
           <h3>
-            <Landmark size={20} aria-hidden="true" className="inline-icon" /> Permits
+            <Landmark size={20} aria-hidden="true" className="inline-icon" />{" "}
+            Permits
           </h3>
           <p>
             {a.kind === "community"
@@ -105,7 +120,11 @@ export default async function Page({ params }: Props) {
           <h2>Common requests in {a.name}</h2>
           <div className="service-grid">
             {services.map((s) => (
-              <Link className="service-card" href={"/services/" + s.slug} key={s.slug}>
+              <Link
+                className="service-card"
+                href={"/services/" + s.slug}
+                key={s.slug}
+              >
                 <span className="service-icon">
                   <ServiceIcon name={s.icon} size={24} />
                 </span>
@@ -119,7 +138,8 @@ export default async function Page({ params }: Props) {
           </div>
           <p>
             <Link className="text-link" href="/services">
-              See all electrical services <ArrowRight size={17} aria-hidden="true" />
+              See all electrical services{" "}
+              <ArrowRight size={17} aria-hidden="true" />
             </Link>
           </p>
         </div>
@@ -136,7 +156,9 @@ export default async function Page({ params }: Props) {
       {linked.length > 0 && (
         <section className="section container">
           <h2 className="subhead">
-            {nearby.length ? "Nearby communities we serve" : "Other communities we serve"}
+            {nearby.length
+              ? "Nearby communities we serve"
+              : "Other communities we serve"}
           </h2>
           <ul className="related">
             {linked.map((n) => (

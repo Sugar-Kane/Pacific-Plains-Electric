@@ -15,6 +15,7 @@ export const requestable = [
   "commercial-electrical",
   "generators",
   "service-plans",
+  "other",
 ] as const;
 
 export type Faq = {
@@ -52,7 +53,8 @@ export const services: Service[] = [
     summary: "Repairs, upgrades, and new work for homes.",
     description:
       "Pacific Plains Electric provides residential electrical services for homeowners, landlords, and property managers throughout San Luis Obispo County.",
-    metaTitle: "Residential Electrician in SLO County | Pacific Plains Electric",
+    metaTitle:
+      "Residential Electrician in SLO County | Pacific Plains Electric",
     metaDescription:
       "Residential electrical services across San Luis Obispo County: troubleshooting, repairs, panel upgrades, EV chargers, lighting, and remodel wiring. CSLB #1162180.",
     icon: "House",
@@ -86,17 +88,23 @@ export const services: Service[] = [
       },
       {
         q: "What if I don't know what's wrong?",
-        a: `Book a diagnostic visit. It's $${business.diagnosticPrice} and covers on-site troubleshooting and an explanation of what we find. ${diagnosticTerms}`,
+        a: `Request a diagnostic visit. It's $${business.diagnosticPrice} and covers on-site troubleshooting and an explanation of what we find. ${diagnosticTerms}`,
       },
     ],
-    related: ["troubleshooting", "panel-upgrades", "ev-charger-installation", "remodel-electrical"],
+    related: [
+      "troubleshooting",
+      "panel-upgrades",
+      "ev-charger-installation",
+      "remodel-electrical",
+    ],
   },
   {
     slug: "troubleshooting",
     name: "Electrical Troubleshooting",
     summary: "A $180 visit to find what's causing the problem.",
     description: `Pacific Plains Electric troubleshoots electrical problems in homes and businesses across San Luis Obispo County. A diagnostic visit is $${business.diagnosticPrice}.`,
-    metaTitle: "Electrical Troubleshooting, SLO County | Pacific Plains Electric",
+    metaTitle:
+      "Electrical Troubleshooting, SLO County | Pacific Plains Electric",
     metaDescription:
       "Breaker tripping, dead outlets, or flickering lights? A $180 diagnostic visit traces the cause and explains repair options. Serving San Luis Obispo County.",
     icon: "Search",
@@ -137,7 +145,11 @@ export const services: Service[] = [
         a: "No. A breaker that trips again right away is doing its job. Unplug what's on the circuit, reset it once, and if it trips again, leave it off and have it checked.",
       },
     ],
-    related: ["electrical-repair", "outlet-switch-installation", "panel-upgrades"],
+    related: [
+      "electrical-repair",
+      "outlet-switch-installation",
+      "panel-upgrades",
+    ],
   },
   {
     slug: "electrical-repair",
@@ -181,7 +193,11 @@ export const services: Service[] = [
         a: "Yes. Start by checking for a tripped GFCI outlet nearby (kitchen, bath, garage, or outdoors) and a tripped breaker. If neither brings it back, we can trace the circuit and repair the cause.",
       },
     ],
-    related: ["troubleshooting", "outlet-switch-installation", "residential-electrical"],
+    related: [
+      "troubleshooting",
+      "outlet-switch-installation",
+      "residential-electrical",
+    ],
   },
   {
     slug: "panel-upgrades",
@@ -231,7 +247,11 @@ export const services: Service[] = [
         a: "Yes. Pacific Plains Electric evaluates, upgrades, and replaces panels for homes and businesses in San Luis Obispo County.",
       },
     ],
-    related: ["ev-charger-installation", "dedicated-circuits", "remodel-electrical"],
+    related: [
+      "ev-charger-installation",
+      "dedicated-circuits",
+      "remodel-electrical",
+    ],
   },
   {
     slug: "ev-charger-installation",
@@ -239,7 +259,8 @@ export const services: Service[] = [
     summary: "Home and workplace chargers, sized to your panel.",
     description:
       "Pacific Plains Electric installs Level 2 EV chargers, including Tesla Wall Connectors, for homes and businesses in San Luis Obispo County.",
-    metaTitle: "EV Charger Installation in SLO County | Pacific Plains Electric",
+    metaTitle:
+      "EV Charger Installation in SLO County | Pacific Plains Electric",
     metaDescription:
       "Level 2 EV charger and Tesla Wall Connector installation in San Luis Obispo County, with circuits sized to your panel and vehicle. Licensed electrical contractor.",
     icon: "CarFront",
@@ -315,7 +336,11 @@ export const services: Service[] = [
         a: "Yes. Near the coast, we recommend fixtures and covers rated for wet and corrosive locations, since salt air shortens the life of standard outdoor hardware.",
       },
     ],
-    related: ["outlet-switch-installation", "remodel-electrical", "commercial-electrical"],
+    related: [
+      "outlet-switch-installation",
+      "remodel-electrical",
+      "commercial-electrical",
+    ],
   },
   {
     slug: "outlet-switch-installation",
@@ -401,7 +426,11 @@ export const services: Service[] = [
         a: "Check the installation manual; it lists the circuit size it needs. Most 240-volt appliances, and many kitchen appliances, require a dedicated circuit.",
       },
     ],
-    related: ["panel-upgrades", "ev-charger-installation", "outlet-switch-installation"],
+    related: [
+      "panel-upgrades",
+      "ev-charger-installation",
+      "outlet-switch-installation",
+    ],
   },
   {
     slug: "remodel-electrical",
@@ -409,7 +438,8 @@ export const services: Service[] = [
     summary: "Wiring for kitchen, bath, and whole-home remodels.",
     description:
       "Pacific Plains Electric plans and installs electrical work for kitchen, bathroom, and whole-home remodels in San Luis Obispo County.",
-    metaTitle: "Remodel Electrical Work in SLO County | Pacific Plains Electric",
+    metaTitle:
+      "Remodel Electrical Work in SLO County | Pacific Plains Electric",
     metaDescription:
       "Electrical work for kitchen, bath, and whole-home remodels in San Luis Obispo County, from new circuits and lighting to panel capacity and code updates.",
     icon: "House",
@@ -457,7 +487,12 @@ export const services: Service[] = [
       "New construction electrical covers the service, panel, rough wiring, and finish work for a new home, addition, or accessory dwelling unit, along with the inspections in between.",
       "Getting the electrical plan settled early, including where outlets, lighting, and EV charging will go, keeps the project moving and avoids changes after the walls close.",
     ],
-    reasons: ["New homes", "Room additions", "Accessory dwelling units (ADUs)", "Detached garages and outbuildings"],
+    reasons: [
+      "New homes",
+      "Room additions",
+      "Accessory dwelling units (ADUs)",
+      "Detached garages and outbuildings",
+    ],
     includes: [
       "Electrical planning and layout",
       "Service and panel installation",
@@ -465,7 +500,11 @@ export const services: Service[] = [
       "Coordination with your project team",
     ],
     faqs: [],
-    related: ["remodel-electrical", "panel-upgrades", "ev-charger-installation"],
+    related: [
+      "remodel-electrical",
+      "panel-upgrades",
+      "ev-charger-installation",
+    ],
   },
   {
     slug: "commercial-electrical",
@@ -551,7 +590,11 @@ export const services: Service[] = [
     overview: [
       "Property owners and managers with several units, or businesses that can't afford downtime, often prefer a recurring arrangement over one-off calls. Scope and pricing are confirmed individually.",
     ],
-    reasons: ["Rental turnovers", "Managed properties", "Businesses that need planned maintenance"],
+    reasons: [
+      "Rental turnovers",
+      "Managed properties",
+      "Businesses that need planned maintenance",
+    ],
     includes: [
       "Property electrical maintenance needs",
       "Preventive service planning",
@@ -563,26 +606,25 @@ export const services: Service[] = [
 ];
 
 export const listedServices = services.filter((s) => s.listed);
-export const findService = (slug: string) => services.find((s) => s.slug === slug);
-export const requestableServices = requestable.map((slug) => findService(slug)!);
+export const findService = (slug: string) =>
+  services.find((s) => s.slug === slug);
+export const requestableServices = services.filter((s) =>
+  requestable.includes(s.slug as (typeof requestable)[number]),
+);
 
 /** What happens after someone gets in touch; shared by every service page. */
 export const process = [
   {
-    title: "Tell us about the job",
-    body: "Call, text, or send the online form with what's happening or what you're planning.",
+    title: "Tell us what you need",
+    body: "Send a short service request or give us a call.",
   },
   {
-    title: "We follow up",
-    body: "We contact you to talk it through and set a time. Sending a request doesn't book an appointment.",
+    title: "Confirm the details",
+    body: "We’ll discuss your electrical needs and arrange an appointment. A request does not reserve a time.",
   },
   {
-    title: "Diagnose or scope",
-    body: `For problems, a $${business.diagnosticPrice} diagnostic visit finds the cause. For new work, we review the scope and quote it before work begins.`,
-  },
-  {
-    title: "The work",
-    body: "Work that needs a permit is inspected by your local building department.",
+    title: "Get the work done",
+    body: "Your electrician evaluates the work and explains the repair options and price before you approve the next steps.",
   },
 ];
 
@@ -590,7 +632,7 @@ export const process = [
 export const faqs: Faq[] = [
   {
     q: "What areas does Pacific Plains Electric serve?",
-    a: "Pacific Plains Electric serves homes and businesses throughout San Luis Obispo County, California, including San Luis Obispo, Arroyo Grande, Grover Beach, Pismo Beach, Nipomo, Avila Beach, Morro Bay, Atascadero, and Paso Robles, as well as Santa Barbara. Contact us to confirm service for your address.",
+    a: "Pacific Plains Electric serves homes and businesses throughout San Luis Obispo County, California, including San Luis Obispo, Arroyo Grande, Grover Beach, Pismo Beach, Nipomo, Avila Beach, Morro Bay, Atascadero, and Paso Robles, as well as all of Santa Barbara County. Contact us to confirm service for your address.",
   },
   {
     q: "How much does an electrician service call cost?",
@@ -640,7 +682,9 @@ export const faqs: Faq[] = [
     a: null,
   },
 ];
-export const answeredFaqs = faqs.filter((f): f is { q: string; a: string } => !!f.a);
+export const answeredFaqs = faqs.filter(
+  (f): f is { q: string; a: string } => !!f.a,
+);
 
 export type Article = {
   slug: string;
@@ -756,7 +800,11 @@ export const articles: Article[] = [
         "Your vehicle and charger model, where you park, and a photo of your panel with the door open help us quote it accurately.",
       ],
     ],
-    related: ["ev-charger-installation", "panel-upgrades", "dedicated-circuits"],
+    related: [
+      "ev-charger-installation",
+      "panel-upgrades",
+      "dedicated-circuits",
+    ],
   },
   {
     slug: "gfci-vs-afci-protection",
@@ -836,7 +884,7 @@ export const articles: Article[] = [
       ],
       [
         "Keep the next step simple",
-        `Pacific Plains Electric offers diagnostic evaluation for $${business.diagnosticPrice}. Repair and project costs are separate.`,
+        `Pacific Plains Electric offers diagnostic evaluation for $${business.diagnosticPrice}. ${diagnosticTerms}`,
       ],
     ],
     related: ["panel-upgrades", "ev-charger-installation"],
@@ -871,4 +919,5 @@ export const articles: Article[] = [
     related: ["lighting", "outlet-switch-installation"],
   },
 ];
-export const findArticle = (slug: string) => articles.find((a) => a.slug === slug);
+export const findArticle = (slug: string) =>
+  articles.find((a) => a.slug === slug);

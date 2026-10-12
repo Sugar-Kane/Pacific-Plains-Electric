@@ -1,3 +1,4 @@
+import { intakeServiceName } from "@/config/intake";
 import Link from "next/link";
 import { getAdmin } from "@/lib/auth/server";
 import {
@@ -7,7 +8,7 @@ import {
   TeamAccess,
 } from "@/components/admin";
 import { logout, markReviewed } from "@/app/admin/actions";
-import { business } from "@/config/business";
+import { diagnosticTerms, business } from "@/config/business";
 import { notFound } from "next/navigation";
 export const metadata = {
   title: "Website administration",
@@ -178,7 +179,7 @@ export default async function Page({
                     {r.payload.firstName} {r.payload.lastName}
                   </h2>
                   <p>
-                    {r.payload.service} ·{" "}
+                    {intakeServiceName(r.payload.service)} ·{" "}
                     {new Intl.DateTimeFormat("en-US", {
                       timeZone: business.timezone,
                       dateStyle: "medium",
@@ -186,13 +187,15 @@ export default async function Page({
                     }).format(new Date(r.created_at))}
                   </p>
                   <p>
-                    {r.payload.phone} · {r.payload.email}
+                    {r.payload.phone}
+                    {r.payload.email ? ` · ${r.payload.email}` : ""}
                     <br />
-                    {r.payload.address}, {r.payload.city}, CA{" "}
-                    {r.payload.postalCode}
+                    {[r.payload.address, r.payload.city, r.payload.postalCode]
+                      .filter(Boolean)
+                      .join(", ")}
                   </p>
                   <p style={{ whiteSpace: "pre-wrap" }}>
-                    {r.payload.description}
+                    {r.payload.description || "No description provided."}
                   </p>
                   <p>
                     Preferred times:{" "}
@@ -264,7 +267,7 @@ export default async function Page({
               <br />
               {business.serviceArea}
               <br />
-              Diagnostic: ${business.diagnosticPrice}
+              Diagnostic: ${business.diagnosticPrice}. {diagnosticTerms}
               <br />
               Timezone: {business.timezone}
             </p>
@@ -280,13 +283,15 @@ export default async function Page({
           <div className="panel">
             <h2>Website assistant</h2>
             <p>
-              The public assistant uses prepared answers for pricing, services,
-              service area, and human contact. Live AI is not connected.
+              There is no live website chat assistant. The automated phone
+              assistant is managed separately; its pricing answers must follow
+              the policy below.
             </p>
             <p>
-              Approved diagnostic price: ${business.diagnosticPrice}. Human
-              escalation: {business.email}. It must not invent
-              availability, pricing, or provide electrical DIY troubleshooting.
+              Approved diagnostic price: ${business.diagnosticPrice}.{" "}
+              {diagnosticTerms} Human escalation: {business.email}. It must not
+              invent availability, pricing, or provide electrical DIY
+              troubleshooting.
             </p>
             <div className="notice">
               AI conversations and knowledge will be managed through Volteira
