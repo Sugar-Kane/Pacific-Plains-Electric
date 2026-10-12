@@ -31,7 +31,7 @@ export function Actions() {
         Request Service <ArrowRight size={17} aria-hidden="true" />
       </Link>
       <a className="button outline" href={business.workPhone.tel}>
-        <Phone size={17} aria-hidden="true" /> Call {business.workPhone.display}
+        <Phone size={17} aria-hidden="true" /> <span className="contact-call-desktop">Call {business.workPhone.display}</span><span className="contact-call-mobile">Call</span>
       </a>
       <a className="button outline" href={business.workPhone.sms}>
         <MessageSquare size={17} aria-hidden="true" /> Text Us

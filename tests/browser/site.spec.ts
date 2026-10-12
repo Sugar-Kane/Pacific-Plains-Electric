@@ -288,7 +288,7 @@ test("diagnostic policy, example, mobile actions and guide are preserved", async
   await expect(page.locator(".credit-example")).toContainText("$320");
   await expect(page.locator(".credit-example")).toContainText("$500 total");
   await expect(
-    page.locator(".mobile-action-bar").getByRole("link", { name: "Call Now" }),
+    page.locator(".mobile-action-bar").getByRole("link", { name: "Call", exact: true }),
   ).toHaveAttribute("href", "tel:+18056267761");
   await expect(page.locator(".mobile-action-bar").getByRole("link", { name: "Text", exact: true })).toHaveAttribute("href", "sms:+18056267761");
   await page
@@ -354,4 +354,21 @@ test("private routes and unsafe submissions fail closed", async ({
   expect(home.headers()["content-security-policy"]).toContain(
     "frame-ancestors 'none'",
   );
+});
+
+test("mobile contact layout and footer disclosures stay compact", async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 740 });
+  await page.goto("/");
+  const buttons = page.locator(".primary-actions").first().locator("a");
+  const call = await buttons.nth(1).boundingBox();
+  const text = await buttons.nth(2).boundingBox();
+  expect(call!.y).toBe(text!.y);
+  const areas = page.locator(".footer-mobile-links").filter({ hasText: "Service areas" });
+  await expect(areas.locator("a").first()).not.toBeVisible();
+  await areas.locator("summary").click();
+  await expect(areas.locator("a").first()).toBeVisible();
+  await page.goto("/request-service");
+  await expect(page.locator(".request-aside")).not.toBeVisible();
+  await expect(page.locator(".mobile-action-bar a")).toHaveCount(2);
+  await expect(page.getByRole("button", {name: "Send My Request"})).toBeVisible();
 });

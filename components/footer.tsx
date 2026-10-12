@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Brand from "./brand";
-import { Phone, MessageSquare } from "lucide-react";
+import MobileActions from "./mobile-actions";
 import { business } from "@/config/business";
 import { listedServices } from "@/config/content";
 import { publishedAreas } from "@/config/areas";
@@ -14,7 +14,7 @@ export default function Footer() {
             <p>{business.description}</p>
             <small>{business.license}</small>
           </div>
-          <nav className="footer-col" aria-labelledby="footer-services">
+          <nav className="footer-col footer-desktop-links" aria-labelledby="footer-services">
             <h2 id="footer-services">Services</h2>
             <ul>
               {listedServices.slice(0, 6).map((s) => (
@@ -27,7 +27,22 @@ export default function Footer() {
               </li>
             </ul>
           </nav>
-          <nav className="footer-col" aria-labelledby="footer-areas">
+          <details className="footer-col footer-mobile-links">
+            <summary>Services</summary>
+            <nav aria-label="Services">
+            <ul>
+              {listedServices.slice(0, 6).map((s) => (
+                <li key={s.slug}>
+                  <Link href={"/services/" + s.slug}>{s.name}</Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/services">All services</Link>
+              </li>
+            </ul>
+            </nav>
+          </details>
+          <nav className="footer-col footer-desktop-links" aria-labelledby="footer-areas">
             <h2 id="footer-areas">Service areas</h2>
             <ul>
               {publishedAreas.map((a) => (
@@ -37,6 +52,18 @@ export default function Footer() {
               ))}
             </ul>
           </nav>
+          <details className="footer-col footer-mobile-links">
+            <summary>Service areas</summary>
+            <nav aria-label="Service areas">
+            <ul>
+              {publishedAreas.map((a) => (
+                <li key={a.slug}>
+                  <Link href={"/service-areas/" + a.slug}>{a.name}</Link>
+                </li>
+              ))}
+            </ul>
+            </nav>
+          </details>
           <nav className="footer-col" aria-labelledby="footer-company">
             <h2 id="footer-company">Company</h2>
             <ul>
@@ -86,21 +113,7 @@ export default function Footer() {
           </nav>
         </div>
       </footer>
-      <div
-        className="mobile-action-bar"
-        role="group"
-        aria-label="Request service"
-      >
-        <a href={business.workPhone.tel}>
-          <Phone size={17} aria-hidden="true" /> Call Now
-        </a>
-        <a href={business.workPhone.sms}>
-          <MessageSquare size={17} aria-hidden="true" /> Text
-        </a>
-        <Link className="mobile-request" href="/request-service">
-          Request Service
-        </Link>
-      </div>
+      <MobileActions />
     </>
   );
 }
