@@ -18,7 +18,7 @@ const routes = [
   "/privacy",
   "/terms",
 ];
-for (const width of [375, 390, 430, 768, 1024, 1440])
+for (const width of [320, 375, 390, 430, 768, 1024, 1440])
   test(`layout fits ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     for (const path of [
@@ -107,7 +107,11 @@ test("theme persists and mobile navigation works", async ({ page }) => {
   expect(await page.locator("html").getAttribute("data-theme")).not.toBe(
     initial,
   );
-  await page.locator("header").getByRole("link", { name: "Services", exact: true }).click();
+  await page.getByRole("button", { name: "Open navigation" }).click();
+  await page
+    .getByRole("navigation", { name: "Main navigation" })
+    .getByRole("link", { name: "Services", exact: true })
+    .click();
   await expect(page).toHaveURL(/\/services$/);
   await expect(
     page.getByRole("button", { name: "Open navigation" }),
@@ -127,14 +131,30 @@ test("service links carry the selected service into the request", async ({
 }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
-  await page.locator("header").getByRole("link", { name: "Services", exact: true }).click();
-  const serviceLinks = await page.locator('.service-card a[href^="/request-service"]')
-    .evaluateAll(links => links.map(link => link.getAttribute("href")!));
+  await page.getByRole("button", { name: "Open navigation" }).click();
+  await page
+    .getByRole("navigation", { name: "Main navigation" })
+    .getByRole("link", { name: "Services", exact: true })
+    .click();
+  await page
+    .getByText("Explore all electrical services", { exact: true })
+    .click();
+  const serviceLinks = await page
+    .locator('.service-card a[href^="/request-service"]')
+    .evaluateAll((links) => links.map((link) => link.getAttribute("href")!));
   expect(serviceLinks).toHaveLength(listedServices.length);
   for (const [i, href] of serviceLinks.entries()) {
     await page.goto("/services");
-    await page.locator('.service-card a[href^="/request-service"]').nth(i).click();
-    await expect(page.locator("#service")).toHaveValue(new URL(href, "http://localhost").searchParams.get("service")!);
+    await page
+      .getByText("Explore all electrical services", { exact: true })
+      .click();
+    await page
+      .locator('.service-card a[href^="/request-service"]')
+      .nth(i)
+      .click();
+    await expect(page.locator("#service")).toHaveValue(
+      new URL(href, "http://localhost").searchParams.get("service")!,
+    );
   }
   await page.goto("/contact");
   await expect(page.locator('main a[href="tel:+18056267761"]')).toBeVisible();
@@ -143,78 +163,157 @@ test("service links carry the selected service into the request", async ({
   ).toBeVisible();
   await expect(page.locator('a[href="tel:+12096269313"]')).toHaveCount(0);
 });
-test("request review and submitted state use server response", async ({
-  page,
-}) => {
-  await page.goto("/request-service");
-  await expect(page.locator("main")).toContainText("$180");
-  for (const [id, val] of Object.entries({
-    firstName: "Test",
-    lastName: "Customer",
-    phone: "8055550100",
-    email: "test@example.invalid",
-    address: "100 Test Street",
-    city: "San Luis Obispo",
-    postalCode: "93401",
-    description: "Synthetic browser form verification only.",
-  }))
-    await page.locator("#" + id).fill(val);
+async function fillInquiry(
+  page: import("@playwright/test").Page,
+  location = "93401",
+) {
+  await page.locator("#firstName").fill("Test Customer");
+  await page.locator("#phone").fill("8055550100");
+  await page.locator("#location").fill(location);
   await page.locator("input[type=checkbox]").first().check();
-  await page.getByRole("button", { name: "Review Request" }).click();
-  await expect(
-    page.getByRole("heading", { name: "Check the details." }),
-  ).toBeVisible();
-  let submitted: Record<string, unknown> = {};
-  await page.route("**/api/service-requests", async (route) => {
-    submitted = route.request().postDataJSON();
-    await route.fulfill({
-      status: 201,
-      json: { reference: "7498110c-65d8-4cb5-9153-a9f071f3d70a" },
+}
+for (const service of [
+  "electrical-repair",
+  "ev-charger-installation",
+  "other",
+]) {
+  test(`home to acknowledged ${service} inquiry`, async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto("/");
+    await page
+      .locator(`.service-choices a[href$="service=${service}"]`)
+      .click();
+    await expect(page.locator("#service")).toHaveValue(service);
+    await fillInquiry(page);
+    await page
+      .locator("#description")
+      .fill("Two kitchen outlets stopped working.");
+    let submitted: Record<string, unknown> = {};
+    await page.route("**/api/service-requests", async (route) => {
+      submitted = route.request().postDataJSON();
+      await route.fulfill({
+        status: 201,
+        json: {
+          status: "received",
+          reference: "7498110c-65d8-4cb5-9153-a9f071f3d70a",
+        },
+      });
     });
+    await page.getByRole("button", { name: "Send My Request" }).click();
+    await expect(
+      page.getByRole("heading", { name: "Your request has been received" }),
+    ).toBeFocused();
+    expect(submitted.service).toBe(service);
+    expect(submitted.smsConsent).toBe(false);
+    expect(submitted.email).toBe("");
+    expect(submitted.address).toBe("");
+    expect(submitted.transactionalConsent).toBe(true);
   });
-  await page.getByRole("button", { name: "Send Service Request" }).click();
-  await expect(
-    page.getByRole("heading", { name: "Your request is saved." }),
-  ).toBeVisible();
-  await expect(page.locator("main")).toContainText(
-    "not a confirmed appointment",
-  );
-  expect(submitted.smsConsent).toBe(false);
-  expect(submitted.transactionalConsent).toBe(true);
-  expect(submitted.idempotencyKey).toBeTruthy();
-});
-test("failure state retains request and shows call fallback", async ({
+}
+test("failure preserves input; retry uses the identical request", async ({
   page,
 }) => {
   await page.goto("/request-service");
-  for (const [id, val] of Object.entries({
-    firstName: "Test",
-    lastName: "Customer",
-    phone: "8055550100",
-    email: "test@example.invalid",
-    address: "100 Test Street",
-    city: "San Luis Obispo",
-    postalCode: "93401",
-    description: "Synthetic browser form verification only.",
-  }))
-    await page.locator("#" + id).fill(val);
-  await page.locator("input[type=checkbox]").first().check();
-  await page.getByRole("button", { name: "Review Request" }).click();
-  await page.route("**/api/service-requests", (r) =>
-    r.fulfill({
-      status: 503,
-      json: {
-        error: "Online requests are unavailable. Please call (805) 626-7761.",
-      },
-    }),
-  );
-  await page.getByRole("button", { name: "Send Service Request" }).click();
+  await fillInquiry(page);
+  const payloads: unknown[] = [];
+  await page.route("**/api/service-requests", async (route) => {
+    payloads.push(route.request().postDataJSON());
+    await route.fulfill(
+      payloads.length === 1
+        ? {
+            status: 503,
+            json: { error: "Please retry or call (805) 626-7761." },
+          }
+        : {
+            status: 201,
+            json: {
+              status: "received",
+              reference: "7498110c-65d8-4cb5-9153-a9f071f3d70a",
+            },
+          },
+    );
+  });
+  await page.getByRole("button", { name: "Send My Request" }).click();
   await expect(page.locator("main").getByRole("alert")).toContainText(
     "(805) 626-7761",
   );
+  await expect(page.locator("#firstName")).toHaveValue("Test Customer");
+  await page.getByRole("button", { name: "Retry My Request" }).click();
   await expect(
-    page.getByRole("heading", { name: "Check the details." }),
+    page.getByRole("heading", { name: "Your request has been received" }),
   ).toBeVisible();
+  expect(payloads[0]).toEqual(payloads[1]);
+});
+test("malformed success never produces a false acknowledgment", async ({
+  page,
+}) => {
+  await page.goto("/request-service");
+  await fillInquiry(page);
+  await page.route("**/api/service-requests", (route) =>
+    route.fulfill({ status: 200, json: {} }),
+  );
+  await page.getByRole("button", { name: "Send My Request" }).click();
+  await expect(page.locator("main").getByRole("alert")).toContainText(
+    "couldn’t confirm",
+  );
+  await expect(
+    page.getByRole("heading", { name: "Your request has been received" }),
+  ).toHaveCount(0);
+});
+test("county ZIP checks, border ZIP and unknown ZIP never block inquiry", async ({
+  page,
+}) => {
+  await page.goto("/request-service");
+  for (const zip of ["93401", "93458", "93117", "93199", "93483"]) {
+    await page.locator("#location").fill(zip);
+    await expect(page.locator("#coverage-note")).toContainText("coverage area");
+  }
+  await page.locator("#location").fill("93252");
+  await expect(page.locator("#coverage-note")).toContainText(
+    "part of our service area",
+  );
+  await page.locator("#location").fill("10001");
+  await expect(page.locator("#coverage-note")).toContainText(
+    "still send a request",
+  );
+  await expect(
+    page.getByRole("button", { name: "Send My Request" }),
+  ).toBeEnabled();
+});
+test("diagnostic policy, example, mobile actions and guide are preserved", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 320, height: 740 });
+  await page.goto("/");
+  await expect(page.locator(".credit-example")).toContainText("$320");
+  await expect(page.locator(".credit-example")).toContainText("$500 total");
+  await expect(
+    page.locator(".mobile-action-bar").getByRole("link", { name: "Call Now" }),
+  ).toHaveAttribute("href", "tel:+18056267761");
+  await page
+    .locator(".mobile-action-bar")
+    .getByRole("link", { name: "Request Service" })
+    .click();
+  await expect(page).toHaveURL(/request-service/);
+  for (const path of [
+    "/",
+    "/services",
+    "/services/troubleshooting",
+    "/faq",
+    "/terms",
+    "/request-service",
+    "/service-areas/nipomo",
+  ]) {
+    await page.goto(path);
+    await expect(page.locator("main")).toContainText(
+      "qualifying approved follow-up repairs related to the original diagnostic visit",
+    );
+    await expect(page.locator("main")).not.toContainText(
+      "not automatically credited",
+    );
+  }
+  await page.goto("/blog");
+  await expect(page.locator("#power-story-title")).toBeVisible();
 });
 test("private routes and unsafe submissions fail closed", async ({
   request,
@@ -245,7 +344,9 @@ test("private routes and unsafe submissions fail closed", async ({
   expect(mapText).toContain("/service-areas/nipomo");
   const llms = await request.get("/llms.txt");
   expect(llms.status()).toBe(200);
-  expect(await llms.text()).toContain("electrical contractor serving San Luis Obispo County");
+  expect(await llms.text()).toContain(
+    "electrical contractor serving San Luis Obispo and Santa Barbara counties",
+  );
   const robot = await request.get("/robots.txt");
   expect(await robot.text()).toContain("/appointment/");
   const home = await request.get("/");

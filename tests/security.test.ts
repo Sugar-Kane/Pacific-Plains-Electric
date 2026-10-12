@@ -24,7 +24,7 @@ const request = {
 };
 test("pricing and scheduling fail-safe defaults", () => {
   assert.equal(business.diagnosticPrice, 180);
-  assert.equal(business.diagnosticFeeAppliedToWork, false);
+  assert.equal(business.diagnosticFeeAppliedToWork, true);
   assert.equal(business.schedulingEnabled, false);
 });
 test("intake rejects unknown services, invalid consent and malformed contact data", () => {
@@ -96,4 +96,49 @@ test("Pacific time accounts for daylight saving", () => {
   });
   assert.equal(fmt.format(new Date("2026-01-15T16:00:00Z")), "08");
   assert.equal(fmt.format(new Date("2026-07-15T16:00:00Z")), "09");
+});
+
+test("short inquiries accept city or ZIP without email, address, or description", () => {
+  const minimal = {
+    ...request,
+    lastName: "",
+    email: "",
+    address: "",
+    description: "",
+    contactMethod: "phone",
+    city: "",
+    postalCode: "93401",
+  };
+  assert.ok(requestSchema.safeParse(minimal).success);
+  assert.ok(
+    requestSchema.safeParse({ ...minimal, city: "Nipomo", postalCode: "" })
+      .success,
+  );
+  for (const patch of [
+    { city: "", postalCode: "" },
+    { city: "1234", postalCode: "" },
+    { contactMethod: "email" },
+    { firstName: "  " },
+  ])
+    assert.equal(
+      requestSchema.safeParse({ ...minimal, ...patch }).success,
+      false,
+    );
+  assert.ok(requestSchema.safeParse({ ...minimal, service: "other" }).success);
+});
+
+test("all authorized ZIPs are recognized, with ZIP+4 and boundary handling", async () => {
+  const { servedZips, crossCountyZips, coverageMessage } =
+    await import("../config/coverage");
+  assert.equal(servedZips.length, 78);
+  for (const zip of servedZips) {
+    assert.match(zip, /^\d{5}$/);
+    assert.match(
+      coverageMessage(zip),
+      /coverage area|part of our service area/,
+    );
+    assert.equal(coverageMessage(zip), coverageMessage(zip + "-1234"));
+  }
+  assert.ok(crossCountyZips.includes("93252"));
+  assert.match(coverageMessage("10001"), /still send a request/);
 });

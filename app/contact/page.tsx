@@ -1,9 +1,22 @@
-import { Phone, Mail, Clock, MessageCircle, ArrowRight, ArrowUpRight } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  Clock,
+  MessageCircle,
+  ArrowRight,
+  ArrowUpRight,
+} from "lucide-react";
 import Link from "next/link";
 import CaliforniaMap from "@/components/california-map";
 import { PageHero } from "@/components/public";
 import { business } from "@/config/business";
-import { metadata as meta, JsonLd, graph, breadcrumbNode, webPageNode } from "@/lib/seo";
+import {
+  metadata as meta,
+  JsonLd,
+  graph,
+  breadcrumbNode,
+  webPageNode,
+} from "@/lib/seo";
 export const metadata = meta(
   "Contact",
   "Contact Pacific Plains Electric, a licensed electrician in San Luis Obispo County. Call or text (805) 626-7761, email, or send a service request online.",
@@ -14,7 +27,9 @@ export default function Page() {
     <>
       <JsonLd
         data={graph(
-          webPageNode("/contact", "Contact Pacific Plains Electric", { "@type": "ContactPage" }),
+          webPageNode("/contact", "Contact Pacific Plains Electric", {
+            "@type": "ContactPage",
+          }),
           breadcrumbNode([{ name: "Contact", path: "/contact" }]),
         )}
       />
@@ -29,9 +44,12 @@ export default function Page() {
             <li className="contact-item">
               <Phone size={22} aria-hidden="true" />
               <div>
-                <span className="contact-label">Main line</span>
-                <a className="contact-value large" href={business.workPhone.tel}>
-                  {business.workPhone.display}
+                <span className="contact-label">Speak with us</span>
+                <a
+                  className="contact-value large"
+                  href={business.workPhone.tel}
+                >
+                  Call {business.workPhone.display}
                 </a>
                 <small>
                   Answered 24/7 by an automated assistant. Visits are by
@@ -42,9 +60,10 @@ export default function Page() {
             <li className="contact-item">
               <MessageCircle size={22} aria-hidden="true" />
               <div>
-                <span className="contact-label">Text</span>
-                <a className="contact-value" href={business.workPhone.sms}>
-                  {business.workPhone.display}
+                <span className="contact-label">Have a quick question?</span>
+                <p>Send us a text describing what you need.</p>
+                <a className="button outline" href={business.workPhone.sms}>
+                  Send a Text
                 </a>
               </div>
             </li>
@@ -66,17 +85,23 @@ export default function Page() {
               </div>
             </li>
           </ul>
+          <h2>Prefer to send the details online?</h2>
+          <p>
+            Submit a service request and we’ll contact you about the next steps.
+          </p>
           <Link className="button" href="/request-service">
             Request service <ArrowRight size={18} aria-hidden="true" />
           </Link>
         </div>
         <div className="map-panel">
           <CaliforniaMap />
-          <h2>San Luis Obispo County and Santa Barbara</h2>
+          <h2>San Luis Obispo and Santa Barbara counties</h2>
           <p className="map-legend">
             <span /> Our service area
           </p>
-          <p className="legal-note">We come to you. There’s no public storefront.</p>
+          <p className="legal-note">
+            We come to you. There’s no public storefront.
+          </p>
           <a
             className="text-link"
             href="https://www.google.com/maps/search/San+Luis+Obispo+County+California"

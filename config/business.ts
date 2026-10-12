@@ -10,11 +10,13 @@ export const business = {
   name: "Pacific Plains Electric",
   /** Plain factual description used in schema, llms.txt, and the About page. */
   description:
-    "Pacific Plains Electric is a licensed electrical contractor providing residential and commercial electrical services throughout San Luis Obispo County, California.",
+    "Pacific Plains Electric is a licensed electrical contractor providing residential and commercial electrical services throughout San Luis Obispo and Santa Barbara counties, California.",
   category: "Electrician",
   owner: "Nicholas Kane",
   license: "CSLB #1162180",
   licenseNumber: "1162180",
+  licenseUrl:
+    "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckLicense.aspx",
   // TODO(owner): confirm the license classification (for example C-10
   // Electrical) as shown on the CSLB license lookup before adding it here.
   licenseClassification: null as string | null,
@@ -37,7 +39,7 @@ export const business = {
     days: null as string[] | null,
   },
   diagnosticPrice: 180,
-  diagnosticFeeAppliedToWork: false,
+  diagnosticFeeAppliedToWork: true,
   schedulingEnabled: false,
   // TODO(owner): set true only if the business carries liability insurance
   // and wants it advertised.
@@ -46,7 +48,7 @@ export const business = {
   bonded: null as boolean | null,
   // TODO(owner): accepted payment methods, e.g. ["Credit card", "Check"].
   paymentMethods: null as string[] | null,
-  serviceArea: "San Luis Obispo County, California",
+  serviceArea: "San Luis Obispo and Santa Barbara counties, California",
   county: "San Luis Obispo County",
   state: "California",
   siteUrl: "https://www.pacificplainselectric.com",
@@ -65,7 +67,7 @@ export const business = {
 
 /** The one place the diagnostic terms are worded. Reuse it; don't restate it. */
 export const diagnosticTerms =
-  "Repairs and project work are quoted separately. The diagnostic fee is not automatically credited toward repairs.";
+  "The $180 diagnostic fee is credited toward qualifying approved follow-up repairs related to the original diagnostic visit. Repairs are quoted before you approve the work.";
 export const smsDisclosure =
   "I agree to receive transactional text messages from Pacific Plains Electric about my service request and appointment. Consent is optional and is not a condition of service. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help.";
 export const days = [

@@ -1,9 +1,16 @@
 import Link from "next/link";
+import PoweredHouse from "@/components/powered-house";
 import { ArrowRight } from "lucide-react";
 import { articles } from "@/config/content";
 import { PageHero, ContactCTA } from "@/components/public";
 import { ServiceIcon } from "@/components/icons";
-import { metadata as meta, JsonLd, graph, breadcrumbNode, webPageNode } from "@/lib/seo";
+import {
+  metadata as meta,
+  JsonLd,
+  graph,
+  breadcrumbNode,
+  webPageNode,
+} from "@/lib/seo";
 import { getContent } from "@/lib/content";
 export const dynamic = "force-dynamic";
 export const metadata = meta(
@@ -14,14 +21,28 @@ export const metadata = meta(
 export default async function Page() {
   const posts = await getContent("article");
   const cards = [
-    ...articles.map((a) => ({ slug: a.slug, category: a.category, title: a.title, excerpt: a.dek, icon: a.icon })),
-    ...posts.map((p) => ({ slug: p.slug, category: p.category, title: p.title, excerpt: p.excerpt, icon: undefined })),
+    ...articles.map((a) => ({
+      slug: a.slug,
+      category: a.category,
+      title: a.title,
+      excerpt: a.dek,
+      icon: a.icon,
+    })),
+    ...posts.map((p) => ({
+      slug: p.slug,
+      category: p.category,
+      title: p.title,
+      excerpt: p.excerpt,
+      icon: undefined,
+    })),
   ];
   return (
     <>
       <JsonLd
         data={graph(
-          webPageNode("/blog", "Planning guides", { "@type": "CollectionPage" }),
+          webPageNode("/blog", "Planning guides", {
+            "@type": "CollectionPage",
+          }),
           breadcrumbNode([{ name: "Guides", path: "/blog" }]),
         )}
       />
@@ -33,7 +54,11 @@ export default async function Page() {
       <section className="section container">
         <div className="article-grid">
           {cards.map((c) => (
-            <Link className="article-card" href={"/blog/" + c.slug} key={c.slug}>
+            <Link
+              className="article-card"
+              href={"/blog/" + c.slug}
+              key={c.slug}
+            >
               {c.icon && (
                 <div className="article-art">
                   <ServiceIcon name={c.icon} size={56} />
@@ -51,6 +76,7 @@ export default async function Page() {
           ))}
         </div>
       </section>
+      <PoweredHouse />
       <ContactCTA />
     </>
   );

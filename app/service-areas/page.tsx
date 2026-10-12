@@ -1,14 +1,21 @@
+import CoverageCheck from "@/components/coverage-check";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import CaliforniaMap from "@/components/california-map";
 import { PageHero, ContactCTA } from "@/components/public";
 import { business } from "@/config/business";
 import { publishedAreas, countyOf, DEFAULT_COUNTY } from "@/config/areas";
-import { metadata as meta, JsonLd, graph, breadcrumbNode, webPageNode } from "@/lib/seo";
+import {
+  metadata as meta,
+  JsonLd,
+  graph,
+  breadcrumbNode,
+  webPageNode,
+} from "@/lib/seo";
 
 export const metadata = meta(
   "Service Areas | Electrician in San Luis Obispo County",
-  "Pacific Plains Electric serves homes and businesses across San Luis Obispo County and in Santa Barbara, including San Luis Obispo, Arroyo Grande, and Nipomo.",
+  "Pacific Plains Electric serves homes and businesses across San Luis Obispo and Santa Barbara counties, including San Luis Obispo, Arroyo Grande, and Nipomo.",
   "/service-areas",
   { absolute: true },
 );
@@ -24,8 +31,8 @@ export default function Page() {
       />
       <PageHero
         eyebrow="Service areas"
-        title="Electrician serving San Luis Obispo County"
-        description={`${business.name} provides residential and commercial electrical services throughout San Luis Obispo County and in Santa Barbara. We come to you; there is no public storefront.`}
+        title="Serving San Luis Obispo and Santa Barbara counties"
+        description={`${business.name} provides residential and commercial electrical services throughout San Luis Obispo and Santa Barbara counties. We come to you; there is no public storefront.`}
       />
       <section className="section container two-column">
         <div>
@@ -39,10 +46,10 @@ export default function Page() {
                     {countyOf(a) !== DEFAULT_COUNTY
                       ? countyOf(a)
                       : a.setting === "coastal"
-                      ? "Coastal"
-                      : a.setting === "inland"
-                        ? "North County"
-                        : "Central and South County"}
+                        ? "Coastal"
+                        : a.setting === "inland"
+                          ? "North County"
+                          : "Central and South County"}
                     {a.kind === "community" ? " · unincorporated" : ""}
                   </span>
                   <ArrowRight size={16} aria-hidden="true" />
@@ -51,20 +58,24 @@ export default function Page() {
             ))}
           </ul>
           <p>
-            Don’t see your town? We work throughout San Luis Obispo County.{" "}
+            Don’t see your town? We work throughout San Luis Obispo and Santa
+            Barbara counties.{" "}
             <Link className="inline-link" href="/contact">
               Contact us
-            </Link> to confirm service for your
-            address.
+            </Link>{" "}
+            to confirm service for your address.
           </p>
         </div>
         <div className="map-panel">
           <CaliforniaMap />
-          <h2>San Luis Obispo County and Santa Barbara</h2>
+          <h2>San Luis Obispo and Santa Barbara counties</h2>
           <p className="map-legend">
             <span /> Our service area
           </p>
         </div>
+      </section>
+      <section className="section container">
+        <CoverageCheck />
       </section>
       <ContactCTA />
     </>

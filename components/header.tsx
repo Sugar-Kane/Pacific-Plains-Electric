@@ -7,11 +7,8 @@ import Brand from "./brand";
 import { business } from "@/config/business";
 export const navigation = [
   ["Services", "/services"],
-  ["Service areas", "/service-areas"],
   ["About", "/about"],
-  ["Guides", "/blog"],
-  ["FAQ", "/faq"],
-  ["Contact", "/contact"],
+  ["Service Area", "/service-areas"],
 ] as const;
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -39,6 +36,13 @@ export default function Header() {
           }}
           className={open ? "nav open" : "nav"}
         >
+          <Link
+            className="mobile-nav-only"
+            href="/"
+            onClick={() => setOpen(false)}
+          >
+            Home
+          </Link>
           {navigation.map(([label, url]) => (
             <Link
               key={url}
@@ -49,6 +53,13 @@ export default function Header() {
               {label}
             </Link>
           ))}
+          <Link
+            className="mobile-nav-only"
+            href="/contact"
+            onClick={() => setOpen(false)}
+          >
+            Contact
+          </Link>
         </nav>
         <div className="header-actions">
           <Link
@@ -59,9 +70,13 @@ export default function Header() {
           >
             Services
           </Link>
-          <a href={business.workPhone.tel} className="header-phone">
+          <a
+            href={business.workPhone.tel}
+            className="header-phone"
+            aria-label={"Call " + business.workPhone.display}
+          >
             <Phone size={18} aria-hidden="true" />
-            <span>{business.workPhone.display}</span>
+            <span>Call Now</span>
           </a>
           <button
             type="button"
@@ -73,7 +88,7 @@ export default function Header() {
             <Moon className="moon" size={18} />
           </button>
           <Link className="button small header-cta" href="/request-service">
-            Online form
+            Request Service
           </Link>
           <button
             id="navigation-toggle"

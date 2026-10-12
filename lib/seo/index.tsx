@@ -6,7 +6,8 @@ import { listedServices, type Article, type Service } from "@/config/content";
 const SITE = business.siteUrl;
 export const BUSINESS_ID = `${SITE}/#business`;
 export const WEBSITE_ID = `${SITE}/#website`;
-const COUNTY_WIKI = "https://en.wikipedia.org/wiki/San_Luis_Obispo_County,_California";
+const COUNTY_WIKI =
+  "https://en.wikipedia.org/wiki/San_Luis_Obispo_County,_California";
 
 /**
  * Page metadata with a canonical URL and matching Open Graph and Twitter tags.
@@ -17,7 +18,10 @@ export function metadata(
   title: string,
   description: string,
   path: string,
-  { absolute = false, noindex = false }: { absolute?: boolean; noindex?: boolean } = {},
+  {
+    absolute = false,
+    noindex = false,
+  }: { absolute?: boolean; noindex?: boolean } = {},
 ): Metadata {
   const fullTitle = absolute ? title : `${title} | ${business.name}`;
   return {
@@ -83,14 +87,29 @@ export function businessNode() {
     name: business.name,
     description: business.description,
     url: SITE,
-    logo: { "@type": "ImageObject", url: SITE + business.logoPng, width: 512, height: 512 },
+    logo: {
+      "@type": "ImageObject",
+      url: SITE + business.logoPng,
+      width: 512,
+      height: 512,
+    },
     image: SITE + business.ogImage,
     telephone: business.workPhone.e164,
     email: business.email,
     // A service-area business: no street address is published.
-    address: { "@type": "PostalAddress", addressRegion: "CA", addressCountry: "US" },
+    address: {
+      "@type": "PostalAddress",
+      addressRegion: "CA",
+      addressCountry: "US",
+    },
     areaServed: [
       countyNode,
+      {
+        "@type": "AdministrativeArea",
+        name: "Santa Barbara County",
+        sameAs:
+          "https://en.wikipedia.org/wiki/Santa_Barbara_County,_California",
+      },
       ...publishedAreas.map((a) => ({
         "@type": a.kind === "city" ? "City" : "Place",
         name: `${a.name}, CA`,
@@ -124,7 +143,9 @@ export function businessNode() {
         closes: business.hours.end,
       },
     }),
-    ...(business.paymentMethods && { paymentAccepted: business.paymentMethods.join(", ") }),
+    ...(business.paymentMethods && {
+      paymentAccepted: business.paymentMethods.join(", "),
+    }),
     ...(business.sameAs.length > 0 && { sameAs: business.sameAs }),
     knowsAbout: listedServices.map((s) => s.name),
     hasOfferCatalog: {
@@ -185,7 +206,9 @@ export function faqNode(list: { q: string; a: string }[], path: string) {
   };
 }
 
-export function articleNode(a: Pick<Article, "slug" | "title" | "dek" | "published">) {
+export function articleNode(
+  a: Pick<Article, "slug" | "title" | "dek" | "published">,
+) {
   return {
     "@type": "Article",
     headline: a.title,

@@ -1,3 +1,5 @@
+> Historical baseline. For the October 11, 2026 homeowner redesign, current diagnostic credit policy, county ZIP coverage, and test results, see [UX-REDESIGN.md](UX-REDESIGN.md).
+
 # Pacific Plains Electric: local SEO and AI-search report
 
 Scope: make Pacific Plains Electric unmistakable to Google, Bing, Apple, and AI search tools as **an electrical contractor serving San Luis Obispo County, California**. No invented facts: anything unknown is a `TODO(owner)` in code and is left off the site until confirmed.

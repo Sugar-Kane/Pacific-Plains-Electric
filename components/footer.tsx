@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Brand from "./brand";
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone } from "lucide-react";
 import { business } from "@/config/business";
 import { listedServices } from "@/config/content";
 import { publishedAreas } from "@/config/areas";
@@ -61,7 +61,9 @@ export default function Footer() {
             <h2>Get in touch</h2>
             <ul>
               <li>
-                <a href={business.workPhone.tel}>{business.workPhone.display}</a>
+                <a href={business.workPhone.tel}>
+                  {business.workPhone.display}
+                </a>
                 <small>Main line</small>
               </li>
               <li>
@@ -84,17 +86,17 @@ export default function Footer() {
           </nav>
         </div>
       </footer>
-      <div className="mobile-action-bar" role="group" aria-label="Request service">
-        <p className="request-options-label" aria-hidden="true">
-          Request service
-        </p>
+      <div
+        className="mobile-action-bar"
+        role="group"
+        aria-label="Request service"
+      >
         <a href={business.workPhone.tel}>
-          <Phone size={17} aria-hidden="true" /> Call
+          <Phone size={17} aria-hidden="true" /> Call Now
         </a>
-        <a href={business.workPhone.sms} aria-label="Text Pacific Plains Electric">
-          <MessageCircle size={17} aria-hidden="true" /> Text
-        </a>
-        <Link href="/request-service">Online form</Link>
+        <Link className="mobile-request" href="/request-service">
+          Request Service
+        </Link>
       </div>
     </>
   );

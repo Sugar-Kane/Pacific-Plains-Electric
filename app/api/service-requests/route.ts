@@ -1,7 +1,7 @@
 import { NextResponse, after } from "next/server";
 import { requestSchema, hazardMessage } from "@/lib/security/validation";
 import { publicDb } from "@/lib/auth/server";
-import { smsDisclosure } from "@/config/business";
+import { smsDisclosure, diagnosticTerms } from "@/config/business";
 import { sendRequestEmail } from "@/lib/notify/request-email";
 export async function POST(req: Request) {
   const origin = req.headers.get("origin");
@@ -60,14 +60,19 @@ export async function POST(req: Request) {
         { status: limited ? 429 : 503 },
       );
     }
+    if (typeof data !== "string" || !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(data)) {
+      return NextResponse.json(
+        { error: "We could not confirm your request. Please retry with the same details or call (805) 626-7761." },
+        { status: 503 },
+      );
+    }
     // Email the owner after responding, so the customer isn't kept waiting.
     after(() => sendRequestEmail(input, String(data)));
     return NextResponse.json(
       {
         reference: data,
         status: "received",
-        message:
-          "Your request is saved for review. It is not a confirmed appointment. No email or text confirmation has been sent.",
+        message: `Your request has been received. We’ll contact you to discuss the next steps. This is not a confirmed appointment. ${diagnosticTerms}`,
       },
       { status: 201 },
     );
