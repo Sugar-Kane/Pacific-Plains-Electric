@@ -60,6 +60,12 @@ export async function POST(req: Request) {
         { status: limited ? 429 : 503 },
       );
     }
+    if (typeof data !== "string" || !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(data)) {
+      return NextResponse.json(
+        { error: "We could not confirm your request. Please retry with the same details or call (805) 626-7761." },
+        { status: 503 },
+      );
+    }
     // Email the owner after responding, so the customer isn't kept waiting.
     after(() => sendRequestEmail(input, String(data)));
     return NextResponse.json(
