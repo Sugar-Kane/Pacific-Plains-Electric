@@ -50,7 +50,7 @@ test("email exhausts bounded failures without throwing", async () => {
   assert.equal(f.calls.length, 3);
 });
 test("short request email includes phone fallback and approved diagnostic policy", () => {
-  const input = requestSchema.parse({ idempotencyKey: crypto.randomUUID(), firstName: "Test\nCustomer", lastName: "", phone: "8055550100", email: "", address: "", city: "", postalCode: "93401", service: "other", description: "", preferredTimes: "", contactMethod: "phone", transactionalConsent: true, smsConsent: false, website: "" });
+  const input = requestSchema.parse({ idempotencyKey: crypto.randomUUID(), firstName: "Test\nCustomer", lastName: "Person", phone: "8055550100", email: "", address: "", city: "", postalCode: "93401", service: "other", description: "", preferredTimes: "", contactMethod: "phone", transactionalConsent: true, smsConsent: false, website: "" });
   const result = buildRequestEmail(input, "synthetic-reference");
   assert.doesNotMatch(result.subject, /[\r\n]/);
   assert.match(result.text, /Email: Not provided/);

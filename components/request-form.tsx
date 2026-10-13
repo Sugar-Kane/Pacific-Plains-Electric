@@ -53,7 +53,7 @@ export default function RequestForm({
         payload: {
           ...values,
           firstName: values.firstName?.trim(),
-          lastName: "",
+          lastName: values.lastName?.trim(),
           email: values.email || "",
           address: "",
           city: isZip ? "" : trimmed,
@@ -210,15 +210,27 @@ export default function RequestForm({
             </small>
           </div>
           <div className="form-field">
-            <label htmlFor="firstName">Your name *</label>
+            <label htmlFor="firstName">First name *</label>
             <input
               id="firstName"
               name="firstName"
-              autoComplete="name"
+              autoComplete="given-name"
               required
               maxLength={80}
               value={values.firstName || ""}
               onChange={(e) => update("firstName", e.target.value)}
+            />
+          </div>
+          <div className="form-field">
+            <label htmlFor="lastName">Last name *</label>
+            <input
+              id="lastName"
+              name="lastName"
+              autoComplete="family-name"
+              required
+              maxLength={80}
+              value={values.lastName || ""}
+              onChange={(e) => update("lastName", e.target.value)}
             />
           </div>
           <div className="form-field">
@@ -235,7 +247,7 @@ export default function RequestForm({
               onChange={(e) => update("phone", e.target.value)}
             />
           </div>
-          <div className="form-field full">
+          <div className="form-field">
             <label htmlFor="location">City or ZIP code *</label>
             <input
               id="location"
