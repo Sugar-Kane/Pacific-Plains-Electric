@@ -167,7 +167,8 @@ async function fillInquiry(
   page: import("@playwright/test").Page,
   location = "93401",
 ) {
-  await page.locator("#firstName").fill("Test Customer");
+  await page.locator("#firstName").fill("Test");
+  await page.locator("#lastName").fill("Customer");
   await page.locator("#phone").fill("8055550100");
   await page.locator("#location").fill(location);
   await page.locator("input[type=checkbox]").first().check();
@@ -237,7 +238,8 @@ test("failure preserves input; retry uses the identical request", async ({
   await expect(page.locator("main").getByRole("alert")).toContainText(
     "(805) 626-7761",
   );
-  await expect(page.locator("#firstName")).toHaveValue("Test Customer");
+  await expect(page.locator("#firstName")).toHaveValue("Test");
+  await expect(page.locator("#lastName")).toHaveValue("Customer");
   await page.getByRole("button", { name: "Retry My Request" }).click();
   await expect(
     page.getByRole("heading", { name: "Your request has been received" }),
