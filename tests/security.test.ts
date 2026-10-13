@@ -101,7 +101,6 @@ test("Pacific time accounts for daylight saving", () => {
 test("short inquiries accept city or ZIP without email, address, or description", () => {
   const minimal = {
     ...request,
-    lastName: "",
     email: "",
     address: "",
     description: "",
@@ -146,4 +145,13 @@ test("all authorized ZIPs are recognized, with ZIP+4 and boundary handling", asy
 test("text preference requires explicit SMS consent", () => {
   assert.equal(requestSchema.safeParse({ ...request, contactMethod: "text", smsConsent: false }).success, false);
   assert.equal(requestSchema.safeParse({ ...request, contactMethod: "text", smsConsent: true }).success, true);
+});
+
+test("a request needs both a first and a last name", () => {
+  for (const name of [{ lastName: "" }, { lastName: "   " }, { firstName: "" }]) {
+    const result = requestSchema.safeParse({ ...request, ...name });
+    assert.equal(result.success, false, JSON.stringify(name));
+  }
+  const missing = requestSchema.safeParse({ ...request, lastName: "" });
+  assert.equal(!missing.success && missing.error.issues[0]?.message, "Enter your last name.");
 });
