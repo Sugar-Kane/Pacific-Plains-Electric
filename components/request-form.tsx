@@ -14,6 +14,7 @@ export default function RequestForm({
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [done, setDone] = useState("");
+  const [textFollowUp, setTextFollowUp] = useState(false);
   const [location, setLocation] = useState("");
   const [values, setValues] = useState<Record<string, string>>({
     service: initialService,
@@ -95,6 +96,7 @@ export default function RequestForm({
           "We couldn’t confirm your request. Please retry or call us.",
         );
       }
+      setTextFollowUp(result.textFollowUp === true);
       setDone(result.reference);
     } catch (e) {
       setUncertain(!!attempt.current);
@@ -118,8 +120,9 @@ export default function RequestForm({
           Your request has been received
         </h2>
         <p>
-          Thank you for contacting Pacific Plains Electric. We’ll contact you to
-          discuss your electrical needs and confirm the next steps.
+          {textFollowUp
+            ? "Thank you for contacting Pacific Plains Electric. We’ll text you in a moment to get a few details and find a time."
+            : "Thank you for contacting Pacific Plains Electric. We’ll contact you to discuss your electrical needs and confirm the next steps."}
         </p>
         <p>
           <strong>This is not a confirmed appointment.</strong>

@@ -112,8 +112,8 @@ See `.env.example`. Supabase URL and publishable key are safe client credentials
 | `NEXT_PUBLIC_SUPABASE_URL` | Separate website project's URL |
 | `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | Public project key; RLS provides data protection |
 | `NEXT_PUBLIC_SITE_URL` | Reserved site-origin setting; canonical business origin currently lives in centralized config |
-| `VOLTEIRA_MODE` | Recorded intent; deployed provider stays unavailable until implemented |
-| `VOLTEIRA_API_URL`, `VOLTEIRA_API_KEY` | Reserved server-only future credentials; unused today |
+| `VOLTEIRA_MODE` | `live` turns on request forwarding to Volteira (see VOLTEIRA.md). Scheduling stays unavailable either way |
+| `VOLTEIRA_API_URL`, `VOLTEIRA_API_KEY` | Server-only. Volteira's address (`https://www.volteira.com`) and the website key made in Volteira → Settings → Integrations. Used only for request forwarding |
 | `VOLTEIRA_WEBHOOK_SECRET` | Reserved future signature secret; unused by inactive route |
 | `SUPABASE_SECRET_KEY` | Reserved privileged integrations; not required or configured today |
 | `VOLTEIRA_ADAPTER_READY` | Reserved future setting; cannot override the code/database fail-closed guards |
@@ -149,7 +149,8 @@ Deployment uses Next.js on Vercel in `sfo1`, `npm ci`, and `npm run build`. Keep
 | WORKING | Server authorization, database RBAC, three owner memberships, admin management of other admins |
 | WORKING | CMS drafts/publishing, scheduling preference storage, audit logging, SEO metadata and crawl controls |
 | MOCKED | Isolated provider used only by unit tests; never used for customer requests |
-| REQUIRES VOLTEIRA | Live bookings, availability, appointment management, operations, shared AI, request transfer, webhook consumer |
+| WORKING (when configured) | Request transfer to Volteira, with Volteira's assistant texting customers who agreed to texts |
+| REQUIRES VOLTEIRA | Live bookings, availability, appointment management, operations, shared AI, webhook consumer |
 | REQUIRES CREDENTIALS / CONFIGURATION | Auth email delivery and callback URLs, notification providers, any future payment/analytics integrations |
 | REQUIRES BUSINESS DECISION | Final legal approval, real working days, fee-credit policy changes, retention policy |
 | REQUIRES REAL CONTENT | Completed projects/photos, verified reviews, Nicholas's detailed biography, approved insurance claims |
