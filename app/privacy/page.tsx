@@ -34,7 +34,7 @@ export default function Page() {
           </p>
           <h2>Preferences and technical information</h2>
           <p>
-            The website remembers your theme preference in your browser.
+            The website remembers your theme preference in your browser and your language choice in a cookie. When you have not chosen a language, it may use your browser’s preferred language.
             Authentication cookies support owner sign-in. Hosting services may
             process technical request information for security and operation. We
             do not send form names, phone numbers, email addresses, service

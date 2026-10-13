@@ -3,6 +3,7 @@ import { requestable } from "@/config/content";
 export const requestSchema = z
   .object({
     idempotencyKey: z.uuid(),
+    preferredLanguage: z.enum(["en", "es"]).default("en"),
     firstName: z.string().trim().min(1).max(80),
     lastName: z.string().trim().max(80).default(""),
     phone: z
@@ -52,7 +53,7 @@ export const requestSchema = z
   });
 export type ServiceRequestInput = z.infer<typeof requestSchema>;
 export function hazardMessage(text: string) {
-  return /\b(fire|smoke|sparking|burning smell|electrical shock|hot (?:electrical )?panel|downed (?:power |electrical )?(?:line|wire))\b/i.test(
+  return /\b(fire|smoke|sparking|burning smell|electrical shock|hot (?:electrical )?panel|incendio|humo|chispas|olor a quemado|descarga eléctrica|cables? caídos?|downed (?:power |electrical )?(?:line|wire))\b/i.test(
     text,
   )
     ? "If there is an immediate hazard, move away and call 911. Do not touch equipment or downed wires. For a non-emergency concern, call us to discuss the next step."

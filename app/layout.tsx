@@ -1,3 +1,4 @@
+import { headers } from "next/headers";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Header from "@/components/header";
@@ -37,20 +38,21 @@ export const metadata: Metadata = {
       : { index: true, follow: true },
 };
 const themeScript = `try{var t=localStorage.getItem('ppe-theme');document.documentElement.dataset.theme=t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(e){}`;
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default async function Layout({ children }: { children: React.ReactNode }) {
+  const spanish = (await headers()).get("x-ppe-language") === "es";
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={spanish ? "es" : "en"} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className={arimo.variable}>
         <a className="skip-link" href="#main">
-          Skip to content
+          {spanish ? "Saltar al contenido" : "Skip to content"}
         </a>
         <JsonLd data={graph(businessNode(), websiteNode())} />
-        <Header />
-        <main id="main">{children}</main>
-        <Footer />
+        <Header spanish={spanish} />
+        <main id="main" tabIndex={-1}>{children}</main>
+        <Footer spanish={spanish} />
       </body>
     </html>
   );

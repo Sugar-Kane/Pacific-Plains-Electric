@@ -1,3 +1,4 @@
+import { hasSpanish, spanishPath } from "@/lib/i18n/shared";
 import type { MetadataRoute } from "next";
 import { business } from "@/config/business";
 import { services, articles } from "@/config/content";
@@ -21,8 +22,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...posts.map((p): [string, number] => ["/blog/" + p.slug, 0.5]),
     // Projects is noindexed until it has real content.
     ...(projects.length ? [["/projects", 0.5] as [string, number]] : []),
+    ["/accessibility", 0.2],
     ["/privacy", 0.2],
     ["/terms", 0.2],
   ];
-  return entries.map(([path, priority]) => ({ url: business.siteUrl + path, priority }));
+  return entries.flatMap(([path, priority]) => {
+    const translated = hasSpanish(path || "/");
+    const alternates = translated ? { languages: { en: business.siteUrl + (path || "/"), es: business.siteUrl + spanishPath(path || "/") } } : undefined;
+    return [{ url: business.siteUrl + path, priority, alternates }, ...(translated ? [{ url: business.siteUrl + spanishPath(path || "/"), priority, alternates }] : [])];
+  });
 }

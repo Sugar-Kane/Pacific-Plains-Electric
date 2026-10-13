@@ -1,13 +1,13 @@
 "use client";
 import { useState } from "react";
 import { coverageMessage } from "@/config/coverage";
-export default function CoverageCheck() {
+export default function CoverageCheck({ spanish = false }: { spanish?: boolean }) {
   const [zip, setZip] = useState("");
   return (
     <div className="panel coverage-check">
-      <h2>Check your ZIP code</h2>
+      <h2>{spanish ? "Consulte su código postal" : "Check your ZIP code"}</h2>
       <div className="form-field">
-        <label htmlFor="coverage-zip">ZIP code</label>
+        <label htmlFor="coverage-zip">{spanish ? "Código postal" : "ZIP code"}</label>
         <input
           id="coverage-zip"
           inputMode="numeric"
@@ -19,7 +19,7 @@ export default function CoverageCheck() {
         />
       </div>
       <p id="coverage-result" role="status">
-        {coverageMessage(zip)}
+        {coverageMessage(zip, spanish)}
       </p>
     </div>
   );

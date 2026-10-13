@@ -2315,3 +2315,32 @@ a {
   .contact-call-desktop { display: none; }
   .contact-call-mobile { display: inline; }
 }
+
+/* Language and accessibility controls remain usable at narrow widths and zoom. */
+.language-switch { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 6px 10px; font-size: .875rem; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+main:focus { outline: none; }
+:where(a, button, input, select, textarea, summary):focus-visible { scroll-margin-block: 120px; }
+@media (max-width: 760px) {
+  .header-actions { gap: 4px; }
+  .language-switch { padding-inline: 6px; }
+  html[lang="es"] .mobile-action-bar { grid-template-columns: .8fr 1fr 1.5fr; }
+  html[lang="es"] .mobile-help-bar { grid-template-columns: 1fr 1fr; }
+  html[lang="es"] .hero h1 { font-size: clamp(2rem, 8vw, 3.5rem); }
+}
+@media (max-width: 380px) { .header-services, .header-phone { display: none; } .brand { gap: 6px; } }
+@media (forced-colors: active) { .button, .icon-button, .service-card { border: 1px solid ButtonText; } :focus-visible { outline: 3px solid Highlight; } }
+@media (max-width: 600px) {
+  .header-inner { flex-wrap: wrap; column-gap: 6px; padding-block: 6px; }
+  .header-services { display: none; }
+  .header-actions { flex-wrap: wrap; max-width: 100%; }
+}
+@media (max-width: 380px) {
+  .header .brand svg { display: none; }
+  .header .brand-name { font-size: 12px; }
+}
+.footer-bottom nav { display: flex; flex-wrap: wrap; gap: 12px 20px; }
+.footer-bottom nav a { min-height: 24px; }
+@media (max-width: 700px) {
+  .mobile-action-bar { grid-template-columns: minmax(0, .8fr) minmax(0, 1fr) minmax(0, 1.5fr); }
+  .mobile-action-bar a { min-width: 0; white-space: normal; text-align: center; }
+}

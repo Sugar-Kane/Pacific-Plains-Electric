@@ -100,16 +100,16 @@ export const crossCountyZips: readonly string[] = [
 export const servedZips: readonly string[] = [
   ...new Set(Object.values(countyZips).flat()),
 ].sort();
-export function coverageMessage(location: string) {
+export function coverageMessage(location: string, spanish = false) {
   const zip = location
     .trim()
     .match(/^\d{5}(?:-\d{4})?$/)?.[0]
     .slice(0, 5);
   if (!zip)
-    return "We serve all of San Luis Obispo and Santa Barbara counties. Enter a ZIP code to check the area, or enter your city.";
+    return spanish ? "Atendemos todos los condados de San Luis Obispo y Santa Barbara. Ingrese su código postal para consultar la cobertura, o ingrese su ciudad." : "We serve all of San Luis Obispo and Santa Barbara counties. Enter a ZIP code to check the area, or enter your city.";
   if (crossCountyZips.includes(zip))
-    return "This ZIP code includes part of our service area. We serve addresses in San Luis Obispo and Santa Barbara counties; we’ll confirm your location when we contact you.";
+    return spanish ? "Este código postal incluye parte de nuestra área de servicio. Atendemos direcciones en los condados de San Luis Obispo y Santa Barbara; confirmaremos su ubicación al contactarle." : "This ZIP code includes part of our service area. We serve addresses in San Luis Obispo and Santa Barbara counties; we’ll confirm your location when we contact you.";
   if (servedZips.includes(zip))
-    return "This ZIP code serves our coverage area. We’ll confirm the work address and appointment availability with you.";
-  return "This ZIP code is not on our two-county list. Coverage needs confirmation; you can still send a request or call us.";
+    return spanish ? "Este código postal corresponde a nuestra área de servicio. Confirmaremos la dirección del trabajo y la disponibilidad de citas con usted." : "This ZIP code serves our coverage area. We’ll confirm the work address and appointment availability with you.";
+  return spanish ? "Este código postal no está en nuestra lista de los dos condados. Debemos confirmar la cobertura; puede enviar una solicitud o llamarnos." : "This ZIP code is not on our two-county list. Coverage needs confirmation; you can still send a request or call us.";
 }

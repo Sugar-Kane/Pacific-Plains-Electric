@@ -1,3 +1,4 @@
+import { hasSpanish, spanishPath } from "@/lib/i18n/shared";
 import type { Metadata } from "next";
 import { business } from "@/config/business";
 import { publishedAreas, countyOf } from "@/config/areas";
@@ -27,7 +28,7 @@ export function metadata(
   return {
     title: absolute ? { absolute: title } : title,
     description,
-    alternates: { canonical: path },
+    alternates: { canonical: path, ...(hasSpanish(path) ? { languages: { en: path, es: spanishPath(path), "x-default": path } } : {}) },
     ...(noindex ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       title: fullTitle,
