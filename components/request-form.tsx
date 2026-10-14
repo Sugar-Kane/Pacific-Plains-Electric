@@ -21,10 +21,11 @@ export default function RequestForm({
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [done, setDone] = useState("");
+  const [textFollowUp, setTextFollowUp] = useState(false);
   const [location, setLocation] = useState("");
   const [values, setValues] = useState<Record<string, string>>({
     service: initialService,
-    contactMethod: "phone",
+    contactMethod: "text",
   });
   const [sms, setSms] = useState(false);
   const [consent, setConsent] = useState(false);
@@ -60,7 +61,7 @@ export default function RequestForm({
           ...values,
           preferredLanguage: spanish ? "es" : "en",
           firstName: values.firstName?.trim(),
-          lastName: "",
+          lastName: values.lastName?.trim(),
           email: values.email || "",
           address: "",
           city: isZip ? "" : trimmed,
@@ -103,6 +104,7 @@ export default function RequestForm({
           t("We couldn’t confirm your request. Please retry or call us.", "No pudimos confirmar su solicitud. Inténtelo de nuevo o llámenos."),
         );
       }
+      setTextFollowUp(result.textFollowUp === true);
       setDone(result.reference);
     } catch (e) {
       setUncertain(!!attempt.current);
@@ -126,7 +128,9 @@ export default function RequestForm({
           {t("Your request has been received", "Hemos recibido su solicitud")}
         </h2>
         <p>
-          {t("Thank you for contacting Pacific Plains Electric. We’ll contact you to discuss your electrical needs and confirm the next steps.", "Gracias por contactar a Pacific Plains Electric. Nos comunicaremos con usted para hablar de sus necesidades eléctricas y confirmar los próximos pasos.")}
+          {textFollowUp
+            ? t("Thank you for contacting Pacific Plains Electric. We’ll text you in a moment to get a few details and find a time.", "Gracias por contactar a Pacific Plains Electric. Le enviaremos un mensaje para obtener algunos detalles y acordar un horario.")
+            : t("Thank you for contacting Pacific Plains Electric. We’ll contact you to discuss your electrical needs and confirm the next steps.", "Gracias por contactar a Pacific Plains Electric. Nos comunicaremos con usted para hablar de sus necesidades eléctricas y confirmar los próximos pasos.")}
         </p>
         <p>
           <strong>{t("This is not a confirmed appointment.", "Esto no es una cita confirmada.")}</strong>
@@ -212,15 +216,27 @@ export default function RequestForm({
             </small>
           </div>
           <div className="form-field">
-            <label htmlFor="firstName">{t("Your name *", "Su nombre *")}</label>
+            <label htmlFor="firstName">{t("First name *", "Nombre *")}</label>
             <input
               id="firstName"
               name="firstName"
-              autoComplete="name"
+              autoComplete="given-name"
               required
               maxLength={80}
               value={values.firstName || ""}
               onChange={(e) => update("firstName", e.target.value)}
+            />
+          </div>
+          <div className="form-field">
+            <label htmlFor="lastName">{t("Last name *", "Apellido *")}</label>
+            <input
+              id="lastName"
+              name="lastName"
+              autoComplete="family-name"
+              required
+              maxLength={80}
+              value={values.lastName || ""}
+              onChange={(e) => update("lastName", e.target.value)}
             />
           </div>
           <div className="form-field">
@@ -237,7 +253,7 @@ export default function RequestForm({
               onChange={(e) => update("phone", e.target.value)}
             />
           </div>
-          <div className="form-field full">
+          <div className="form-field">
             <label htmlFor="location">{t("City or ZIP code *", "Ciudad o código postal *")}</label>
             <input
               id="location"

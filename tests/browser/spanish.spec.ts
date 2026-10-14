@@ -45,11 +45,12 @@ for (const theme of ["light", "dark"]) test(`Spanish WCAG checks in ${theme}`, a
 
 test("Spanish request consent, failure, identical retry and focused confirmation", async ({ page }) => {
   await page.goto("/es/request-service?service=ev-charger-installation");
-  await page.getByLabel("Su nombre *", { exact: true }).fill("Prueba Cliente");
+  await page.getByLabel("Nombre *", { exact: true }).fill("Prueba");
+  await page.getByLabel("Apellido *", {exact:true}).fill("Cliente");
   await page.getByLabel("Número de teléfono *", { exact: true }).fill("8055550100");
   await page.getByLabel("Ciudad o código postal *", { exact: true }).fill("93117");
   await expect(page.locator("#coverage-note")).toContainText("área de servicio");
-  await page.getByLabel("Forma de contacto preferida").selectOption("text");
+  await expect(page.getByLabel("Forma de contacto preferida")).toHaveValue("text");
   await page.locator('input[type="checkbox"]').first().check();
   const payloads: Record<string, unknown>[] = [];
   await page.route("**/api/service-requests", async route => {
@@ -62,7 +63,7 @@ test("Spanish request consent, failure, identical retry and focused confirmation
   await page.getByRole("button", {name:"Enviar mi solicitud"}).click();
   await expect(page.locator("main").getByRole("alert")).toBeFocused();
   await expect(page.locator("main").getByRole("alert")).toContainText("No pudimos confirmar");
-  await expect(page.locator("#firstName")).toHaveValue("Prueba Cliente");
+  await expect(page.locator("#firstName")).toHaveValue("Prueba");
   await page.getByRole("button", {name:"Reintentar mi solicitud"}).click();
   await expect(page.getByRole("heading", {name:"Hemos recibido su solicitud"})).toBeFocused();
   expect(payloads[0]).toEqual(payloads[1]);
@@ -84,4 +85,25 @@ test("Spanish keyboard navigation, skip link, reduced motion, and text reflow", 
   await expect(menu).toBeFocused();
   await page.addStyleTag({content:"html { font-size: 200% !important; }"});
   expect(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth+1)).toBe(true);
+});
+
+test("mobile request transition keeps Text visible in touch hover and keyboard focus", async ({ page }) => {
+  await page.setViewportSize({width:390,height:844});
+  for (const theme of ["light","dark"]) {
+    await page.goto("/");
+    await page.evaluate(t=>document.documentElement.dataset.theme=t,theme);
+    await page.locator(".mobile-action-bar .mobile-request").click();
+    const text=page.locator('.mobile-action-bar a[href="sms:+18056267761"]');
+    await expect(text).toHaveText("Text");
+    await text.hover();
+    const hovered=await text.evaluate(e=>({color:getComputedStyle(e).color,background:getComputedStyle(e).backgroundColor}));
+    expect(hovered.background).not.toBe("rgba(0, 0, 0, 0)");
+    expect(hovered.color).not.toBe(hovered.background);
+    await text.focus();
+    const result=await new AxeBuilder({page}).include(".mobile-action-bar").withTags(["wcag2aa"]).analyze();
+    expect(result.violations).toEqual([]);
+    await expect(page.locator("#contactMethod")).toHaveValue("text");
+    await page.locator("#contactMethod").selectOption("phone");
+    await expect(page.locator('input[type="checkbox"]').nth(1)).not.toHaveAttribute("required","");
+  }
 });

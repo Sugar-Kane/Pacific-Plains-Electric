@@ -2344,3 +2344,11 @@ main:focus { outline: none; }
   .mobile-action-bar { grid-template-columns: minmax(0, .8fr) minmax(0, 1fr) minmax(0, 1.5fr); }
   .mobile-action-bar a { min-width: 0; white-space: normal; text-align: center; }
 }
+/* Touch browsers retain hover after navigation. Keep a solid contrasting
+   background with the hover text color, including the two-action help bar. */
+@media (max-width: 700px) {
+  .mobile-action-bar a:not(.mobile-request) { color: var(--text); }
+  .mobile-action-bar a:hover,
+  .mobile-action-bar a:focus-visible,
+  .mobile-action-bar a:active { background: var(--brand); color: var(--on-brand); }
+}

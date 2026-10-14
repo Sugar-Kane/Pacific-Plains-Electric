@@ -4,8 +4,8 @@ export const requestSchema = z
   .object({
     idempotencyKey: z.uuid(),
     preferredLanguage: z.enum(["en", "es"]).default("en"),
-    firstName: z.string().trim().min(1).max(80),
-    lastName: z.string().trim().max(80).default(""),
+    firstName: z.string().trim().min(1, "Enter your first name.").max(80),
+    lastName: z.string().trim().min(1, "Enter your last name.").max(80),
     phone: z
       .string()
       .trim()
