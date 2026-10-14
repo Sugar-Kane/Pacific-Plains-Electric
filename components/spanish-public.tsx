@@ -1,3 +1,5 @@
+import ServiceAnimation from "./service-animation";
+import ServiceMotionGroup from "./service-motion-group";
 import HeroBeach from "./hero-beach";
 import CaliforniaMap from "./california-map";
 import Link from "next/link";
@@ -26,9 +28,13 @@ function Diagnostic() { return <section className="section container" aria-label
 </div><div className="credit-example"><h3>Un ejemplo sencillo</h3><dl>
   <div><dt>Diagnóstico pagado</dt><dd>$180</dd></div><div><dt>Presupuesto de reparación posterior</dt><dd>$500</dd></div><div><dt>Crédito por el diagnóstico</dt><dd>−$180</dd></div><div className="credit-balance"><dt>Saldo restante de la reparación</dt><dd>$320</dd></div>
 </dl><p>Este ejemplo no es un presupuesto. Paga $180 por el diagnóstico y después $320 por la reparación aprobada: $500 en total. Su pago previo se aplica una sola vez.</p></div></div></section>; }
-function Choices({ all = false }: { all?: boolean }) { return <div className="service-grid service-choices">{(all ? services : intakeCategories).map((s) => <Link className="service-card" key={s.slug} href={all ? "/es/services/" + s.slug : "/es/request-service?service=" + s.slug}>
-  <span className="service-icon"><ServiceIcon name={s.icon} size={24} /></span><h3>{serviceNamesEs[s.slug]}</h3><p>{serviceSummariesEs[s.slug]}</p><span className="service-card-more">{all ? "Ver servicio" : "Solicitar ayuda"}</span>
-</Link>)}</div>; }
+function Choices({ all = false }: { all?: boolean }) {
+  const cards = <div className="service-grid service-choices">{(all ? services : intakeCategories).map((s) => <Link className={all ? "service-card" : "service-card service-card-animated"} key={s.slug} href={all ? "/es/services/" + s.slug : "/es/request-service?service=" + s.slug}>
+    {all ? <span className="service-icon"><ServiceIcon name={s.icon} size={24} /></span> : <ServiceAnimation service={s.slug} spanish />}
+    <div className={all ? undefined : "service-card-copy"}><h3>{serviceNamesEs[s.slug]}</h3><p>{serviceSummariesEs[s.slug]}</p><span className="service-card-more">{all ? "Ver servicio" : "Solicitar ayuda"}</span></div>
+  </Link>)}</div>;
+  return all ? cards : <ServiceMotionGroup spanish>{cards}</ServiceMotionGroup>;
+}
 const faqs = [
   ["¿Cuánto cuesta el diagnóstico?", "La visita de diagnóstico cuesta $180. " + diagnosticEs],
   ["¿Mi solicitud confirma una cita?", "No. Nos comunicaremos con usted para hablar de los detalles y confirmar los próximos pasos y un horario."],
