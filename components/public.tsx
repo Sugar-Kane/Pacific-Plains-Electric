@@ -1,3 +1,5 @@
+import ServiceAnimation from "./service-animation";
+import ServiceMotionGroup from "./service-motion-group";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -41,24 +43,24 @@ export function Actions() {
 }
 export function ServiceChoices() {
   return (
-    <div className="service-grid service-choices">
+    <ServiceMotionGroup><div className="service-grid service-choices">
       {intakeCategories.map((s) => (
         <Link
-          className="service-card"
+          className="service-card service-card-animated"
           href={"/request-service?service=" + s.slug}
           key={s.slug}
         >
-          <span className="service-icon">
-            <ServiceIcon name={s.icon} size={24} />
-          </span>
+          <ServiceAnimation service={s.slug} />
+          <div className="service-card-copy">
           <h3>{s.name}</h3>
           <p>{s.summary}</p>
           <span className="service-card-more">
             {s.action} <ArrowRight size={17} aria-hidden="true" />
           </span>
+          </div>
         </Link>
       ))}
-    </div>
+    </div></ServiceMotionGroup>
   );
 }
 export function PageHero({

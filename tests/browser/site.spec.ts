@@ -321,6 +321,7 @@ test("diagnostic policy, example, mobile actions and guide are preserved", async
 });
 test("private routes and unsafe submissions fail closed", async ({
   request,
+  baseURL,
   page,
 }) => {
   for (const path of [
@@ -336,7 +337,7 @@ test("private routes and unsafe submissions fail closed", async ({
   const response = await request.post("/api/service-requests", { data: {} });
   expect(response.status()).toBe(403);
   const invalid = await request.post("/api/service-requests", {
-    headers: { origin: "http://127.0.0.1:3000" },
+    headers: { origin: new URL(baseURL!).origin },
     data: {},
   });
   expect(invalid.status()).toBe(400);
