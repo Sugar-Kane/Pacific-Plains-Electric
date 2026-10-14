@@ -23,6 +23,7 @@ export function buildRequestEmail(
     `Name: ${name}`,
     `Phone: ${input.phone}`,
     `Email: ${input.email || "Not provided"}`,
+    `Preferred language: ${input.preferredLanguage === "es" ? "Spanish" : "English"}`,
     `Prefers contact by: ${input.contactMethod}`,
     `Location: ${[input.address, input.city, input.postalCode].filter(Boolean).map(oneLine).join(", ")}`,
     `Preferred times: ${oneLine(input.preferredTimes) || "Not given"}`,

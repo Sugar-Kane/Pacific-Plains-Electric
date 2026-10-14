@@ -201,6 +201,7 @@ export default async function Page({
                     Preferred times:{" "}
                     {r.payload.preferredTimes || "None specified"}
                     <br />
+                    Preferred language: {r.payload.preferredLanguage === "es" ? "Spanish" : "English"}<br />
                     Preferred contact: {r.payload.contactMethod}
                     <br />
                     Text consent: {r.payload.smsConsent ? "Yes" : "No"}

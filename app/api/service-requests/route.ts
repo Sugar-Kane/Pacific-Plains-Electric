@@ -1,3 +1,4 @@
+import { smsEs } from "@/lib/i18n/shared";
 import { NextResponse, after } from "next/server";
 import { requestSchema, hazardMessage } from "@/lib/security/validation";
 import { publicDb } from "@/lib/auth/server";
@@ -47,7 +48,7 @@ export async function POST(req: Request) {
       p_key: input.idempotencyKey,
       p_payload: {
         ...input,
-        smsDisclosure: input.smsConsent ? smsDisclosure : null,
+        smsDisclosure: input.smsConsent ? (input.preferredLanguage === "es" ? smsEs : smsDisclosure) : null,
       },
     });
     if (error) {
@@ -77,7 +78,7 @@ export async function POST(req: Request) {
         ? await forwardServiceRequest(
             volteira,
             volteiraPayload(input, reference, {
-              smsDisclosure,
+              smsDisclosure: input.preferredLanguage === "es" ? smsEs : smsDisclosure,
               site: new URL(business.siteUrl).hostname.replace(/^www\./, ""),
             }),
           )

@@ -167,6 +167,7 @@ async function fillInquiry(
   page: import("@playwright/test").Page,
   location = "93401",
 ) {
+  await page.locator("#contactMethod").selectOption("phone");
   await page.locator("#firstName").fill("Test");
   await page.locator("#lastName").fill("Customer");
   await page.locator("#phone").fill("8055550100");

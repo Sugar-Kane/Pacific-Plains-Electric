@@ -27,14 +27,11 @@ export default function Page() {
           <h2>Storage and service providers</h2>
           <p>
             Website requests are stored in our Supabase database and the website
-            is hosted by Vercel. Requests are currently reviewed through the
-            website’s protected owner area. When the Volteira integration is
-            activated, service information may be transferred to that business
-            management system to coordinate your work.
+            is hosted by Vercel. Requests can be reviewed through the website’s protected owner area. When the Volteira integration is enabled, service information is transferred to that business management system to coordinate your work.
           </p>
           <h2>Preferences and technical information</h2>
           <p>
-            The website remembers your theme preference in your browser.
+            The website remembers your theme preference in your browser and your language choice in a cookie. When you have not chosen a language, it may use your browser’s preferred language.
             Authentication cookies support owner sign-in. Hosting services may
             process technical request information for security and operation. We
             do not send form names, phone numbers, email addresses, service
@@ -46,8 +43,7 @@ export default function Page() {
             text-message consent. We do not enroll you in marketing through the
             request form. If you opt into transactional texts, message frequency
             varies and message and data rates may apply. Reply STOP to opt out
-            or HELP for help. No automated email or text delivery is currently
-            promised by this website.
+            or HELP for help. When automated follow-up is enabled, an assistant may contact you about your request according to your contact preferences and recorded consent.
           </p>
           <h2>Questions and requests</h2>
           <p>

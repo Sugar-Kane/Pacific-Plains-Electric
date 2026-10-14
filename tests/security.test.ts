@@ -6,6 +6,7 @@ import { requestSchema, hazardMessage } from "../lib/security/validation";
 import { verifyWebhook } from "../lib/volteira/webhooks";
 import { MockVolteiraProvider } from "../lib/volteira/mock";
 const request = {
+  preferredLanguage: "en" as const,
   idempotencyKey: crypto.randomUUID(),
   firstName: "Test",
   lastName: "Customer",
@@ -45,6 +46,9 @@ test("intake rejects unknown services, invalid consent and malformed contact dat
 test("hazard escalation does not give DIY instructions", () => {
   for (const text of [
     "smoke from outlet",
+    "Hay humo en el enchufe",
+    "olor a quemado",
+    "cable caído",
     "burning smell",
     "hot electrical panel",
     "downed power line",

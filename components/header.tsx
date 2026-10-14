@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Phone, Menu, X, Sun, Moon } from "lucide-react";
+import LanguageSwitch from "./language-switch";
 import Brand from "./brand";
 import { business } from "@/config/business";
 export const navigation = [
@@ -10,10 +11,12 @@ export const navigation = [
   ["About", "/about"],
   ["Service Area", "/service-areas"],
 ] as const;
-export default function Header() {
+export default function Header({ spanish = false }: { spanish?: boolean }) {
   const [open, setOpen] = useState(false);
   const path = usePathname();
-  const current = (url: string) => (path.startsWith(url) ? "page" : undefined);
+  const local = (url: string) => spanish ? (url === "/" ? "/es" : "/es" + url) : url;
+  const labels: Record<string, string> = { Services: "Servicios", About: "Nosotros", "Service Area": "Área de servicio" };
+  const current = (url: string) => (path.startsWith(local(url)) ? "page" : undefined);
   function toggleTheme() {
     const dark = document.documentElement.dataset.theme !== "dark";
     document.documentElement.dataset.theme = dark ? "dark" : "light";
@@ -24,9 +27,9 @@ export default function Header() {
   return (
     <header className="header">
       <div className="container header-inner">
-        <Brand />
+        <Brand spanish={spanish} />
         <nav
-          aria-label="Main navigation"
+          aria-label={spanish ? "Navegación principal" : "Main navigation"}
           id="main-navigation"
           onKeyDown={(e) => {
             if (e.key === "Escape") {
@@ -38,57 +41,58 @@ export default function Header() {
         >
           <Link
             className="mobile-nav-only"
-            href="/"
+            href={local("/")}
             onClick={() => setOpen(false)}
           >
-            Home
+            {spanish ? "Inicio" : "Home"}
           </Link>
           {navigation.map(([label, url]) => (
             <Link
               key={url}
-              href={url}
+              href={local(url)}
               onClick={() => setOpen(false)}
               aria-current={current(url)}
             >
-              {label}
+              {spanish ? labels[label] : label}
             </Link>
           ))}
           <Link
             className="mobile-nav-only"
-            href="/contact"
+            href={local("/contact")}
             onClick={() => setOpen(false)}
           >
-            Contact
+            {spanish ? "Contacto" : "Contact"}
           </Link>
         </nav>
         <div className="header-actions">
+          <LanguageSwitch spanish={spanish} />
           <Link
-            href="/services"
+            href={local("/services")}
             className="header-services"
             onClick={() => setOpen(false)}
             aria-current={current("/services")}
           >
-            Services
+            {spanish ? "Servicios" : "Services"}
           </Link>
           <a
             href={business.workPhone.tel}
             className="header-phone"
-            aria-label={"Call " + business.workPhone.display}
+            aria-label={(spanish ? "Llamar " : "Call ") + business.workPhone.display}
           >
             <Phone size={18} aria-hidden="true" />
-            <span>Call Now</span>
+            <span>{spanish ? "Llamar" : "Call Now"}</span>
           </a>
           <button
             type="button"
             className="icon-button theme-toggle"
             onClick={toggleTheme}
-            aria-label="Toggle light and dark theme"
+            aria-label={spanish ? "Cambiar entre tema claro y oscuro" : "Toggle light and dark theme"}
           >
             <Sun className="sun" size={19} />
             <Moon className="moon" size={18} />
           </button>
-          <Link className="button small header-cta" href="/request-service">
-            Request Service
+          <Link className="button small header-cta" href={local("/request-service")}>
+            {spanish ? "Solicitar servicio" : "Request Service"}
           </Link>
           <button
             id="navigation-toggle"
@@ -97,7 +101,7 @@ export default function Header() {
             className="mobile-menu icon-button"
             onClick={() => setOpen(!open)}
             aria-expanded={open}
-            aria-label={open ? "Close navigation" : "Open navigation"}
+            aria-label={open ? (spanish ? "Cerrar menú" : "Close navigation") : (spanish ? "Abrir menú" : "Open navigation")}
           >
             {open ? <X /> : <Menu />}
           </button>

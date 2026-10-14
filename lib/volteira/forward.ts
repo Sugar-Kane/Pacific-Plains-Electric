@@ -53,6 +53,7 @@ export function volteiraPayload(
     serviceName: intakeServiceName(input.service),
     description: input.description,
     preferredTimes: input.preferredTimes,
+    preferredLanguage: input.preferredLanguage,
     contactMethod: input.contactMethod,
     smsConsent: input.smsConsent,
     smsDisclosure: input.smsConsent ? consent.smsDisclosure : "",

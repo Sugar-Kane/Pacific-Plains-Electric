@@ -17,9 +17,9 @@ export function Mark() {
     </svg>
   );
 }
-export default function Brand() {
+export default function Brand({ spanish = false }: { spanish?: boolean }) {
   return (
-    <Link href="/" className="brand" aria-label="Pacific Plains Electric home">
+    <Link href={spanish ? "/es" : "/"} className="brand" aria-label={spanish ? "Pacific Plains Electric — Inicio" : "Pacific Plains Electric home"}>
       <Mark />
       <span className="brand-text">
         <span className="brand-name">Pacific Plains</span>

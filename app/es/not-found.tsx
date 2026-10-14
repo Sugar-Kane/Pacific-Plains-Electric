@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound() { return <section className="error-page container"><span className="eyebrow">Error 404</span><h1>Página no encontrada</h1><p>Es posible que la página haya cambiado de dirección. Visite el inicio o consulte nuestros servicios.</p><div className="actions"><Link className="button" href="/es">Volver al inicio</Link><Link className="button outline" href="/es/services">Ver servicios</Link></div></section>; }
