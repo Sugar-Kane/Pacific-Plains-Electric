@@ -12,6 +12,10 @@ export default function ServiceAnimation({ service, spanish = false }: { service
   return <span className="service-animation" aria-hidden="true" dangerouslySetInnerHTML={{ __html: svg }} />;
 }
 const translations = [
+  ["RATED 15 A · 125 V", "NOMINAL 15 A · 125 V"],
+  ["EXAMPLE · 120/240 V AC", "EJEMPLO · 120/240 V CA"],
+  ["EXAMPLE READING · 120 V AC", "LECTURA DE EJEMPLO · 120 V CA"],
+  ["HOME LEVEL 2 · ILLUSTRATED ENERGY FLOW", "NIVEL 2 EN CASA · FLUJO ILUSTRADO"],
   ["POWER FLOW · CHARGING", "ENERGÍA · CARGANDO"],
   ["CHARGING", "CARGANDO"], ["VOLTAGE • AC", "VOLTAJE • CA"],
   ["KITCHEN", "COCINA"], ["LIGHTING", "LUCES"], ["BEDROOMS", "CUARTOS"],
