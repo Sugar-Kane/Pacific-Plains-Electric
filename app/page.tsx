@@ -1,3 +1,4 @@
+import HeroBeach from "@/components/hero-beach";
 import { answeredFaqs } from "@/config/content";
 import { business } from "@/config/business";
 import {
@@ -29,7 +30,8 @@ export default function Home() {
   return (
     <>
       <JsonLd data={graph(webPageNode("/", business.name))} />
-      <section className="hero">
+      <section className="hero hero-with-beach">
+        <HeroBeach />
         <div className="container hero-content">
           <span className="eyebrow">
             Licensed electrical contractor · {business.license}
