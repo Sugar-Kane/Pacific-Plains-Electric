@@ -2352,3 +2352,11 @@ main:focus { outline: none; }
   .mobile-action-bar a:focus-visible,
   .mobile-action-bar a:active { background: var(--brand); color: var(--on-brand); }
 }
+
+.hero-with-beach { isolation: isolate; }
+.hero-beach { object-fit: cover; object-position: center 55%; z-index: -2; }
+.hero-beach-shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(246,241,231,.80), rgba(246,241,231,.88) 50%, rgba(246,241,231,.80)); }
+[data-theme="dark"] .hero-beach-shade { background: linear-gradient(90deg, rgba(17,23,20,.78), rgba(17,23,20,.88) 50%, rgba(17,23,20,.78)); }
+.hero-with-beach .hero-content { padding-bottom: 64px; }
+.hero-photo-credit { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; margin: 0; padding: 8px 20px 14px; font-size: 12px; color: var(--text); }
+.hero-photo-credit a { text-decoration: underline; text-underline-offset: 3px; }

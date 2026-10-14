@@ -14,3 +14,8 @@ Typography refresh: Barlow Condensed 600 (Latin), self-hosted from @fontsource/b
 - `assets/story/house-night.webp` (source) and the derived files in `public/images/story/`: "Free modern house design photo", rawpixel.com image 5919803 (https://www.rawpixel.com/image/5919803/photo-image-public-domain-house-interior), marked CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/), found via Openverse. Downloaded at its largest available size (1024×685).
 - It is not a Pacific Plains Electric project and the site captions it as a stock photo.
 - `house-off.webp` and `mask-*.png` are generated from the source by `node scripts/build-house-story.mjs`. To use a real job photo: shoot the finished house at dusk with every light on, save it as `assets/story/house-night.webp`, redraw the boxes and polygons in the script for that photo, rerun the script, and remove the stock-photo caption.
+
+## Pismo Beach homepage photograph
+`public/images/pismo-beach.webp`: actual Pismo Beach looking north, photographed February 3, 2022 by Soundsfancy. Source: https://commons.wikimedia.org/wiki/File:Pismobeach02032022.jpg. Licensed CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0/. Resized and converted from JPEG to WebP; displayed cropped with a readability overlay. The adapted image retains CC BY-SA 4.0. Visible attribution appears on English and Spanish homepages. This is a location photograph, not a photograph of the business's completed work.
+
+County map includes geographic polygons for FIPS 06079 and 06083 from https://github.com/plotly/datasets/blob/master/geojson-counties-fips.json. Santa Barbara includes offshore islands. Its projection is fitted to the existing EPSG:3310 map coordinates with maximum alignment error under 0.006 SVG units.
