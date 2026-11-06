@@ -376,3 +376,38 @@ test("mobile contact layout and footer disclosures stay compact", async ({ page 
   await expect(page.locator(".mobile-action-bar a")).toHaveCount(2);
   await expect(page.getByRole("button", {name: "Send My Request"})).toBeVisible();
 });
+test("analytics records call, text and request taps and failed submissions without personal details", async ({
+  page,
+}) => {
+  // Stand in for gtag so events are captured without loading Google's script.
+  await page.addInitScript(() => {
+    const w = window as unknown as { events: unknown[][]; gtag: (...a: unknown[]) => void };
+    w.events = [];
+    w.gtag = (...a) => w.events.push(a);
+  });
+  const events = () =>
+    page.evaluate(() => (window as unknown as { events: unknown[][] }).events.filter((e) => e[0] === "event"));
+  await page.goto("/contact");
+  // Stop tel:/sms: navigation in the test browser; the capture-phase listener still runs.
+  await page.evaluate(() => document.addEventListener("click", (e) => e.preventDefault()));
+  await page.locator('header a[href^="tel:"]').first().click();
+  await page.locator('main a[href^="sms:"]').first().click();
+  await page.locator('main a[href$="/request-service"]').first().click();
+  expect(await events()).toEqual([
+    ["event", "call_click", { link_location: "header" }],
+    ["event", "text_click", { link_location: "page" }],
+    ["event", "request_form_open", { link_location: "page" }],
+  ]);
+  await page.goto("/request-service");
+  await fillInquiry(page);
+  await page.route("**/api/service-requests", (route) =>
+    route.fulfill({ status: 429, json: { error: "Please call us for help." } }),
+  );
+  await page.getByRole("button", { name: "Send My Request" }).click();
+  await expect(page.locator("main").getByRole("alert")).toBeVisible();
+  expect(await events()).toEqual([["event", "request_failed", { reason: "rate_limited" }]]);
+  // Google's script never loads without a measurement ID.
+  expect(
+    await page.evaluate(() => [...document.scripts].some((s) => s.src.includes("googletagmanager"))),
+  ).toBe(false);
+});
