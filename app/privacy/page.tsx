@@ -33,9 +33,21 @@ export default function Page() {
           <p>
             The website remembers your theme preference in your browser and your language choice in a cookie. When you have not chosen a language, it may use your browser’s preferred language.
             Authentication cookies support owner sign-in. Hosting services may
-            process technical request information for security and operation. We
-            do not send form names, phone numbers, email addresses, service
-            addresses, or descriptions to general analytics.
+            process technical request information for security and operation.
+          </p>
+          <h2>Site analytics</h2>
+          <p>
+            We use Vercel Web Analytics, which counts page views without
+            cookies, and Google Analytics, which uses cookies to measure visits
+            and taps on the call, text, email, and request buttons. Google’s
+            advertising features are turned off, and Google Analytics does not
+            load when your browser sends a Global Privacy Control signal. You
+            can also block it with{" "}
+            <a className="inline-link" href="https://tools.google.com/dlpage/gaoptout">
+              Google’s opt-out add-on
+            </a>
+            . We do not send form names, phone numbers, email addresses, service
+            addresses, or descriptions to analytics.
           </p>
           <h2>Communication choices</h2>
           <p>

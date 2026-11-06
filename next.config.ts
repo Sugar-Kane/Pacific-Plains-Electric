@@ -1,4 +1,13 @@
 import type { NextConfig } from "next";
+// Google Analytics hosts are allowed only when a measurement ID is configured.
+const ga = process.env.NEXT_PUBLIC_GA_ID
+  ? {
+      script: " https://*.googletagmanager.com",
+      img: " https://*.google-analytics.com https://*.googletagmanager.com",
+      connect:
+        " https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com",
+    }
+  : { script: "", img: "", connect: "" };
 const config: NextConfig = {
   poweredByHeader: false,
   turbopack: { root: process.cwd() },
@@ -23,7 +32,12 @@ const config: NextConfig = {
             value:
               "default-src 'self'; script-src 'self' 'unsafe-inline'" +
               (process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : "") +
-              "; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://*.supabase.co; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self'",
+              ga.script +
+              "; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:" +
+              ga.img +
+              "; font-src 'self'; connect-src 'self' https://*.supabase.co" +
+              ga.connect +
+              "; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self'",
           },
           ...(process.env.VERCEL_ENV && process.env.VERCEL_ENV !== "production"
             ? [{ key: "X-Robots-Tag", value: "noindex, nofollow" }]

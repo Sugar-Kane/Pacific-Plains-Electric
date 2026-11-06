@@ -157,3 +157,21 @@ Deployment uses Next.js on Vercel in `sfo1`, `npm ci`, and `npm run build`. Keep
 | NOT YET IMPLEMENTED | Photo uploads, full CMS editing workflow, customer self-service, enabled scheduling UI, MFA/password-reset UI, monitoring, attribution, calendar exports |
 
 See `VERIFICATION.md` for what was actually exercised. A passed local test is not a claim that unconnected integrations work.
+
+## Site analytics
+
+- **Vercel Web Analytics** counts page views, visitors, top pages, referrers, countries, and devices without cookies. Turn it on once in Vercel: project → Analytics → Enable. The free plan includes 50,000 events a month; collection pauses after that.
+- **Google Analytics 4** records these events once `NEXT_PUBLIC_GA_ID` is set in Vercel and the site is redeployed:
+
+  | Event | When | Parameters |
+  | --- | --- | --- |
+  | `call_click` | Any phone link is tapped | `link_location`: header, page, footer, mobile_bar |
+  | `text_click` | Any text-message link is tapped | `link_location` |
+  | `email_click` | Any email link is tapped | `link_location` |
+  | `request_form_open` | A link to the request form is tapped | `link_location` |
+  | `request_submitted` | The server confirms a request | `service`, `language` |
+  | `request_failed` | A submission doesn't go through | `reason`: invalid_details, blocked, hazard_warning, rate_limited, server_error, network, unconfirmed |
+
+  In GA, mark `call_click`, `text_click`, and `request_submitted` as key events (Admin → Events). Google signals and ad personalization are off, GA does not load for browsers sending Global Privacy Control, and no form contents are sent (`lib/analytics.ts`). The CSP allows Google's hosts only when the ID is set (`next.config.ts`).
+
+- **What the site can't see:** a tap on Call or Text hands off to the visitor's phone, so the website never learns whether the call or text connected. Taps from desktop computers (GA device category "desktop") often go nowhere because there's no phone app. Missed, dropped, or abandoned calls only appear in the call log of the service answering (805) 626-7761 and, for calls from the Google listing, in Google Business Profile → Performance. Compare those with `call_click` counts to spot callers who tapped but never got through.

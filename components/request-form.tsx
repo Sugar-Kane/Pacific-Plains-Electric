@@ -1,6 +1,7 @@
 "use client";
 import { diagnosticEs, smsEs, serviceNamesEs } from "@/lib/i18n/shared";
 import { useState, useRef, useEffect } from "react";
+import { trackEvent, requestFailureReason } from "@/lib/analytics";
 import Link from "next/link";
 import { ArrowRight, CheckCircle, Phone } from "lucide-react";
 import { intakeCategories, intakeServiceName } from "@/config/intake";
@@ -74,6 +75,7 @@ export default function RequestForm({
         },
       };
     }
+    let status: number | undefined;
     try {
       const response = await fetch("/api/service-requests", {
         method: "POST",
@@ -84,6 +86,7 @@ export default function RequestForm({
         }),
         signal: AbortSignal.timeout(15000),
       });
+      status = response.status;
       const result = await response.json();
       if (!response.ok) {
         // Validation errors cannot have created a request. Server failures may
@@ -106,7 +109,9 @@ export default function RequestForm({
       }
       setTextFollowUp(result.textFollowUp === true);
       setDone(result.reference);
+      trackEvent("request_submitted", { service: values.service || "other", language: spanish ? "es" : "en" });
     } catch (e) {
+      trackEvent("request_failed", { reason: requestFailureReason(status) });
       setUncertain(!!attempt.current);
       setError(
         e instanceof Error &&

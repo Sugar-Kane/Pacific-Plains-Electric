@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Analytics from "@/components/analytics";
 import { business } from "@/config/business";
 import { JsonLd, graph, businessNode, websiteNode } from "@/lib/seo";
 import "./globals.css";
@@ -53,6 +54,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
         <Header spanish={spanish} />
         <main id="main" tabIndex={-1}>{children}</main>
         <Footer spanish={spanish} />
+        <Analytics />
       </body>
     </html>
   );
