@@ -442,3 +442,36 @@ test("the light switch plays a short click that doesn't clip", async ({ page }) 
   expect(sound.peak).toBeLessThan(1);
   expect(sound.ms).toBeLessThan(80);
 });
+
+test("the light switch paddle pivots only when flipped, by mouse or keyboard", async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem("ppe-theme", "light"));
+  await page.goto("/");
+  const lights = page.getByRole("switch", { name: "Light mode" });
+  const box = await lights.boundingBox();
+  expect(box!.width).toBeGreaterThanOrEqual(44);
+  expect(box!.height).toBeGreaterThanOrEqual(44);
+  // Nothing moves on load.
+  expect(await lights.evaluate((n) => n.getAnimations({ subtree: true }).length)).toBe(0);
+  // Keyboard: focus shows a visible ring; Space flips it and the paddle pivots.
+  await lights.evaluate((n) => {
+    (window as unknown as { pivots: string[] }).pivots = [];
+    n.addEventListener("animationstart", (e) => (window as unknown as { pivots: string[] }).pivots.push((e as AnimationEvent).animationName));
+  });
+  await lights.focus();
+  await page.keyboard.press("Space");
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+  await expect(lights).toHaveAttribute("aria-checked", "false");
+  expect(await lights.evaluate((n) => getComputedStyle(n).outlineStyle)).not.toBe("none");
+  await expect.poll(() => page.evaluate(() => (window as unknown as { pivots: string[] }).pivots.slice().sort())).toEqual(["ls-off-arrive", "ls-on-leave"]);
+  // The page colours fade briefly, then the helper class is gone.
+  await expect(page.locator("html")).not.toHaveClass(/theme-fade/);
+  await page.keyboard.press("Enter");
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+  await expect(lights).toHaveAttribute("aria-checked", "true");
+  // Reduced motion: the theme still changes, with no pivot and no fade.
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await lights.click();
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+  expect(await page.locator("html").getAttribute("class")).not.toContain("theme-fade");
+  expect(await lights.evaluate((n) => n.getAnimations({ subtree: true }).length)).toBe(0);
+});

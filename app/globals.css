@@ -534,7 +534,7 @@ hr {
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  transition: opacity 0.18s ease;
+  transition: opacity 0.15s ease;
 }
 .ls-off {
   opacity: 0;
@@ -544,6 +544,50 @@ hr {
 }
 [data-theme="dark"] .ls-off {
   opacity: 1;
+}
+/* The paddle pivots on its centre line when flipped (never on load): the outgoing
+   paddle tips past centre as it fades, the incoming one settles from the other
+   side, while the plate photos swap the edge shadows (top gap vs bottom lip). */
+.ls-paddle {
+  position: absolute;
+  left: 28.8%;
+  top: 19%;
+  width: 43.2%;
+  height: 60.5%;
+  perspective: 60px;
+}
+.ls-paddle img {
+  border-radius: 0;
+  transform-origin: 50% 50%;
+  backface-visibility: hidden;
+}
+.light-switch[data-flipped] .ls-paddle img {
+  animation: 0.15s cubic-bezier(0.3, 0, 0.2, 1) both;
+}
+:root:not([data-theme="dark"]) .light-switch[data-flipped] .ls-paddle .ls-on { animation-name: ls-on-arrive; }
+:root:not([data-theme="dark"]) .light-switch[data-flipped] .ls-paddle .ls-off { animation-name: ls-off-leave; }
+[data-theme="dark"] .light-switch[data-flipped] .ls-paddle .ls-on { animation-name: ls-on-leave; }
+[data-theme="dark"] .light-switch[data-flipped] .ls-paddle .ls-off { animation-name: ls-off-arrive; }
+/* rotateX(+): top edge tips away (lights on: top pressed in); (-): top comes out. */
+@keyframes ls-on-arrive { from { transform: rotateX(-12deg); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes ls-on-leave { from { transform: none; opacity: 1; } to { transform: rotateX(-12deg); opacity: 0; } }
+@keyframes ls-off-arrive { from { transform: rotateX(12deg); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes ls-off-leave { from { transform: none; opacity: 1; } to { transform: rotateX(12deg); opacity: 0; } }
+/* Page colours ease over ~240ms while the theme changes (the class is added for
+   one flip only, and not at all with reduced motion). The switch keeps its own timing. */
+.theme-fade,
+.theme-fade *:not(.ls, .ls *),
+.theme-fade *::before,
+.theme-fade *::after {
+  transition: background-color 0.24s ease, border-color 0.24s ease, color 0.24s ease, fill 0.24s ease, stroke 0.24s ease, box-shadow 0.24s ease, filter 0.24s ease !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ls img {
+    transition: none;
+  }
+  .light-switch[data-flipped] .ls-paddle img {
+    animation: none;
+  }
 }
 
 /* ---------- Home hero ---------- */
