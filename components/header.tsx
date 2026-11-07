@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { Phone, Menu, X } from "lucide-react";
 import LanguageSwitch from "./language-switch";
 import Brand from "./brand";
+import LightSwitchArt from "./light-switch";
 import { business } from "@/config/business";
 export const navigation = [
   ["Services", "/services"],
@@ -99,7 +100,7 @@ export default function Header({ spanish = false }: { spanish?: boolean }) {
             type="button"
             role="switch"
             aria-checked={lightsOn}
-            className="icon-button light-switch"
+            className="light-switch"
             onClick={toggleTheme}
             aria-label={spanish ? "Modo claro" : "Light mode"}
             title={
@@ -108,9 +109,7 @@ export default function Header({ spanish = false }: { spanish?: boolean }) {
                 : lightsOn ? "Turn the lights off (dark mode)" : "Turn the lights on (light mode)"
             }
           >
-            <span className="switch-plate" aria-hidden="true">
-              <span className="switch-lever" />
-            </span>
+            <LightSwitchArt />
           </button>
           <Link className="button small header-cta" href={local("/request-service")}>
             {spanish ? "Solicitar servicio" : "Request Service"}

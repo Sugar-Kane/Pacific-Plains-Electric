@@ -27,11 +27,20 @@
   --story-bg: #141c18;
   --fill-from: #1f4d3c;
   --fill-to: #2f7a52;
-  /* Header light switch: lights on */
-  --switch-slot: #2b302c;
-  --switch-lever-top: #ffffff;
-  --switch-lever-bottom: #e4dccb;
-  --switch-screw: #b8ad99;
+  /* Header light switch (one ivory switch; dark mode dims it via --switch-night) */
+  --switch-plate-hi: #fdfbf5;
+  --switch-plate-lo: #e4dccb;
+  --switch-edge-hi: #fffefa;
+  --switch-edge-lo: #b3a68f;
+  --switch-hole: #4a4237;
+  --switch-hole-deep: #120f0b;
+  --switch-lever-hi: #fffefa;
+  --switch-lever-mid: #ece4d4;
+  --switch-lever-lo: #bcae96;
+  --switch-slot: #8a7e68;
+  --switch-shadow: #2a201066;
+  --switch-night: #0b0f0d;
+  --switch-glow: #ffb04a;
   --story-stage: #3c4656;
   --scrim: #000000b3;
   --on-scrim: #ffffffe6;
@@ -73,11 +82,8 @@
   --story-bg: #0f1412;
   --fill-from: #2e6a52;
   --fill-to: #357a5e;
-  /* Header light switch: lights off */
-  --switch-slot: #070908;
-  --switch-lever-top: #59615b;
-  --switch-lever-bottom: #353b37;
-  --switch-screw: #4a524c;
+  /* Header light switch: deeper shadow on a dark page */
+  --switch-shadow: #00000099;
   --story-stage: #3c4656;
   --scrim: #000000b3;
   --on-scrim: #ffffffe6;
@@ -505,79 +511,123 @@ hr {
 .mobile-menu {
   display: none;
 }
-/* Theme control drawn as a wall light switch: lever up = lights on (light
-   theme), down = off (dark theme). Position follows data-theme, which is set
-   before first paint, so the lever never starts in the wrong place. */
+/* Theme control drawn as a wall light switch (components/light-switch.tsx):
+   lever up = lights on (light theme), down = off (dark theme). Everything
+   keys off data-theme, which is set before first paint. */
 .light-switch {
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: none;
   cursor: pointer;
 }
-.switch-plate {
-  position: relative;
+.ls {
   display: block;
-  width: 24px;
-  height: 36px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--surface);
-  box-shadow: var(--shadow);
+  width: 38px;
+  height: 61px;
+  overflow: visible;
+  filter: drop-shadow(0 1.5px 2px var(--switch-shadow));
+  transition: filter 0.2s ease;
 }
-/* Screws */
-.switch-plate::before,
-.switch-plate::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  width: 3px;
-  height: 3px;
-  margin-left: -1.5px;
-  border-radius: 50%;
-  background: var(--switch-screw);
-}
-.switch-plate::before {
-  top: 3px;
-}
-.switch-plate::after {
-  bottom: 3px;
-}
-/* The slot doubles as the lever's track. */
-.switch-lever {
-  position: absolute;
-  top: 9px;
-  left: 50%;
-  width: 10px;
-  height: 16px;
-  margin-left: -5px;
-  border-radius: 3px;
-  background: var(--switch-slot);
-}
-.switch-lever::before {
-  content: "";
-  position: absolute;
-  left: -1px;
-  right: -1px;
-  top: -2px;
-  height: 11px;
-  border-radius: 3px;
-  background: linear-gradient(var(--switch-lever-top), var(--switch-lever-bottom));
-  box-shadow: 0 2px 2px var(--scrim);
-  transition: transform 0.18s ease;
-}
-[data-theme="dark"] .switch-lever::before {
-  transform: translateY(9px);
-  box-shadow: 0 -1px 2px var(--scrim);
-}
-/* The plate is the visual; no round hover fill, and no hover highlight on touch
-   screens, where :hover sticks after a tap. */
-.light-switch:hover {
-  background: transparent;
-}
+/* Hover only where a pointer really hovers; on touch screens it sticks after a tap. */
 @media (hover: hover) {
-  .light-switch:hover .switch-plate {
-    border-color: var(--text-2);
+  .light-switch:hover .ls {
+    filter: drop-shadow(0 3px 5px var(--switch-shadow));
   }
 }
-.light-switch:active .switch-lever::before {
-  transition-duration: 0.08s;
+.ls-c-plate-hi { stop-color: var(--switch-plate-hi); }
+.ls-c-plate-lo { stop-color: var(--switch-plate-lo); }
+.ls-c-edge-hi { stop-color: var(--switch-edge-hi); }
+.ls-c-edge-lo { stop-color: var(--switch-edge-lo); }
+.ls-c-hole { stop-color: var(--switch-hole); }
+.ls-c-hole-deep { stop-color: var(--switch-hole-deep); }
+.ls-c-lever-hi { stop-color: var(--switch-lever-hi); }
+.ls-c-lever-mid { stop-color: var(--switch-lever-mid); }
+.ls-c-lever-lo { stop-color: var(--switch-lever-lo); }
+.ls-rim {
+  stroke: var(--switch-edge-lo);
+  stroke-width: 0.75;
+}
+.ls-sheen {
+  stroke: var(--switch-edge-hi);
+  stroke-width: 0.8;
+  stroke-linecap: round;
+}
+.ls-screw {
+  stroke: var(--switch-edge-lo);
+  stroke-width: 0.5;
+}
+.ls-slot {
+  stroke: var(--switch-slot);
+  stroke-width: 1.1;
+  stroke-linecap: round;
+}
+.ls-opening {
+  stroke: var(--switch-edge-lo);
+  stroke-width: 0.6;
+}
+.ls-shadow {
+  fill: var(--switch-shadow);
+}
+.ls-lever-body {
+  stroke: var(--switch-lever-lo);
+  stroke-width: 0.5;
+}
+.ls-tip-lit {
+  fill: var(--switch-lever-hi);
+  stroke: var(--switch-lever-mid);
+  stroke-width: 0.5;
+}
+.ls-tip-shade {
+  fill: var(--switch-lever-lo);
+}
+/* The flip: the old lever folds into the pivot, then the new one unfolds. */
+.ls-lever {
+  transform-box: view-box;
+  transform-origin: 30px 48px;
+}
+.ls-lever-up {
+  transition: transform 0.09s ease-out 0.09s;
+}
+.ls-lever-down {
+  transform: scaleY(0);
+  transition: transform 0.09s ease-in;
+}
+[data-theme="dark"] .ls-lever-up {
+  transform: scaleY(0);
+  transition: transform 0.09s ease-in;
+}
+[data-theme="dark"] .ls-lever-down {
+  transform: none;
+  transition: transform 0.09s ease-out 0.09s;
+}
+/* Lights off: the switch sits in a dark room and its lever glows. */
+.ls-night {
+  fill: var(--switch-night);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.ls-glow {
+  opacity: 0;
+  transition: opacity 0.3s ease 0.1s;
+}
+.ls-glow-halo {
+  fill: var(--switch-glow);
+  opacity: 0.7;
+}
+.ls-glow-body {
+  fill: var(--switch-glow);
+  opacity: 0.6;
+}
+[data-theme="dark"] .ls-night {
+  opacity: 0.58;
+}
+[data-theme="dark"] .ls-glow {
+  opacity: 1;
 }
 
 /* ---------- Home hero ---------- */
@@ -2401,12 +2451,13 @@ main:focus { outline: none; }
 @media (max-width: 760px) {
   .header-actions { gap: 4px; }
   .language-switch { padding-inline: 6px; }
+  .ls { width: 34px; height: 55px; }
   html[lang="es"] .mobile-action-bar { grid-template-columns: .8fr 1fr 1.5fr; }
   html[lang="es"] .mobile-help-bar { grid-template-columns: 1fr 1fr; }
   html[lang="es"] .hero h1 { font-size: clamp(2rem, 8vw, 3.5rem); }
 }
 @media (max-width: 380px) { .header-services, .header-phone { display: none; } .brand { gap: 6px; } }
-@media (forced-colors: active) { .button, .icon-button, .service-card { border: 1px solid ButtonText; } :focus-visible { outline: 3px solid Highlight; } .switch-plate, .switch-lever { forced-color-adjust: none; border-color: ButtonText; background: Canvas; } .switch-lever { outline: 1px solid ButtonText; } .switch-lever::before { background: ButtonText; } }
+@media (forced-colors: active) { .button, .icon-button, .service-card { border: 1px solid ButtonText; } :focus-visible { outline: 3px solid Highlight; } .light-switch { border: 1px solid ButtonText; } .ls { forced-color-adjust: none; } }
 @media (max-width: 600px) {
   .header-inner { flex-wrap: wrap; column-gap: 6px; padding-block: 6px; }
   .header-services { display: none; }
