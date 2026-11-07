@@ -196,7 +196,7 @@ const cards = {
   async "ev-charger-installation"(out) {
     const img = await load(`${SRC}/ev-charger.webp`);
     const { width: w, height: h } = img;
-    const area = polygonMask(w, h, [[414, 212], [474, 212], [474, 244], [414, 244]]);
+    const area = polygonMask(w, h, [[95, 295], [150, 295], [150, 340], [95, 340]]);
     const green = mask(w, h);
     for (let i = 0; i < w * h; i++) {
       if (!area.data[i]) continue;
@@ -207,7 +207,7 @@ const cards = {
     // Dimmed bar: the housing grey with a faint trace of the green lens.
     const housing = [0, 1, 2].map((c) => {
       let s = 0, n = 0;
-      for (let y = 214; y < 220; y++) for (let x = 420; x < 468; x++) { s += img.data[(y * w + x) * 4 + c]; n++; }
+      for (let y = 300; y < 306; y++) for (let x = 106; x < 134; x++) { s += img.data[(y * w + x) * 4 + c]; n++; }
       return s / n;
     });
     const plate = adjust(img, glow, () => [housing[0] * 0.9 + 4, housing[1] * 0.9 + 14, housing[2] * 0.9 + 2]);
@@ -219,10 +219,11 @@ const cards = {
     // Cable centre line, for the charging pulse that runs from the charger to the
     // car. A rough hand trace is refined against the photo: at each step, the
     // darkest run across the trace (the black cable on the lighter wall, floor
-    // and bumper) gives the centre; the result is smoothed. The last points
-    // follow the connector handle into the inlet.
+    // and car body) gives the centre; the result is smoothed. The last points
+    // follow the connector handle into the inlet (the port door stands open to
+    // its left).
     const L = (x, y) => { const i = (Math.round(y) * w + Math.round(x)) * 4; return lum(img.data[i], img.data[i + 1], img.data[i + 2]); };
-    const trace = [[404, 396], [408, 453], [416, 533], [429, 627], [451, 720], [480, 813], [520, 893], [567, 953], [627, 993], [693, 1003], [753, 984], [807, 933], [853, 860], [893, 780], [933, 693], [963, 627], [984, 582]];
+    const trace = [[88, 500], [91, 560], [96, 627], [107, 693], [123, 760], [147, 820], [180, 867], [220, 896], [267, 909], [313, 900], [353, 867], [391, 825], [402, 810], [430, 757], [458, 700], [478, 667], [495, 640]];
     const steps = [];
     for (let k = 0; k < trace.length - 1; k++) {
       const [ax, ay] = trace[k], [bx, by] = trace[k + 1];
@@ -232,19 +233,30 @@ const cards = {
     const centres = steps.map(([x, y, tx, ty]) => {
       const runs = [];
       let run = null;
-      for (let s = -28; s <= 28; s++) {
+      for (let s = -12; s <= 12; s++) {
         if (L(x - ty * s, y + tx * s) < 75) (run ??= []).push(s);
         else if (run) { runs.push(run); run = null; }
       }
       if (run) runs.push(run);
-      const best = runs.filter((r) => r.length >= 4 && r.length <= 26).map((r) => (r[0] + r.at(-1)) / 2).sort((p, q) => Math.abs(p) - Math.abs(q))[0];
-      return best === undefined ? null : [x - ty * best, y + tx * best];
+      const best = runs.filter((r) => r.length >= 4 && r.length <= 18 && r[0] > -12 && r.at(-1) < 12).map((r) => (r[0] + r.at(-1)) / 2).sort((p, q) => Math.abs(p) - Math.abs(q))[0];
+      // Where the cable runs in front of something dark (the tyre and its shadow)
+      // there is no clean run; the trace itself is drawn on the cable there.
+      return best === undefined ? [x, y] : [x - ty * best, y + tx * best];
     });
+    // Drop a centre that jumps off the line through its neighbours (where the
+    // cable crosses something dark, such as a tyre, the run can catch its edge).
+    for (let i = 2; i < centres.length - 2; i++) {
+      const [a, c, b] = [centres[i - 2], centres[i], centres[i + 2]];
+      if (!a || !b || !c) continue;
+      const len = Math.hypot(b[0] - a[0], b[1] - a[1]);
+      const off = Math.abs((b[0] - a[0]) * (a[1] - c[1]) - (a[0] - c[0]) * (b[1] - a[1])) / len;
+      if (off > 5) centres[i] = null;
+    }
     const smooth = centres.map((_, i) => {
       const near = centres.slice(Math.max(0, i - 2), i + 3).filter(Boolean);
       return near.length ? [near.reduce((s, p) => s + p[0], 0) / near.length, near.reduce((s, p) => s + p[1], 0) / near.length] : null;
     }).filter(Boolean);
-    const cable = [...smooth.filter((_, i) => i % 3 === 0), [990, 575], [1020, 547], [1048, 523], [1072, 506]]
+    const cable = [...smooth.filter((_, i) => i % 3 === 0), [510, 610], [530, 588], [555, 571], [585, 561], [615, 558]]
       .map(([x, y]) => [+x.toFixed(1), +y.toFixed(1)]);
     return { status: pct(box), cable };
   },
