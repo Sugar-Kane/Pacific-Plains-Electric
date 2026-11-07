@@ -100,13 +100,16 @@ test("theme persists and mobile navigation works", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
   const initial = await page.locator("html").getAttribute("data-theme");
-  await page
-    .getByRole("button", { name: "Toggle light and dark theme" })
-    .click();
+  const lights = page.getByRole("switch", { name: "Light mode" });
+  // The switch reads "on" exactly when the light theme is showing.
+  await expect(lights).toHaveAttribute("aria-checked", String(initial !== "dark"));
+  await lights.click();
+  const flipped = initial === "dark" ? "light" : "dark";
+  await expect(page.locator("html")).toHaveAttribute("data-theme", flipped);
+  await expect(lights).toHaveAttribute("aria-checked", String(flipped === "light"));
   await page.reload();
-  expect(await page.locator("html").getAttribute("data-theme")).not.toBe(
-    initial,
-  );
+  await expect(page.locator("html")).toHaveAttribute("data-theme", flipped);
+  await expect(lights).toHaveAttribute("aria-checked", String(flipped === "light"));
   await page.getByRole("button", { name: "Open navigation" }).click();
   await page
     .getByRole("navigation", { name: "Main navigation" })

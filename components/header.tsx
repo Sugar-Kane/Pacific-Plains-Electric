@@ -1,8 +1,8 @@
 "use client";
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Phone, Menu, X, Sun, Moon } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 import LanguageSwitch from "./language-switch";
 import Brand from "./brand";
 import { business } from "@/config/business";
@@ -11,12 +11,25 @@ export const navigation = [
   ["About", "/about"],
   ["Service Area", "/service-areas"],
 ] as const;
+/** Re-render when the theme attribute on <html> changes (set before hydration by the layout's theme script). */
+function subscribeTheme(onChange: () => void) {
+  const observer = new MutationObserver(onChange);
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  return () => observer.disconnect();
+}
 export default function Header({ spanish = false }: { spanish?: boolean }) {
   const [open, setOpen] = useState(false);
   const path = usePathname();
   const local = (url: string) => spanish ? (url === "/" ? "/es" : "/es" + url) : url;
   const labels: Record<string, string> = { Services: "Servicios", About: "Nosotros", "Service Area": "Área de servicio" };
   const current = (url: string) => (path.startsWith(local(url)) ? "page" : undefined);
+  // Lights on = light theme. The server can't know the visitor's theme, so it
+  // renders "on"; the lever's position itself comes from CSS on data-theme.
+  const lightsOn = useSyncExternalStore(
+    subscribeTheme,
+    () => document.documentElement.dataset.theme !== "dark",
+    () => true,
+  );
   function toggleTheme() {
     const dark = document.documentElement.dataset.theme !== "dark";
     document.documentElement.dataset.theme = dark ? "dark" : "light";
@@ -84,12 +97,20 @@ export default function Header({ spanish = false }: { spanish?: boolean }) {
           </a>
           <button
             type="button"
-            className="icon-button theme-toggle"
+            role="switch"
+            aria-checked={lightsOn}
+            className="icon-button light-switch"
             onClick={toggleTheme}
-            aria-label={spanish ? "Cambiar entre tema claro y oscuro" : "Toggle light and dark theme"}
+            aria-label={spanish ? "Modo claro" : "Light mode"}
+            title={
+              spanish
+                ? lightsOn ? "Apagar las luces (modo oscuro)" : "Encender las luces (modo claro)"
+                : lightsOn ? "Turn the lights off (dark mode)" : "Turn the lights on (light mode)"
+            }
           >
-            <Sun className="sun" size={19} />
-            <Moon className="moon" size={18} />
+            <span className="switch-plate" aria-hidden="true">
+              <span className="switch-lever" />
+            </span>
           </button>
           <Link className="button small header-cta" href={local("/request-service")}>
             {spanish ? "Solicitar servicio" : "Request Service"}

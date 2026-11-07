@@ -27,6 +27,11 @@
   --story-bg: #141c18;
   --fill-from: #1f4d3c;
   --fill-to: #2f7a52;
+  /* Header light switch: lights on */
+  --switch-slot: #2b302c;
+  --switch-lever-top: #ffffff;
+  --switch-lever-bottom: #e4dccb;
+  --switch-screw: #b8ad99;
   --story-stage: #3c4656;
   --scrim: #000000b3;
   --on-scrim: #ffffffe6;
@@ -68,6 +73,11 @@
   --story-bg: #0f1412;
   --fill-from: #2e6a52;
   --fill-to: #357a5e;
+  /* Header light switch: lights off */
+  --switch-slot: #070908;
+  --switch-lever-top: #59615b;
+  --switch-lever-bottom: #353b37;
+  --switch-screw: #4a524c;
   --story-stage: #3c4656;
   --scrim: #000000b3;
   --on-scrim: #ffffffe6;
@@ -495,12 +505,79 @@ hr {
 .mobile-menu {
   display: none;
 }
-.theme-toggle .moon,
-[data-theme="dark"] .theme-toggle .sun {
-  display: none;
+/* Theme control drawn as a wall light switch: lever up = lights on (light
+   theme), down = off (dark theme). Position follows data-theme, which is set
+   before first paint, so the lever never starts in the wrong place. */
+.light-switch {
+  cursor: pointer;
 }
-[data-theme="dark"] .theme-toggle .moon {
+.switch-plate {
+  position: relative;
   display: block;
+  width: 24px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+/* Screws */
+.switch-plate::before,
+.switch-plate::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  height: 3px;
+  margin-left: -1.5px;
+  border-radius: 50%;
+  background: var(--switch-screw);
+}
+.switch-plate::before {
+  top: 3px;
+}
+.switch-plate::after {
+  bottom: 3px;
+}
+/* The slot doubles as the lever's track. */
+.switch-lever {
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  width: 10px;
+  height: 16px;
+  margin-left: -5px;
+  border-radius: 3px;
+  background: var(--switch-slot);
+}
+.switch-lever::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  top: -2px;
+  height: 11px;
+  border-radius: 3px;
+  background: linear-gradient(var(--switch-lever-top), var(--switch-lever-bottom));
+  box-shadow: 0 2px 2px var(--scrim);
+  transition: transform 0.18s ease;
+}
+[data-theme="dark"] .switch-lever::before {
+  transform: translateY(9px);
+  box-shadow: 0 -1px 2px var(--scrim);
+}
+/* The plate is the visual; no round hover fill, and no hover highlight on touch
+   screens, where :hover sticks after a tap. */
+.light-switch:hover {
+  background: transparent;
+}
+@media (hover: hover) {
+  .light-switch:hover .switch-plate {
+    border-color: var(--text-2);
+  }
+}
+.light-switch:active .switch-lever::before {
+  transition-duration: 0.08s;
 }
 
 /* ---------- Home hero ---------- */
@@ -2329,7 +2406,7 @@ main:focus { outline: none; }
   html[lang="es"] .hero h1 { font-size: clamp(2rem, 8vw, 3.5rem); }
 }
 @media (max-width: 380px) { .header-services, .header-phone { display: none; } .brand { gap: 6px; } }
-@media (forced-colors: active) { .button, .icon-button, .service-card { border: 1px solid ButtonText; } :focus-visible { outline: 3px solid Highlight; } }
+@media (forced-colors: active) { .button, .icon-button, .service-card { border: 1px solid ButtonText; } :focus-visible { outline: 3px solid Highlight; } .switch-plate, .switch-lever { forced-color-adjust: none; border-color: ButtonText; background: Canvas; } .switch-lever { outline: 1px solid ButtonText; } .switch-lever::before { background: ButtonText; } }
 @media (max-width: 600px) {
   .header-inner { flex-wrap: wrap; column-gap: 6px; padding-block: 6px; }
   .header-services { display: none; }
