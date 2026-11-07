@@ -13,6 +13,7 @@ export const navigation = [
   ["About", "/about"],
   ["Service Area", "/service-areas"],
 ] as const;
+let themeFadeTimer: number | undefined;
 /** Re-render when the theme attribute on <html> changes (set before hydration by the layout's theme script). */
 function subscribeTheme(onChange: () => void) {
   const observer = new MutationObserver(onChange);
@@ -32,10 +33,21 @@ export default function Header({ spanish = false }: { spanish?: boolean }) {
     () => document.documentElement.dataset.theme !== "dark",
     () => true,
   );
+  // Set on the first flip so the paddle pivots only when the visitor flips it,
+  // never on page load.
+  const [flipped, setFlipped] = useState(false);
   function toggleTheme() {
-    const dark = document.documentElement.dataset.theme !== "dark";
+    const root = document.documentElement;
+    const dark = root.dataset.theme !== "dark";
     playSwitchClick(!dark);
-    document.documentElement.dataset.theme = dark ? "dark" : "light";
+    setFlipped(true);
+    // A short colour fade for the page (skipped for reduced motion); see .theme-fade.
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      root.classList.add("theme-fade");
+      window.clearTimeout(themeFadeTimer);
+      themeFadeTimer = window.setTimeout(() => root.classList.remove("theme-fade"), 320);
+    }
+    root.dataset.theme = dark ? "dark" : "light";
     try {
       localStorage.setItem("ppe-theme", dark ? "dark" : "light");
     } catch {}
@@ -103,6 +115,7 @@ export default function Header({ spanish = false }: { spanish?: boolean }) {
             role="switch"
             aria-checked={lightsOn}
             className="light-switch"
+            data-flipped={flipped || undefined}
             onClick={toggleTheme}
             aria-label={spanish ? "Modo claro" : "Light mode"}
             title={

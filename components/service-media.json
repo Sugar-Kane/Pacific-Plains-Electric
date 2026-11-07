@@ -1,0 +1,71 @@
+{
+  "electrical-repair": {
+    "tester": {
+      "left": 57.32,
+      "top": 22.652,
+      "width": 42.68
+    },
+    "testerLit": {
+      "left": 58.08,
+      "top": 27.164,
+      "width": 11.464
+    }
+  },
+  "ev-charger-installation": {
+    "status": {
+      "left": 29.075,
+      "top": 19.89,
+      "width": 3.108
+    }
+  },
+  "panel-upgrades": {
+    "door": {
+      "left": 41.644,
+      "top": 9.669,
+      "width": 27.97,
+      "height": 78.269
+    },
+    "perspective": "128.31cqw",
+    "origin": "50% 51.10%",
+    "openAngle": -116.1
+  },
+  "lighting": {
+    "dimmed": {
+      "left": 5.456,
+      "top": 16.667,
+      "width": 45.787
+    },
+    "slider": {
+      "left": 76.036,
+      "top": 46.777,
+      "width": 2.141
+    },
+    "travel": {
+      "from": -88.5,
+      "to": 68.5
+    }
+  },
+  "new-construction": {
+    "finished": {
+      "left": 14.572,
+      "top": 9.208,
+      "width": 40.539
+    }
+  },
+  "other": {
+    "digits": {
+      "x": 411.7,
+      "y": 231.7,
+      "pitch": 50,
+      "width": 38.3,
+      "height": 88.3,
+      "thickness": 7.3,
+      "point": [
+        551.7,
+        310,
+        5.2,
+        8.2
+      ]
+    }
+  }
+}
