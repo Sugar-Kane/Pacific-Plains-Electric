@@ -84,13 +84,18 @@ const scenes: Record<string, () => React.ReactNode> = {
       <>
         <Plate card="ev-charger-installation" />
         <Layer className="sa-layer sa-ev-status" src={`${BASE}/ev-charger-installation/status.webp`} style={place(m.status)} />
-        {/* Charging: soft pulses of light run down the cable from the charger into the car's inlet. */}
+        {/* Charging: the cable glows from the charger to the car's inlet, and brighter
+            pulses of light run along it into the car. */}
         <svg className="sa-ev-flow" viewBox={`0 0 ${FRAME.width} ${FRAME.height}`} preserveAspectRatio="xMidYMid meet" focusable="false">
           <defs>
             <filter id="sa-ev-glow" x="-10%" y="-10%" width="120%" height="120%">
               <feGaussianBlur stdDeviation="7" />
             </filter>
           </defs>
+          <g className="sa-ev-cable">
+            <path className="sa-ev-halo" d={d} filter="url(#sa-ev-glow)" />
+            <path className="sa-ev-core" d={d} />
+          </g>
           {[0, 1].map((n) => (
             <g key={n} className={`sa-ev-pulse sa-ev-pulse-${n}`}>
               <path className="sa-ev-halo" d={d} pathLength={100} filter="url(#sa-ev-glow)" />
