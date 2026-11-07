@@ -414,3 +414,31 @@ test("analytics records call, text and request taps and failed submissions witho
     await page.evaluate(() => [...document.scripts].some((s) => s.src.includes("googletagmanager"))),
   ).toBe(false);
 });
+test("the light switch plays a short click that doesn't clip", async ({ page }) => {
+  // Render the click offline instead of out of the speakers, then measure it.
+  await page.addInitScript(() => {
+    const w = window as unknown as { contexts: OfflineAudioContext[]; AudioContext: unknown };
+    w.contexts = [];
+    w.AudioContext = function () {
+      const ctx = new OfflineAudioContext(1, 8820, 44100);
+      w.contexts.push(ctx);
+      return ctx;
+    };
+  });
+  await page.goto("/");
+  await page.getByRole("switch", { name: "Light mode" }).click();
+  const sound = await page.evaluate(async () => {
+    const ctx = (window as unknown as { contexts: OfflineAudioContext[] }).contexts[0];
+    const data = (await ctx.startRendering()).getChannelData(0);
+    let peak = 0;
+    let last = 0;
+    data.forEach((v, i) => {
+      peak = Math.max(peak, Math.abs(v));
+      if (Math.abs(v) > 0.005) last = i;
+    });
+    return { peak, ms: (last / 44100) * 1000 };
+  });
+  expect(sound.peak).toBeGreaterThan(0.05);
+  expect(sound.peak).toBeLessThan(1);
+  expect(sound.ms).toBeLessThan(80);
+});

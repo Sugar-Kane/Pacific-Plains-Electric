@@ -6,6 +6,7 @@ import { Phone, Menu, X } from "lucide-react";
 import LanguageSwitch from "./language-switch";
 import Brand from "./brand";
 import LightSwitchArt from "./light-switch";
+import { playSwitchClick } from "@/lib/switch-click";
 import { business } from "@/config/business";
 export const navigation = [
   ["Services", "/services"],
@@ -33,6 +34,7 @@ export default function Header({ spanish = false }: { spanish?: boolean }) {
   );
   function toggleTheme() {
     const dark = document.documentElement.dataset.theme !== "dark";
+    playSwitchClick(!dark);
     document.documentElement.dataset.theme = dark ? "dark" : "light";
     try {
       localStorage.setItem("ppe-theme", dark ? "dark" : "light");
