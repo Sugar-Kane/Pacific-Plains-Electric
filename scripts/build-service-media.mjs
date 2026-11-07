@@ -215,7 +215,38 @@ const cards = {
     await writePlate(plate, `${out}/plate.webp`);
     await writeLayer(cutout(img, glow, box), `${out}/status.webp`);
     await debug("ev-plate", plate);
-    return { status: pct(box) };
+
+    // Cable centre line, for the charging pulse that runs from the charger to the
+    // car. A rough hand trace is refined against the photo: at each step, the
+    // darkest run across the trace (the black cable on the lighter wall, floor
+    // and bumper) gives the centre; the result is smoothed. The last points
+    // follow the connector handle into the inlet.
+    const L = (x, y) => { const i = (Math.round(y) * w + Math.round(x)) * 4; return lum(img.data[i], img.data[i + 1], img.data[i + 2]); };
+    const trace = [[404, 396], [408, 453], [416, 533], [429, 627], [451, 720], [480, 813], [520, 893], [567, 953], [627, 993], [693, 1003], [753, 984], [807, 933], [853, 860], [893, 780], [933, 693], [963, 627], [984, 582]];
+    const steps = [];
+    for (let k = 0; k < trace.length - 1; k++) {
+      const [ax, ay] = trace[k], [bx, by] = trace[k + 1];
+      const d = Math.hypot(bx - ax, by - ay), n = Math.max(1, Math.round(d / 12));
+      for (let i = 0; i < n; i++) steps.push([ax + ((bx - ax) * i) / n, ay + ((by - ay) * i) / n, (bx - ax) / d, (by - ay) / d]);
+    }
+    const centres = steps.map(([x, y, tx, ty]) => {
+      const runs = [];
+      let run = null;
+      for (let s = -28; s <= 28; s++) {
+        if (L(x - ty * s, y + tx * s) < 75) (run ??= []).push(s);
+        else if (run) { runs.push(run); run = null; }
+      }
+      if (run) runs.push(run);
+      const best = runs.filter((r) => r.length >= 4 && r.length <= 26).map((r) => (r[0] + r.at(-1)) / 2).sort((p, q) => Math.abs(p) - Math.abs(q))[0];
+      return best === undefined ? null : [x - ty * best, y + tx * best];
+    });
+    const smooth = centres.map((_, i) => {
+      const near = centres.slice(Math.max(0, i - 2), i + 3).filter(Boolean);
+      return near.length ? [near.reduce((s, p) => s + p[0], 0) / near.length, near.reduce((s, p) => s + p[1], 0) / near.length] : null;
+    }).filter(Boolean);
+    const cable = [...smooth.filter((_, i) => i % 3 === 0), [990, 575], [1020, 547], [1048, 523], [1072, 506]]
+      .map(([x, y]) => [+x.toFixed(1), +y.toFixed(1)]);
+    return { status: pct(box), cable };
   },
 
   /**

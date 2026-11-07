@@ -16,6 +16,10 @@ for (const language of ["en", "es"]) {
     const status = ev.locator(".sa-ev-status");
     const before = await status.evaluate((node) => getComputedStyle(node).opacity);
     await expect.poll(() => status.evaluate((node) => getComputedStyle(node).opacity)).not.toBe(before);
+    // Charging pulses travel along the cable towards the car.
+    const pulse = ev.locator(".sa-ev-core").first();
+    const start = await pulse.evaluate((node) => parseFloat(getComputedStyle(node).strokeDashoffset));
+    await expect.poll(() => pulse.evaluate((node) => parseFloat(getComputedStyle(node).strokeDashoffset))).toBeLessThan(start);
     // The meter steps through readings and settles on 120.1 (frame 5).
     const meter = scenes.nth(5);
     await meter.scrollIntoViewIfNeeded();
@@ -36,6 +40,7 @@ for (const language of ["en", "es"]) {
     expect(await scenes.nth(0).locator(".sa-repair-led").evaluate((n) => getComputedStyle(n).opacity)).toBe("1");
     expect(await scenes.nth(1).locator(".sa-door").evaluate((n) => getComputedStyle(n).transform)).not.toBe("none");
     expect(await meter.locator(".sa-mf5").evaluate((n) => getComputedStyle(n).opacity)).toBe("1");
+    await expect(ev.locator(".sa-ev-flow")).toBeHidden();
     await expect(page.locator(".service-motion-reduced")).toBeVisible();
     await page.locator(".service-card-animated").nth(2).click();
     await expect(page).toHaveURL(/request-service\?service=ev-charger-installation/);

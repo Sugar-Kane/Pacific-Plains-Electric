@@ -77,12 +77,30 @@ const scenes: Record<string, () => React.ReactNode> = {
       </>
     );
   },
-  "ev-charger-installation": () => (
-    <>
-      <Plate card="ev-charger-installation" />
-      <Layer className="sa-layer sa-ev-status" src={`${BASE}/ev-charger-installation/status.webp`} style={place(media["ev-charger-installation"].status)} />
-    </>
-  ),
+  "ev-charger-installation": () => {
+    const m = media["ev-charger-installation"];
+    const d = smoothPath(m.cable as [number, number][]);
+    return (
+      <>
+        <Plate card="ev-charger-installation" />
+        <Layer className="sa-layer sa-ev-status" src={`${BASE}/ev-charger-installation/status.webp`} style={place(m.status)} />
+        {/* Charging: soft pulses of light run down the cable from the charger into the car's inlet. */}
+        <svg className="sa-ev-flow" viewBox={`0 0 ${FRAME.width} ${FRAME.height}`} preserveAspectRatio="xMidYMid meet" focusable="false">
+          <defs>
+            <filter id="sa-ev-glow" x="-10%" y="-10%" width="120%" height="120%">
+              <feGaussianBlur stdDeviation="7" />
+            </filter>
+          </defs>
+          {[0, 1].map((n) => (
+            <g key={n} className={`sa-ev-pulse sa-ev-pulse-${n}`}>
+              <path className="sa-ev-halo" d={d} pathLength={100} filter="url(#sa-ev-glow)" />
+              <path className="sa-ev-core" d={d} pathLength={100} />
+            </g>
+          ))}
+        </svg>
+      </>
+    );
+  },
   lighting: () => {
     const m = media.lighting;
     const style = {
@@ -112,6 +130,19 @@ const scenes: Record<string, () => React.ReactNode> = {
     </>
   ),
 };
+
+/** A smooth curve through traced points (Catmull-Rom as cubic Béziers), in frame px. */
+function smoothPath(points: [number, number][]) {
+  const p = (i: number) => points[Math.max(0, Math.min(points.length - 1, i))];
+  let d = `M${p(0)[0]} ${p(0)[1]}`;
+  for (let i = 0; i < points.length - 1; i++) {
+    const [x0, y0] = p(i - 1), [x1, y1] = p(i), [x2, y2] = p(i + 1), [x3, y3] = p(i + 2);
+    const c1 = [x1 + (x2 - x0) / 6, y1 + (y2 - y0) / 6];
+    const c2 = [x2 - (x3 - x1) / 6, y2 - (y3 - y1) / 6];
+    d += ` C${c1[0].toFixed(1)} ${c1[1].toFixed(1)} ${c2[0].toFixed(1)} ${c2[1].toFixed(1)} ${x2} ${y2}`;
+  }
+  return d;
+}
 
 /* ---- Multimeter display: seven-segment digits drawn to the photo's own geometry. ---- */
 const SEGMENTS: Record<string, string> = {
