@@ -32,8 +32,8 @@ export default function Page() {
       />
       <PageHero
         eyebrow="Services"
-        title="Electrical services in San Luis Obispo County"
-        description={`${business.name} provides residential and commercial electrical services throughout San Luis Obispo County. Pick a service to request it, or read the details first.`}
+        title="Electrical services in San Luis Obispo and Santa Barbara counties"
+        description={`${business.name} provides residential and commercial electrical services throughout San Luis Obispo and Santa Barbara counties. Pick a service to request it, or read the details first.`}
       />
       <section className="section container">
         <h2>What do you need help with?</h2>

@@ -1,4 +1,5 @@
 import HeroBeach from "@/components/hero-beach";
+import CoverageCheck from "@/components/coverage-check";
 import { answeredFaqs } from "@/config/content";
 import { business } from "@/config/business";
 import {
@@ -20,8 +21,10 @@ export const metadata = meta(
   "/",
   { absolute: true },
 );
+// The cost question is answered by the diagnostic section just above, so the
+// home page asks about EV chargers instead. Spanish uses the same four.
 const homeFaqs = [
-  answeredFaqs[1],
+  answeredFaqs[3],
   answeredFaqs.find((f) => f.q.includes("schedule"))!,
   answeredFaqs[0],
   answeredFaqs[2],
@@ -76,6 +79,7 @@ export default function Home() {
           counties. Contact us to confirm coverage for your address.
         </p>
         <AreaLinks />
+        <CoverageCheck />
       </section>
       <OwnerSection />
       <Reviews />
