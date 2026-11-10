@@ -107,3 +107,22 @@ test("mobile request transition keeps Text visible in touch hover and keyboard f
     await expect(page.locator('input[type="checkbox"]').nth(1)).not.toHaveAttribute("required","");
   }
 });
+
+test("Spanish pages have the same sections, links and FAQs as English", async ({ page }) => {
+  const shape = async (url: string) => {
+    await page.goto(url);
+    return page.evaluate(() => ({
+      h2: document.querySelectorAll("main h2").length,
+      h3: document.querySelectorAll("main h3").length,
+      faqs: document.querySelectorAll("main details > summary").length,
+      listItems: document.querySelectorAll("main li").length,
+      forms: document.querySelectorAll("main form").length,
+      inputs: document.querySelectorAll("main input:not([type=hidden]), main select, main textarea").length,
+    }));
+  };
+  const paths = ["/", "/services", "/contact", "/faq", "/service-areas", "/about", "/request-service",
+    ...services.map((s) => "/services/" + s.slug), ...publishedAreas.map((a) => "/service-areas/" + a.slug)];
+  for (const path of paths) {
+    expect(await shape(path === "/" ? "/es" : "/es" + path), path).toEqual(await shape(path));
+  }
+});

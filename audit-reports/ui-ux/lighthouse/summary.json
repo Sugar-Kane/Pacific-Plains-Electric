@@ -1,0 +1,62 @@
+{
+ "after-en-mobile": {
+  "url": "http://127.0.0.1:3000/",
+  "lighthouse": "12.8.2",
+  "scores": {
+   "performance": 95,
+   "accessibility": 100,
+   "best-practices": 96,
+   "seo": 100
+  },
+  "LCP_ms": 2832,
+  "FCP_ms": 912,
+  "TBT_ms": 71,
+  "CLS": 0,
+  "bytes": 658173
+ },
+ "after-es-mobile": {
+  "url": "http://127.0.0.1:3000/es",
+  "lighthouse": "12.8.2",
+  "scores": {
+   "performance": 92,
+   "accessibility": 100,
+   "best-practices": 96,
+   "seo": 100
+  },
+  "LCP_ms": 3155,
+  "FCP_ms": 914,
+  "TBT_ms": 129,
+  "CLS": 0,
+  "bytes": 667969
+ },
+ "before-en-mobile": {
+  "url": "http://127.0.0.1:3001/",
+  "lighthouse": "12.8.2",
+  "scores": {
+   "performance": 91,
+   "accessibility": 100,
+   "best-practices": 96,
+   "seo": 100
+  },
+  "LCP_ms": 3264,
+  "FCP_ms": 943,
+  "TBT_ms": 141,
+  "CLS": 0,
+  "bytes": 656299
+ },
+ "before-es-mobile": {
+  "url": "http://127.0.0.1:3001/es",
+  "lighthouse": "12.8.2",
+  "scores": {
+   "performance": 92,
+   "accessibility": 100,
+   "best-practices": 96,
+   "seo": 100
+  },
+  "LCP_ms": 3250,
+  "FCP_ms": 914,
+  "TBT_ms": 72,
+  "CLS": 0,
+  "bytes": 664336
+ }
+}
