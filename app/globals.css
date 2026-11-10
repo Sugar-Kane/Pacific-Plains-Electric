@@ -657,6 +657,10 @@ hr {
   font-size: 14px;
 }
 .breadcrumbs a {
+  /* WCAG 2.2 target size: at least 24px tall, without moving the text. */
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -1157,9 +1161,9 @@ details p {
 }
 .checkbox input {
   flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  margin-top: 1px;
+  width: 24px;
+  height: 24px;
+  margin-top: -1px;
   accent-color: var(--brand);
 }
 .checkbox a {
