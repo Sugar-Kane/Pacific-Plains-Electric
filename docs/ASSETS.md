@@ -34,3 +34,14 @@ What the script changes, and why:
 - **Lighting** (`dimmer-pendant.webp`): the slider knob is its own layer; the dimmed layer darkens only the pendant's glow, the wall it lights and the countertop reflections, leaving window daylight as photographed.
 - **Remodeling** (`remodel-rough-in.webp`): the source showed receptacles already installed in the open boxes, which doesn't happen at rough-in, so the boxes are emptied and given folded conductors and sheath stubs (drawn). The finished view rebuilds the open bay as painted drywall and baseboard from the same room's finished wall, with receptacles at the box positions, so both views share one camera.
 - **Multimeter** (`multimeter.webp`): the photographed LCD digits are removed (the "~" and "V AC" legends stay) and `components/service-animation.tsx` draws exact seven-segment digits measured from the photo. Verified in the source: black lead in COM, red in VΩHz, dial on V~, black probe in the neutral (wide) slot, red in the hot (narrow) slot.
+
+## Electrical repair card: left edge retouched (2026-11-10)
+
+`public/images/services/electrical-repair/plate.webp` was edited by hand after
+`scripts/build-service-media.mjs` produced it. The source photo has a window,
+a houseplant and an inside wall corner in its left sixth, which read as a
+separate panel beside the outlet. That strip (x 0–180 of 960) is replaced with
+the same stucco wall, taken from x 700–930, colour-matched to the wall beside
+it and faded in over x 180–230, so the outlet sits on one continuous wall.
+Re-running the build script restores the original strip; apply the same edit
+again, or retouch the source photo in `assets/service-photos/` instead.
