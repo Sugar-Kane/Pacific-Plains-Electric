@@ -1,0 +1,4859 @@
+[
+ {
+  "lang": "en",
+  "path": "/",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Pacific Plains Electric | SLO & Santa Barbara County Electrician",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?_rsc=5CB68i4pnAekjehf"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Pacific Plains Electric | SLO & Santa Barbara County Electrician",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/services?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/request-service?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/services?_rsc=tXyZJ52UQVBCVsD3"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Pacific Plains Electric | SLO & Santa Barbara County Electrician",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?service=electrical-repair&_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/request-service?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/services?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/services?_rsc=tXyZJ52UQVBCVsD3",
+   "http://127.0.0.1:3000/request-service?service=electrical-repair&_rsc=tXyZJ52UQVBCVsD3"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Pacific Plains Electric | SLO & Santa Barbara County Electrician",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/services?_rsc=tXyZJ52UQVBCVsD3"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Pacific Plains Electric | SLO & Santa Barbara County Electrician",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/request-service?service=electrical-repair&_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/request-service?service=panel-upgrades&_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/services?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/request-service?_rsc=tXyZJ52UQVBCVsD3"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Pacific Plains Electric | SLO & Santa Barbara County Electrician",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/services?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/about?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/service-areas?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/request-service?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/services?_rsc=tXyZJ52UQVBCVsD3"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Pacific Plains Electric | SLO & Santa Barbara County Electrician",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/services?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/service-areas?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/request-service?service=electrical-repair&_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/request-service?service=panel-upgrades&_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/request-service?service=ev-charger-installation&_rsc=5CB68i4pnAekjehf"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Pacific Plains Electric | SLO & Santa Barbara County Electrician",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/services?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/about?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/service-areas?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/request-service?_rsc=tXyZJ52UQVBCVsD3"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Pacific Plains Electric | SLO & Santa Barbara County Electrician",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/services?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/about?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/service-areas?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/services?_rsc=tXyZJ52UQVBCVsD3"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Pacific Plains Electric | SLO & Santa Barbara County Electrician",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/services?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/about?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/service-areas?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/request-service?_rsc=5CB68i4pnAekjehf",
+   "http://127.0.0.1:3000/request-service?service=electrical-repair&_rsc=5CB68i4pnAekjehf"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/services",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electrical Services in SLO County | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/?_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/request-service?service=electrical-repair&_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/request-service?_rsc=Ktn5x2ERov_cBgED",
+   "http://127.0.0.1:3000/?_rsc=Ktn5x2ERov_cBgED"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/services",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electrical Services in SLO County | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/?_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/request-service?service=electrical-repair&_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/?_rsc=Ktn5x2ERov_cBgED"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/services",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electrical Services in SLO County | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/request-service?service=electrical-repair&_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/?_rsc=Ktn5x2ERov_cBgED",
+   "http://127.0.0.1:3000/request-service?service=electrical-repair&_rsc=Ktn5x2ERov_cBgED",
+   "http://127.0.0.1:3000/request-service?_rsc=Ktn5x2ERov_cBgED"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/services",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electrical Services in SLO County | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/?_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/request-service?service=electrical-repair&_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/request-service?service=panel-upgrades&_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/request-service?_rsc=Ktn5x2ERov_cBgED"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/services",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electrical Services in SLO County | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/request-service?service=electrical-repair&_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/request-service?service=panel-upgrades&_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/request-service?service=ev-charger-installation&_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/request-service?service=lighting&_rsc=1RpmAqYJEMFF4n7A"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/services",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electrical Services in SLO County | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/about?_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/request-service?service=panel-upgrades&_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/?_rsc=Ktn5x2ERov_cBgED",
+   "http://127.0.0.1:3000/about?_rsc=Ktn5x2ERov_cBgED"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/services",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electrical Services in SLO County | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/?_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/about?_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/service-areas?_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/about?_rsc=Ktn5x2ERov_cBgED"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/services",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electrical Services in SLO County | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/about?_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/service-areas?_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/?_rsc=Ktn5x2ERov_cBgED",
+   "http://127.0.0.1:3000/request-service?service=ev-charger-installation&_rsc=1RpmAqYJEMFF4n7A"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/services",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electrical Services in SLO County | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?service=electrical-repair&_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/request-service?service=ev-charger-installation&_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/?_rsc=Ktn5x2ERov_cBgED",
+   "http://127.0.0.1:3000/about?_rsc=Ktn5x2ERov_cBgED",
+   "http://127.0.0.1:3000/service-areas?_rsc=Ktn5x2ERov_cBgED"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/services",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electrical Services in SLO County | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/about?_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/service-areas?_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/request-service?_rsc=1RpmAqYJEMFF4n7A",
+   "http://127.0.0.1:3000/request-service?service=electrical-repair&_rsc=1RpmAqYJEMFF4n7A"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/services/ev-charger-installation",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "EV Charger Installation in SLO County | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/services?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/request-service?_rsc=oChqSOBQ_wCECPrs",
+   "http://127.0.0.1:3000/services?_rsc=oChqSOBQ_wCECPrs"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/services/ev-charger-installation",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "EV Charger Installation in SLO County | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/services?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/?_rsc=oChqSOBQ_wCECPrs",
+   "http://127.0.0.1:3000/request-service?_rsc=oChqSOBQ_wCECPrs"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/services/ev-charger-installation",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "EV Charger Installation in SLO County | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/request-service?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/request-service?_rsc=oChqSOBQ_wCECPrs",
+   "http://127.0.0.1:3000/?_rsc=oChqSOBQ_wCECPrs",
+   "http://127.0.0.1:3000/services?_rsc=oChqSOBQ_wCECPrs"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/services/ev-charger-installation",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "EV Charger Installation in SLO County | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/services?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/request-service?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/services?_rsc=oChqSOBQ_wCECPrs",
+   "http://127.0.0.1:3000/request-service?_rsc=oChqSOBQ_wCECPrs"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/services/ev-charger-installation",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "EV Charger Installation in SLO County | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/services?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/services?_rsc=oChqSOBQ_wCECPrs",
+   "http://127.0.0.1:3000/request-service?_rsc=oChqSOBQ_wCECPrs"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/services/ev-charger-installation",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "EV Charger Installation in SLO County | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/services?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/about?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/request-service?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/request-service?_rsc=oChqSOBQ_wCECPrs"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/services/ev-charger-installation",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "EV Charger Installation in SLO County | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/services?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/about?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/service-areas?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/request-service?_rsc=bgH1xtliYpeVmZzJ"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/services/ev-charger-installation",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "EV Charger Installation in SLO County | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/services?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/about?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/service-areas?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/request-service?_rsc=bgH1xtliYpeVmZzJ"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/services/ev-charger-installation",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "EV Charger Installation in SLO County | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/services?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/about?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/about?_rsc=oChqSOBQ_wCECPrs",
+   "http://127.0.0.1:3000/services?_rsc=oChqSOBQ_wCECPrs"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/services/ev-charger-installation",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "EV Charger Installation in SLO County | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/services?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/about?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/service-areas?_rsc=bgH1xtliYpeVmZzJ",
+   "http://127.0.0.1:3000/request-service?_rsc=bgH1xtliYpeVmZzJ"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/request-service",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [
+   "Privacy Notice 96x17",
+   "Website Terms 98x17"
+  ],
+  "h1": 1,
+  "title": "Request Electrical Service | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=JmgYmv58q8LOcVYX"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/request-service",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [
+   "Privacy Notice 96x17",
+   "Website Terms 98x17"
+  ],
+  "h1": 1,
+  "title": "Request Electrical Service | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=Dn-gYYWOCbgwIT7w"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/request-service",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [
+   "Privacy Notice 96x17",
+   "Website Terms 98x17"
+  ],
+  "h1": 1,
+  "title": "Request Electrical Service | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/?_rsc=JmgYmv58q8LOcVYX"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/request-service",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [
+   "Privacy Notice 96x17"
+  ],
+  "h1": 1,
+  "title": "Request Electrical Service | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=Dn-gYYWOCbgwIT7w"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/request-service",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [
+   "Privacy Notice 96x17"
+  ],
+  "h1": 1,
+  "title": "Request Electrical Service | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/services?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/privacy?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/?_rsc=JmgYmv58q8LOcVYX",
+   "http://127.0.0.1:3000/services?_rsc=JmgYmv58q8LOcVYX"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/request-service",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [
+   "Privacy Notice 96x17",
+   "Website Terms 98x17"
+  ],
+  "h1": 1,
+  "title": "Request Electrical Service | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/services?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/service-areas?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/service-areas?_rsc=JmgYmv58q8LOcVYX",
+   "http://127.0.0.1:3000/services?_rsc=JmgYmv58q8LOcVYX"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/request-service",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [
+   "Privacy Notice 96x17",
+   "Website Terms 98x17"
+  ],
+  "h1": 1,
+  "title": "Request Electrical Service | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/service-areas?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/services?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/about?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/service-areas?_rsc=JmgYmv58q8LOcVYX"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/request-service",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [
+   "Privacy Notice 96x17",
+   "Website Terms 98x17"
+  ],
+  "h1": 1,
+  "title": "Request Electrical Service | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/services?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/service-areas?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/about?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/?_rsc=JmgYmv58q8LOcVYX"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/request-service",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [
+   "Privacy Notice 96x17",
+   "Website Terms 98x17"
+  ],
+  "h1": 1,
+  "title": "Request Electrical Service | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/services?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/about?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/service-areas?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/privacy?_rsc=Dn-gYYWOCbgwIT7w"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/request-service",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [
+   "Privacy Notice 96x17",
+   "Website Terms 98x17"
+  ],
+  "h1": 1,
+  "title": "Request Electrical Service | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/services?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/about?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/privacy?_rsc=Dn-gYYWOCbgwIT7w",
+   "http://127.0.0.1:3000/terms?_rsc=Dn-gYYWOCbgwIT7w"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/contact",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Contact | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/request-service?_rsc=mTa8tpfUvA8h8GpF"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/contact",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Contact | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/request-service?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/?_rsc=mTa8tpfUvA8h8GpF",
+   "http://127.0.0.1:3000/request-service?_rsc=mTa8tpfUvA8h8GpF"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/contact",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Contact | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?_rsc=mTa8tpfUvA8h8GpF",
+   "http://127.0.0.1:3000/?_rsc=mTa8tpfUvA8h8GpF"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/contact",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Contact | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/request-service?_rsc=mTa8tpfUvA8h8GpF"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/contact",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Contact | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/services?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/request-service?_rsc=mTa8tpfUvA8h8GpF",
+   "http://127.0.0.1:3000/?_rsc=mTa8tpfUvA8h8GpF"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/contact",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Contact | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/service-areas?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/services?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/about?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/request-service?_rsc=h2vb-LAkAGynSY5z"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/contact",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Contact | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/about?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/services?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/service-areas?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/request-service?_rsc=h2vb-LAkAGynSY5z"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/contact",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Contact | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/services?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/about?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/service-areas?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/request-service?_rsc=h2vb-LAkAGynSY5z"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/contact",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Contact | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/services?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/about?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/service-areas?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/services/residential-electrical?_rsc=h2vb-LAkAGynSY5z"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/contact",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Contact | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/services?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/about?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/service-areas?_rsc=h2vb-LAkAGynSY5z",
+   "http://127.0.0.1:3000/services/residential-electrical?_rsc=h2vb-LAkAGynSY5z"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/faq",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electrician FAQ | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/request-service?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/request-service?_rsc=wKPz8cjhDlzQ_BQw",
+   "http://127.0.0.1:3000/?_rsc=wKPz8cjhDlzQ_BQw"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/faq",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electrician FAQ | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/?_rsc=wKPz8cjhDlzQ_BQw",
+   "http://127.0.0.1:3000/request-service?_rsc=wKPz8cjhDlzQ_BQw"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/faq",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electrician FAQ | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/request-service?_rsc=wKPz8cjhDlzQ_BQw"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/faq",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electrician FAQ | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/services?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/blog?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/blog?_rsc=wKPz8cjhDlzQ_BQw",
+   "http://127.0.0.1:3000/?_rsc=wKPz8cjhDlzQ_BQw"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/faq",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electrician FAQ | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/services?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/blog?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/request-service?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/?_rsc=wKPz8cjhDlzQ_BQw"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/faq",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electrician FAQ | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/service-areas?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/services?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/about?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/request-service?_rsc=QgfnF85fYcrwyI4V"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/faq",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electrician FAQ | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/services?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/about?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/request-service?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/blog?_rsc=QgfnF85fYcrwyI4V"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/faq",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electrician FAQ | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/about?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/request-service?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/services?_rsc=wKPz8cjhDlzQ_BQw",
+   "http://127.0.0.1:3000/?_rsc=wKPz8cjhDlzQ_BQw"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/faq",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electrician FAQ | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/services?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/about?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/service-areas?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/request-service?_rsc=QgfnF85fYcrwyI4V"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/faq",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electrician FAQ | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/services?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/about?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/blog?_rsc=QgfnF85fYcrwyI4V",
+   "http://127.0.0.1:3000/services/residential-electrical?_rsc=QgfnF85fYcrwyI4V"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/service-areas",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Service Areas | Electrician in San Luis Obispo County",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/service-areas/san-luis-obispo?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/service-areas/nipomo?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/?_rsc=rOCJzzhZpq3GKyZ5",
+   "http://127.0.0.1:3000/request-service?_rsc=rOCJzzhZpq3GKyZ5"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/service-areas",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Service Areas | Electrician in San Luis Obispo County",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/service-areas/nipomo?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/service-areas/arroyo-grande?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/service-areas/san-luis-obispo?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/request-service?_rsc=C5h8JQXZE80k0ZBf"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/service-areas",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Service Areas | Electrician in San Luis Obispo County",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/service-areas/arroyo-grande?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/service-areas/san-luis-obispo?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/service-areas/nipomo?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/request-service?_rsc=C5h8JQXZE80k0ZBf"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/service-areas",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Service Areas | Electrician in San Luis Obispo County",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/service-areas/san-luis-obispo?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/service-areas/nipomo?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/service-areas/grover-beach?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/request-service?_rsc=C5h8JQXZE80k0ZBf"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/service-areas",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Service Areas | Electrician in San Luis Obispo County",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/service-areas/san-luis-obispo?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/services?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/contact?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/request-service?_rsc=C5h8JQXZE80k0ZBf"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/service-areas",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Service Areas | Electrician in San Luis Obispo County",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/about?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/request-service?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/services?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/service-areas/san-luis-obispo?_rsc=C5h8JQXZE80k0ZBf"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/service-areas",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Service Areas | Electrician in San Luis Obispo County",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/services?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/about?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/service-areas/san-luis-obispo?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/services?_rsc=rOCJzzhZpq3GKyZ5"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/service-areas",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Service Areas | Electrician in San Luis Obispo County",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/services?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/service-areas/nipomo?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/service-areas/arroyo-grande?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/service-areas/grover-beach?_rsc=C5h8JQXZE80k0ZBf"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/service-areas",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Service Areas | Electrician in San Luis Obispo County",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/services?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/about?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/request-service?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/service-areas/san-luis-obispo?_rsc=C5h8JQXZE80k0ZBf"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/service-areas",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Service Areas | Electrician in San Luis Obispo County",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/services?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/about?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/request-service?_rsc=C5h8JQXZE80k0ZBf",
+   "http://127.0.0.1:3000/service-areas/san-luis-obispo?_rsc=C5h8JQXZE80k0ZBf"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/about",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "About Pacific Plains Electric | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/?_rsc=yMFZbW3py_RmPDJX",
+   "http://127.0.0.1:3000/request-service?_rsc=yMFZbW3py_RmPDJX"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/about",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "About Pacific Plains Electric | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/?_rsc=Sdev7PUlRw12F58X"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/about",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "About Pacific Plains Electric | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/request-service?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/?_rsc=yMFZbW3py_RmPDJX",
+   "http://127.0.0.1:3000/request-service?_rsc=yMFZbW3py_RmPDJX"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/about",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "About Pacific Plains Electric | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/request-service?_rsc=yMFZbW3py_RmPDJX"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/about",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "About Pacific Plains Electric | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/services?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/request-service?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/services?_rsc=yMFZbW3py_RmPDJX",
+   "http://127.0.0.1:3000/?_rsc=yMFZbW3py_RmPDJX"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/about",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "About Pacific Plains Electric | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/services?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/service-areas?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/request-service?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/service-areas?_rsc=yMFZbW3py_RmPDJX"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/about",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "About Pacific Plains Electric | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/services?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/service-areas?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/request-service?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/service-areas?_rsc=yMFZbW3py_RmPDJX"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/about",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "About Pacific Plains Electric | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/services?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/service-areas?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/request-service?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/?_rsc=yMFZbW3py_RmPDJX"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/about",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "About Pacific Plains Electric | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/services?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/service-areas?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/services/residential-electrical?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/services/troubleshooting?_rsc=Sdev7PUlRw12F58X"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/about",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "About Pacific Plains Electric | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/services?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/service-areas?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/services/residential-electrical?_rsc=Sdev7PUlRw12F58X",
+   "http://127.0.0.1:3000/services/troubleshooting?_rsc=Sdev7PUlRw12F58X"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/privacy",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Privacy Notice | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/request-service?_rsc=UnGutxUMZihRxjHi",
+   "http://127.0.0.1:3000/?_rsc=UnGutxUMZihRxjHi"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/privacy",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Privacy Notice | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/request-service?_rsc=UnGutxUMZihRxjHi",
+   "http://127.0.0.1:3000/?_rsc=UnGutxUMZihRxjHi"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/privacy",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Privacy Notice | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/request-service?_rsc=UnGutxUMZihRxjHi",
+   "http://127.0.0.1:3000/?_rsc=UnGutxUMZihRxjHi"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/privacy",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Privacy Notice | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/request-service?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/?_rsc=UnGutxUMZihRxjHi"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/privacy",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Privacy Notice | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/services?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/?_rsc=UnGutxUMZihRxjHi",
+   "http://127.0.0.1:3000/services?_rsc=UnGutxUMZihRxjHi",
+   "http://127.0.0.1:3000/request-service?_rsc=UnGutxUMZihRxjHi"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/privacy",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Privacy Notice | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/services?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/about?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/?_rsc=UnGutxUMZihRxjHi",
+   "http://127.0.0.1:3000/service-areas?_rsc=UnGutxUMZihRxjHi"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/privacy",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Privacy Notice | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/service-areas?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/about?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/services?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/request-service?_rsc=WzUDN3am5ctH078F"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/privacy",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Privacy Notice | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/services?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/about?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/service-areas?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/request-service?_rsc=WzUDN3am5ctH078F"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/privacy",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Privacy Notice | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/service-areas?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/services?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/about?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/request-service?_rsc=WzUDN3am5ctH078F"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/privacy",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Privacy Notice | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/services?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/about?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/service-areas?_rsc=WzUDN3am5ctH078F",
+   "http://127.0.0.1:3000/?_rsc=UnGutxUMZihRxjHi"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/terms",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Website Terms | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/request-service?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/?_rsc=Jm_KudBfn_F9em99"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/terms",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Website Terms | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/?_rsc=Jm_KudBfn_F9em99",
+   "http://127.0.0.1:3000/request-service?_rsc=Jm_KudBfn_F9em99"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/terms",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Website Terms | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/request-service?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/?_rsc=Jm_KudBfn_F9em99"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/terms",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Website Terms | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/request-service?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/?_rsc=Jm_KudBfn_F9em99"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/terms",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Website Terms | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/services?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/?_rsc=Jm_KudBfn_F9em99",
+   "http://127.0.0.1:3000/services?_rsc=Jm_KudBfn_F9em99"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/terms",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Website Terms | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/services?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/about?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/service-areas?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/request-service?_rsc=pfWg1qw4uMxqj7N2"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/terms",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Website Terms | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/service-areas?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/about?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/services?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/request-service?_rsc=pfWg1qw4uMxqj7N2"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/terms",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Website Terms | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/services?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/about?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/request-service?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/?_rsc=Jm_KudBfn_F9em99"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/terms",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Website Terms | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/service-areas?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/services?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/about?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/request-service?_rsc=pfWg1qw4uMxqj7N2"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/terms",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Website Terms | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/service-areas?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/services?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/request-service?_rsc=pfWg1qw4uMxqj7N2",
+   "http://127.0.0.1:3000/services/troubleshooting?_rsc=pfWg1qw4uMxqj7N2"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/accessibility",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Accessibility | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/request-service?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/?_rsc=T4dImo0Fcz6l5WZS",
+   "http://127.0.0.1:3000/request-service?_rsc=T4dImo0Fcz6l5WZS"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/accessibility",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Accessibility | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/?_rsc=T4dImo0Fcz6l5WZS"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/accessibility",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Accessibility | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/request-service?_rsc=T4dImo0Fcz6l5WZS",
+   "http://127.0.0.1:3000/?_rsc=T4dImo0Fcz6l5WZS"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/accessibility",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Accessibility | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/request-service?_rsc=q_SjM-fNg-IEFvkV"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/accessibility",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Accessibility | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/services?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/request-service?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/services?_rsc=T4dImo0Fcz6l5WZS",
+   "http://127.0.0.1:3000/request-service?_rsc=T4dImo0Fcz6l5WZS"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/accessibility",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Accessibility | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/services?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/about?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/service-areas?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/request-service?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/service-areas/san-luis-obispo?_rsc=q_SjM-fNg-IEFvkV"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/accessibility",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Accessibility | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/services?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/about?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/service-areas?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/request-service?_rsc=q_SjM-fNg-IEFvkV"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "en",
+  "path": "/accessibility",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Accessibility | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/services?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/about?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/services/residential-electrical?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/request-service?_rsc=q_SjM-fNg-IEFvkV"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/accessibility",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Accessibility | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/services?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/services/residential-electrical?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/request-service?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/services/troubleshooting?_rsc=q_SjM-fNg-IEFvkV"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "en",
+  "path": "/accessibility",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Accessibility | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/service-areas?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/about?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/services?_rsc=q_SjM-fNg-IEFvkV",
+   "http://127.0.0.1:3000/services/residential-electrical?_rsc=q_SjM-fNg-IEFvkV"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electricista en San Luis Obispo y Santa Barbara | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electricista en San Luis Obispo y Santa Barbara | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/request-service?_rsc=2qXMMY0ffqcoFH72",
+   "http://127.0.0.1:3000/es/services?_rsc=2qXMMY0ffqcoFH72"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electricista en San Luis Obispo y Santa Barbara | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/request-service?_rsc=2qXMMY0ffqcoFH72"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electricista en San Luis Obispo y Santa Barbara | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electricista en San Luis Obispo y Santa Barbara | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/services?_rsc=2qXMMY0ffqcoFH72"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electricista en San Luis Obispo y Santa Barbara | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/services?_rsc=2qXMMY0ffqcoFH72",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=2qXMMY0ffqcoFH72",
+   "http://127.0.0.1:3000/es/request-service?_rsc=2qXMMY0ffqcoFH72",
+   "http://127.0.0.1:3000/es/about?_rsc=2qXMMY0ffqcoFH72",
+   "http://127.0.0.1:3000/es/request-service?service=electrical-repair&_rsc=2qXMMY0ffqcoFH72"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electricista en San Luis Obispo y Santa Barbara | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/services?_rsc=2qXMMY0ffqcoFH72",
+   "http://127.0.0.1:3000/es/about?_rsc=2qXMMY0ffqcoFH72",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=2qXMMY0ffqcoFH72",
+   "http://127.0.0.1:3000/es/request-service?_rsc=2qXMMY0ffqcoFH72",
+   "http://127.0.0.1:3000/es/request-service?service=panel-upgrades&_rsc=2qXMMY0ffqcoFH72"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electricista en San Luis Obispo y Santa Barbara | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/services?_rsc=2qXMMY0ffqcoFH72",
+   "http://127.0.0.1:3000/es/about?_rsc=2qXMMY0ffqcoFH72",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=2qXMMY0ffqcoFH72",
+   "http://127.0.0.1:3000/es/request-service?service=electrical-repair&_rsc=2qXMMY0ffqcoFH72",
+   "http://127.0.0.1:3000/es/request-service?service=ev-charger-installation&_rsc=2qXMMY0ffqcoFH72"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electricista en San Luis Obispo y Santa Barbara | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/request-service?_rsc=2qXMMY0ffqcoFH72",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=2qXMMY0ffqcoFH72",
+   "http://127.0.0.1:3000/es/services?_rsc=2qXMMY0ffqcoFH72",
+   "http://127.0.0.1:3000/es/about?_rsc=2qXMMY0ffqcoFH72",
+   "http://127.0.0.1:3000/es/request-service?service=electrical-repair&_rsc=2qXMMY0ffqcoFH72"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Electricista en San Luis Obispo y Santa Barbara | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/about?_rsc=2qXMMY0ffqcoFH72",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=2qXMMY0ffqcoFH72",
+   "http://127.0.0.1:3000/es/request-service?_rsc=2qXMMY0ffqcoFH72",
+   "http://127.0.0.1:3000/es/services?_rsc=2qXMMY0ffqcoFH72",
+   "http://127.0.0.1:3000/es/request-service?service=electrical-repair&_rsc=2qXMMY0ffqcoFH72"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/services",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Servicios eléctricos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/request-service?service=electrical-repair&_rsc=5u5Yw9yjmuXoOdEA"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/services",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Servicios eléctricos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/request-service?service=electrical-repair&_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/request-service?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es?_rsc=5u5Yw9yjmuXoOdEA"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es/services",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Servicios eléctricos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/request-service?service=electrical-repair&_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/request-service?_rsc=5u5Yw9yjmuXoOdEA"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/services",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Servicios eléctricos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/request-service?service=electrical-repair&_rsc=5u5Yw9yjmuXoOdEA"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/services",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Servicios eléctricos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/request-service?service=panel-upgrades&_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/request-service?service=ev-charger-installation&_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/request-service?service=electrical-repair&_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/request-service?service=lighting&_rsc=5u5Yw9yjmuXoOdEA"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/services",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Servicios eléctricos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/request-service?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/request-service?service=electrical-repair&_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/request-service?service=panel-upgrades&_rsc=5u5Yw9yjmuXoOdEA"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/services",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Servicios eléctricos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/request-service?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/about?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/request-service?service=electrical-repair&_rsc=5u5Yw9yjmuXoOdEA"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es/services",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Servicios eléctricos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/request-service?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/about?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/request-service?service=panel-upgrades&_rsc=5u5Yw9yjmuXoOdEA"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/services",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Servicios eléctricos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/about?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/request-service?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/request-service?service=panel-upgrades&_rsc=5u5Yw9yjmuXoOdEA"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/services",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Servicios eléctricos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/about?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/request-service?_rsc=5u5Yw9yjmuXoOdEA",
+   "http://127.0.0.1:3000/es/request-service?service=panel-upgrades&_rsc=5u5Yw9yjmuXoOdEA"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/services/ev-charger-installation",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Instalación de cargadores para vehículos eléctricos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es/services?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es/request-service?_rsc=__BmFVAGYVNuCgtK"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/services/ev-charger-installation",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Instalación de cargadores para vehículos eléctricos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es/services?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es/request-service?_rsc=__BmFVAGYVNuCgtK"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es/services/ev-charger-installation",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Instalación de cargadores para vehículos eléctricos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/services?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es/request-service?_rsc=__BmFVAGYVNuCgtK"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/services/ev-charger-installation",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Instalación de cargadores para vehículos eléctricos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es/services?_rsc=__BmFVAGYVNuCgtK"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/services/ev-charger-installation",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Instalación de cargadores para vehículos eléctricos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es/services?_rsc=__BmFVAGYVNuCgtK"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/services/ev-charger-installation",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Instalación de cargadores para vehículos eléctricos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/about?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es/services?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es/request-service?_rsc=__BmFVAGYVNuCgtK"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/services/ev-charger-installation",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Instalación de cargadores para vehículos eléctricos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/services?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es/about?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es/request-service?_rsc=__BmFVAGYVNuCgtK"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es/services/ev-charger-installation",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Instalación de cargadores para vehículos eléctricos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/service-areas?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es/services?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es/about?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es/request-service?_rsc=__BmFVAGYVNuCgtK"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/services/ev-charger-installation",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Instalación de cargadores para vehículos eléctricos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/about?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es/services?_rsc=__BmFVAGYVNuCgtK"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/services/ev-charger-installation",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Instalación de cargadores para vehículos eléctricos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/service-areas?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es/about?_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es/request-service?service=ev-charger-installation&_rsc=__BmFVAGYVNuCgtK",
+   "http://127.0.0.1:3000/es/request-service?_rsc=__BmFVAGYVNuCgtK"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/request-service",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Solicitar servicio eléctrico | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/request-service",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [
+   "Aviso de privacidad 130x17",
+   "Términos del sitio web 148x17"
+  ],
+  "h1": 1,
+  "title": "Solicitar servicio eléctrico | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es/request-service",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [
+   "Aviso de privacidad 130x17",
+   "Términos del sitio web 148x17"
+  ],
+  "h1": 1,
+  "title": "Solicitar servicio eléctrico | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=43DVI0V-RtJVah1I"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/request-service",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [
+   "Aviso de privacidad 130x17"
+  ],
+  "h1": 1,
+  "title": "Solicitar servicio eléctrico | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=43DVI0V-RtJVah1I"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/request-service",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [
+   "Aviso de privacidad 130x17"
+  ],
+  "h1": 1,
+  "title": "Solicitar servicio eléctrico | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=43DVI0V-RtJVah1I",
+   "http://127.0.0.1:3000/es/privacy?_rsc=43DVI0V-RtJVah1I",
+   "http://127.0.0.1:3000/es/terms?_rsc=43DVI0V-RtJVah1I",
+   "http://127.0.0.1:3000/es/services?_rsc=43DVI0V-RtJVah1I"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/request-service",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [
+   "Términos del sitio web 148x17"
+  ],
+  "h1": 1,
+  "title": "Solicitar servicio eléctrico | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/services?_rsc=43DVI0V-RtJVah1I",
+   "http://127.0.0.1:3000/es/about?_rsc=43DVI0V-RtJVah1I",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=43DVI0V-RtJVah1I",
+   "http://127.0.0.1:3000/es?_rsc=43DVI0V-RtJVah1I"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/request-service",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [
+   "Aviso de privacidad 130x17",
+   "Términos del sitio web 148x17"
+  ],
+  "h1": 1,
+  "title": "Solicitar servicio eléctrico | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=43DVI0V-RtJVah1I",
+   "http://127.0.0.1:3000/es/about?_rsc=43DVI0V-RtJVah1I",
+   "http://127.0.0.1:3000/es/services?_rsc=43DVI0V-RtJVah1I",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=43DVI0V-RtJVah1I"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es/request-service",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [
+   "Aviso de privacidad 130x17",
+   "Términos del sitio web 148x17"
+  ],
+  "h1": 1,
+  "title": "Solicitar servicio eléctrico | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/services?_rsc=43DVI0V-RtJVah1I",
+   "http://127.0.0.1:3000/es/about?_rsc=43DVI0V-RtJVah1I",
+   "http://127.0.0.1:3000/es?_rsc=43DVI0V-RtJVah1I",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=43DVI0V-RtJVah1I"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/request-service",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [
+   "Aviso de privacidad 130x17",
+   "Términos del sitio web 148x17"
+  ],
+  "h1": 1,
+  "title": "Solicitar servicio eléctrico | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/services?_rsc=43DVI0V-RtJVah1I",
+   "http://127.0.0.1:3000/es?_rsc=43DVI0V-RtJVah1I",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=43DVI0V-RtJVah1I",
+   "http://127.0.0.1:3000/es/about?_rsc=43DVI0V-RtJVah1I",
+   "http://127.0.0.1:3000/es/terms?_rsc=43DVI0V-RtJVah1I"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/request-service",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [
+   "Aviso de privacidad 130x17",
+   "Términos del sitio web 148x17"
+  ],
+  "h1": 1,
+  "title": "Solicitar servicio eléctrico | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=43DVI0V-RtJVah1I",
+   "http://127.0.0.1:3000/es/about?_rsc=43DVI0V-RtJVah1I",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=43DVI0V-RtJVah1I",
+   "http://127.0.0.1:3000/es/services?_rsc=43DVI0V-RtJVah1I",
+   "http://127.0.0.1:3000/es/privacy?_rsc=43DVI0V-RtJVah1I"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/contact",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Contáctenos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es/request-service?_rsc=729zX387a3a-eNNw"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/contact",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Contáctenos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/request-service?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es?_rsc=729zX387a3a-eNNw"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es/contact",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Contáctenos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es/request-service?_rsc=729zX387a3a-eNNw"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/contact",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Contáctenos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es/request-service?_rsc=729zX387a3a-eNNw"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/contact",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Contáctenos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/request-service?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es?_rsc=729zX387a3a-eNNw"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/contact",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Contáctenos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es/services?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es/about?_rsc=729zX387a3a-eNNw"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/contact",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Contáctenos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/service-areas?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es/services?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es/about?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es/request-service?_rsc=729zX387a3a-eNNw"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es/contact",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Contáctenos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/services?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es/about?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es/request-service?_rsc=729zX387a3a-eNNw"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/contact",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Contáctenos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/service-areas?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es/services?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es/about?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es/request-service?_rsc=729zX387a3a-eNNw"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/contact",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Contáctenos | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/about?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es/request-service?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es/services/residential-electrical?_rsc=729zX387a3a-eNNw",
+   "http://127.0.0.1:3000/es/services/troubleshooting?_rsc=729zX387a3a-eNNw"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/faq",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Preguntas frecuentes | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=z6NkBmUAzJJU2yNG"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/faq",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Preguntas frecuentes | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/es/request-service?_rsc=z6NkBmUAzJJU2yNG"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es/faq",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Preguntas frecuentes | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/request-service?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/es?_rsc=z6NkBmUAzJJU2yNG"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/faq",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Preguntas frecuentes | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/es/request-service?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/es/services?_rsc=z6NkBmUAzJJU2yNG"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/faq",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Preguntas frecuentes | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/blog?_rsc=r59gnDhUtQgGaHrO",
+   "http://127.0.0.1:3000/es?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/es/services?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/es/request-service?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/blog?_rsc=z6NkBmUAzJJU2yNG"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/faq",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Preguntas frecuentes | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/services?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/es/about?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/es?_rsc=z6NkBmUAzJJU2yNG"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/faq",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Preguntas frecuentes | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/blog?_rsc=r59gnDhUtQgGaHrO",
+   "http://127.0.0.1:3000/es?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/es/services?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/es/about?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/es/request-service?_rsc=z6NkBmUAzJJU2yNG"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es/faq",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Preguntas frecuentes | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/es/services?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/es/about?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/es/request-service?_rsc=z6NkBmUAzJJU2yNG"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/faq",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Preguntas frecuentes | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/blog?_rsc=r59gnDhUtQgGaHrO",
+   "http://127.0.0.1:3000/es?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/es/services?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/es/about?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=z6NkBmUAzJJU2yNG"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/faq",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Preguntas frecuentes | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/blog?_rsc=r59gnDhUtQgGaHrO",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/blog?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/es/request-service?_rsc=z6NkBmUAzJJU2yNG",
+   "http://127.0.0.1:3000/es/services/residential-electrical?_rsc=z6NkBmUAzJJU2yNG"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/service-areas",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Áreas de servicio | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/san-luis-obispo?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/nipomo?_rsc=9IhlBvNk6ypr7ktU"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/service-areas",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Áreas de servicio | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/service-areas/san-luis-obispo?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/arroyo-grande?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es?_rsc=9IhlBvNk6ypr7ktU"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es/service-areas",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Áreas de servicio | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/arroyo-grande?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/san-luis-obispo?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/nipomo?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/grover-beach?_rsc=9IhlBvNk6ypr7ktU"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/service-areas",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Áreas de servicio | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/nipomo?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/arroyo-grande?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/grover-beach?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/pismo-beach?_rsc=9IhlBvNk6ypr7ktU"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/service-areas",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Áreas de servicio | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/services?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/san-luis-obispo?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/nipomo?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/arroyo-grande?_rsc=9IhlBvNk6ypr7ktU"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/service-areas",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Áreas de servicio | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/services?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/about?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/san-luis-obispo?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/arroyo-grande?_rsc=9IhlBvNk6ypr7ktU"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/service-areas",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Áreas de servicio | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/services?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/about?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/san-luis-obispo?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/nipomo?_rsc=9IhlBvNk6ypr7ktU"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es/service-areas",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Áreas de servicio | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/about?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/request-service?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/services?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/nipomo?_rsc=9IhlBvNk6ypr7ktU"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/service-areas",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Áreas de servicio | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/services?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/request-service?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/about?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/san-luis-obispo?_rsc=9IhlBvNk6ypr7ktU"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/service-areas",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Áreas de servicio | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/services?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/about?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/san-luis-obispo?_rsc=9IhlBvNk6ypr7ktU",
+   "http://127.0.0.1:3000/es/service-areas/arroyo-grande?_rsc=9IhlBvNk6ypr7ktU"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/about",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Sobre Pacific Plains Electric | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=Y2aDImLQ1pD7mfvm",
+   "http://127.0.0.1:3000/es/request-service?_rsc=Y2aDImLQ1pD7mfvm"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/about",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Sobre Pacific Plains Electric | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es/about",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Sobre Pacific Plains Electric | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=Y2aDImLQ1pD7mfvm",
+   "http://127.0.0.1:3000/es/request-service?_rsc=Y2aDImLQ1pD7mfvm"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/about",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Sobre Pacific Plains Electric | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=Y2aDImLQ1pD7mfvm",
+   "http://127.0.0.1:3000/es/request-service?_rsc=Y2aDImLQ1pD7mfvm"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/about",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Sobre Pacific Plains Electric | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=Y2aDImLQ1pD7mfvm",
+   "http://127.0.0.1:3000/es/services?_rsc=Y2aDImLQ1pD7mfvm",
+   "http://127.0.0.1:3000/es/request-service?_rsc=Y2aDImLQ1pD7mfvm"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/about",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Sobre Pacific Plains Electric | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/service-areas?_rsc=Y2aDImLQ1pD7mfvm",
+   "http://127.0.0.1:3000/es/services?_rsc=Y2aDImLQ1pD7mfvm",
+   "http://127.0.0.1:3000/es?_rsc=Y2aDImLQ1pD7mfvm"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/about",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Sobre Pacific Plains Electric | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/services?_rsc=Y2aDImLQ1pD7mfvm",
+   "http://127.0.0.1:3000/es?_rsc=Y2aDImLQ1pD7mfvm",
+   "http://127.0.0.1:3000/es/request-service?_rsc=Y2aDImLQ1pD7mfvm",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=Y2aDImLQ1pD7mfvm"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es/about",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Sobre Pacific Plains Electric | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/service-areas?_rsc=Y2aDImLQ1pD7mfvm",
+   "http://127.0.0.1:3000/es/services?_rsc=Y2aDImLQ1pD7mfvm",
+   "http://127.0.0.1:3000/es?_rsc=Y2aDImLQ1pD7mfvm",
+   "http://127.0.0.1:3000/es/request-service?_rsc=Y2aDImLQ1pD7mfvm"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/about",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Sobre Pacific Plains Electric | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/service-areas?_rsc=Y2aDImLQ1pD7mfvm",
+   "http://127.0.0.1:3000/es/request-service?_rsc=Y2aDImLQ1pD7mfvm",
+   "http://127.0.0.1:3000/es?_rsc=Y2aDImLQ1pD7mfvm",
+   "http://127.0.0.1:3000/es/services?_rsc=Y2aDImLQ1pD7mfvm",
+   "http://127.0.0.1:3000/es/services/residential-electrical?_rsc=Y2aDImLQ1pD7mfvm"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/about",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Sobre Pacific Plains Electric | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/service-areas?_rsc=Y2aDImLQ1pD7mfvm",
+   "http://127.0.0.1:3000/es/request-service?_rsc=Y2aDImLQ1pD7mfvm",
+   "http://127.0.0.1:3000/es?_rsc=Y2aDImLQ1pD7mfvm",
+   "http://127.0.0.1:3000/es/services?_rsc=Y2aDImLQ1pD7mfvm",
+   "http://127.0.0.1:3000/es/services/residential-electrical?_rsc=Y2aDImLQ1pD7mfvm"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/privacy",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Aviso de privacidad | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/request-service?_rsc=AuMePqv4ZCbA1CFb",
+   "http://127.0.0.1:3000/es?_rsc=AuMePqv4ZCbA1CFb"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/privacy",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Aviso de privacidad | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=AuMePqv4ZCbA1CFb",
+   "http://127.0.0.1:3000/es/request-service?_rsc=AuMePqv4ZCbA1CFb"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es/privacy",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Aviso de privacidad | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/privacy",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Aviso de privacidad | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/request-service?_rsc=AuMePqv4ZCbA1CFb",
+   "http://127.0.0.1:3000/es?_rsc=AuMePqv4ZCbA1CFb"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/privacy",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Aviso de privacidad | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=AuMePqv4ZCbA1CFb",
+   "http://127.0.0.1:3000/es/services?_rsc=AuMePqv4ZCbA1CFb",
+   "http://127.0.0.1:3000/es/request-service?_rsc=AuMePqv4ZCbA1CFb"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/privacy",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Aviso de privacidad | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/about?_rsc=AuMePqv4ZCbA1CFb",
+   "http://127.0.0.1:3000/es?_rsc=AuMePqv4ZCbA1CFb",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=AuMePqv4ZCbA1CFb",
+   "http://127.0.0.1:3000/es/services?_rsc=AuMePqv4ZCbA1CFb"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/privacy",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Aviso de privacidad | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/services?_rsc=AuMePqv4ZCbA1CFb",
+   "http://127.0.0.1:3000/es?_rsc=AuMePqv4ZCbA1CFb",
+   "http://127.0.0.1:3000/es/about?_rsc=AuMePqv4ZCbA1CFb",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=AuMePqv4ZCbA1CFb",
+   "http://127.0.0.1:3000/es/request-service?_rsc=AuMePqv4ZCbA1CFb"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es/privacy",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Aviso de privacidad | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=AuMePqv4ZCbA1CFb",
+   "http://127.0.0.1:3000/es/services?_rsc=AuMePqv4ZCbA1CFb",
+   "http://127.0.0.1:3000/es/about?_rsc=AuMePqv4ZCbA1CFb"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/privacy",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Aviso de privacidad | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=AuMePqv4ZCbA1CFb",
+   "http://127.0.0.1:3000/es/services?_rsc=AuMePqv4ZCbA1CFb",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=AuMePqv4ZCbA1CFb",
+   "http://127.0.0.1:3000/es/about?_rsc=AuMePqv4ZCbA1CFb"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/privacy",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Aviso de privacidad | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/services?_rsc=AuMePqv4ZCbA1CFb",
+   "http://127.0.0.1:3000/es?_rsc=AuMePqv4ZCbA1CFb",
+   "http://127.0.0.1:3000/es/about?_rsc=AuMePqv4ZCbA1CFb",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=AuMePqv4ZCbA1CFb",
+   "http://127.0.0.1:3000/es/request-service?_rsc=AuMePqv4ZCbA1CFb"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/terms",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Términos del sitio web | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=J7j3dyXHZ9KqWade",
+   "http://127.0.0.1:3000/es/request-service?_rsc=J7j3dyXHZ9KqWade"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/terms",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Términos del sitio web | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/request-service?_rsc=J7j3dyXHZ9KqWade",
+   "http://127.0.0.1:3000/es?_rsc=J7j3dyXHZ9KqWade"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es/terms",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Términos del sitio web | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=J7j3dyXHZ9KqWade",
+   "http://127.0.0.1:3000/es/request-service?_rsc=J7j3dyXHZ9KqWade"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/terms",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Términos del sitio web | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/request-service?_rsc=J7j3dyXHZ9KqWade",
+   "http://127.0.0.1:3000/es?_rsc=J7j3dyXHZ9KqWade"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/terms",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Términos del sitio web | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=J7j3dyXHZ9KqWade"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/terms",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Términos del sitio web | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/services?_rsc=J7j3dyXHZ9KqWade",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=J7j3dyXHZ9KqWade",
+   "http://127.0.0.1:3000/es?_rsc=J7j3dyXHZ9KqWade",
+   "http://127.0.0.1:3000/es/about?_rsc=J7j3dyXHZ9KqWade",
+   "http://127.0.0.1:3000/es/request-service?_rsc=J7j3dyXHZ9KqWade"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/terms",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Términos del sitio web | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/services?_rsc=J7j3dyXHZ9KqWade",
+   "http://127.0.0.1:3000/es/about?_rsc=J7j3dyXHZ9KqWade",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=J7j3dyXHZ9KqWade",
+   "http://127.0.0.1:3000/es?_rsc=J7j3dyXHZ9KqWade",
+   "http://127.0.0.1:3000/es/request-service?_rsc=J7j3dyXHZ9KqWade"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es/terms",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Términos del sitio web | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=J7j3dyXHZ9KqWade",
+   "http://127.0.0.1:3000/es/services?_rsc=J7j3dyXHZ9KqWade",
+   "http://127.0.0.1:3000/es/about?_rsc=J7j3dyXHZ9KqWade",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=J7j3dyXHZ9KqWade"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/terms",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Términos del sitio web | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=J7j3dyXHZ9KqWade",
+   "http://127.0.0.1:3000/es/services?_rsc=J7j3dyXHZ9KqWade",
+   "http://127.0.0.1:3000/es/about?_rsc=J7j3dyXHZ9KqWade"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/terms",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Términos del sitio web | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/about?_rsc=J7j3dyXHZ9KqWade",
+   "http://127.0.0.1:3000/es?_rsc=J7j3dyXHZ9KqWade",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=J7j3dyXHZ9KqWade",
+   "http://127.0.0.1:3000/es/services?_rsc=J7j3dyXHZ9KqWade",
+   "http://127.0.0.1:3000/es/services/troubleshooting?_rsc=J7j3dyXHZ9KqWade"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/accessibility",
+  "vp": "320x568",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Accesibilidad | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/request-service?_rsc=JPqU6YVxWzDMugdY"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/accessibility",
+  "vp": "375x667",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Accesibilidad | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=JPqU6YVxWzDMugdY"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es/accessibility",
+  "vp": "390x844",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Accesibilidad | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=JPqU6YVxWzDMugdY"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/accessibility",
+  "vp": "430x932",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Accesibilidad | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/request-service?_rsc=JPqU6YVxWzDMugdY"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/accessibility",
+  "vp": "768x1024",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Accesibilidad | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/request-service?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/services?_rsc=JPqU6YVxWzDMugdY"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/accessibility",
+  "vp": "1024x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Accesibilidad | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/about?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/request-service?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/services/residential-electrical?_rsc=JPqU6YVxWzDMugdY"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/accessibility",
+  "vp": "1280x800",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Accesibilidad | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es/service-areas?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/about?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/services?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/request-service?_rsc=JPqU6YVxWzDMugdY"
+  ],
+  "axe": []
+ },
+ {
+  "lang": "es",
+  "path": "/es/accessibility",
+  "vp": "1366x768",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Accesibilidad | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/services?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/about?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/request-service?_rsc=JPqU6YVxWzDMugdY"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/accessibility",
+  "vp": "1920x1080",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Accesibilidad | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/services?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/about?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/services/troubleshooting?_rsc=JPqU6YVxWzDMugdY"
+  ],
+  "axe": null
+ },
+ {
+  "lang": "es",
+  "path": "/es/accessibility",
+  "vp": "2560x1440",
+  "status": 200,
+  "overflow": 0,
+  "offscreen": [],
+  "small": [],
+  "h1": 1,
+  "title": "Accesibilidad | Pacific Plains Electric",
+  "consoleErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)",
+   "Refused to execute script from 'http://127.0.0.1:3000/_vercel/insights/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "failed": [
+   "http://127.0.0.1:3000/es?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/services?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/service-areas?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/about?_rsc=JPqU6YVxWzDMugdY",
+   "http://127.0.0.1:3000/es/request-service?_rsc=JPqU6YVxWzDMugdY"
+  ],
+  "axe": null
+ }
+]
