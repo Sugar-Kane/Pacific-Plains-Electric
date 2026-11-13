@@ -58,3 +58,8 @@ test("short request email includes phone fallback and approved diagnostic policy
   assert.match(result.text, /qualifying.*follow-up repairs/);
   assert.match(result.text, /not a confirmed appointment/);
 });
+test("request email shows the same short reference number the customer sees", () => {
+  const input = requestSchema.parse({ idempotencyKey: crypto.randomUUID(), firstName: "Test", lastName: "Person", phone: "8055550100", email: "", address: "", city: "", postalCode: "93401", service: "other", description: "", preferredTimes: "", contactMethod: "phone", transactionalConsent: true, smsConsent: false, website: "" });
+  const result = buildRequestEmail(input, "3f2a9c1b-0000-4000-8000-000000000001");
+  assert.match(result.text, /^Reference: 3F2A9C1B$/m);
+});

@@ -75,7 +75,7 @@ Supabase Auth handles password hashing and authentication rate limits. The app r
 ## Admin routes
 
 - `/admin/dashboard`: real request counts from the latest 100 records and explicit integration statuses.
-- `/admin/service-requests`: read inquiries and mark reviewed. No automated contact is sent.
+- `/admin/service-requests`: track every inquiry submitted on the website, newest first, each with the reference number the customer was shown (the first 8 characters of its id, e.g. `3F2A9C1B`; the owner email shows the same code). Search by reference number, name, phone (any formatting), email or city; filter New / Reviewed; open a request for its details; mark it reviewed or move it back to New. 25 per page, up to the newest 10,000 loaded. No automated contact is sent.
 - `/admin/website`, `/admin/blog`, `/admin/projects`: plain-text content create/update by slug; drafts private; SEO title/description required for publishing.
 - `/admin/team`: RBAC management.
 - `/admin/settings/scheduling`: working days, hours, duration, buffer, minimum notice, horizon, same-day preference.

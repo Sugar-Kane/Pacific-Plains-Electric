@@ -2,6 +2,7 @@ import { diagnosticTerms } from "@/config/business";
 import { intakeServiceName } from "@/config/intake";
 import type { ServiceRequestInput } from "@/lib/security/validation";
 import type { ForwardOutcome } from "@/lib/volteira/forward";
+import { shortReference } from "@/lib/reference";
 
 /** Collapse whitespace so customer text can't add header-like lines to the subject. */
 const oneLine = (s: string) => s.replace(/\s+/g, " ").trim();
@@ -33,7 +34,8 @@ export function buildRequestEmail(
     input.description || "Not provided",
     diagnosticTerms,
     ``,
-    `Reference: ${reference}`,
+    // The same code the customer was shown; search it on the admin Service requests page.
+    `Reference: ${shortReference(reference)}`,
     ...(volteira === null
       ? []
       : volteira.sent
