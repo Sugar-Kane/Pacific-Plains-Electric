@@ -2643,3 +2643,60 @@ main:focus { outline: none; }
 /* Stronger photo visibility with high-contrast copy and solid contact controls. */
 .hero-with-beach .eyebrow, .hero-with-beach .lede, .hero-with-beach .hero-meta { color: var(--text); }
 .hero-with-beach .button.outline { background-color: var(--surface); }
+
+/* Dropdowns follow the site theme. Every browser gets themed option colours;
+   browsers with customizable selects (appearance: base-select) also get a fully
+   themed menu: surface background, site border and shadow, and the brand green
+   for the chosen option instead of the operating system's blue. */
+.form-field select option,
+.admin-main select option {
+  background: var(--surface);
+  color: var(--text);
+}
+@supports (appearance: base-select) {
+  .form-field select,
+  .form-field select::picker(select) {
+    appearance: base-select;
+  }
+  .form-field select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .form-field select::picker-icon {
+    color: var(--text-2);
+    transition: rotate 0.15s;
+  }
+  .form-field select:open::picker-icon {
+    rotate: 180deg;
+  }
+  .form-field select::picker(select) {
+    margin-block: 6px;
+    padding: 6px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: var(--shadow-lg);
+  }
+  .form-field select option {
+    min-height: 44px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    gap: 10px;
+  }
+  .form-field select option::checkmark {
+    color: var(--brand-ink);
+  }
+  .form-field select option:hover,
+  .form-field select option:focus-visible {
+    background: var(--band);
+  }
+  .form-field select option:checked {
+    background: var(--brand);
+    color: var(--on-brand);
+  }
+  .form-field select option:checked::checkmark {
+    color: var(--on-brand);
+  }
+}
