@@ -129,8 +129,23 @@ export async function markReviewed(id: string) {
   await admin.db
     .from("website_request_outbox")
     .update({ status: "reviewed" })
-    .eq("id", id);
+    .eq("id", id)
+    .eq("status", "received");
   revalidatePath("/admin/service-requests");
+  revalidatePath("/admin/dashboard");
+}
+
+/** Undo "Mark reviewed" (only from reviewed, so exported or synced requests keep their state). */
+export async function markNew(id: string) {
+  const admin = await getAdmin();
+  if (!admin || !z.uuid().safeParse(id).success) return;
+  await admin.db
+    .from("website_request_outbox")
+    .update({ status: "received" })
+    .eq("id", id)
+    .eq("status", "reviewed");
+  revalidatePath("/admin/service-requests");
+  revalidatePath("/admin/dashboard");
 }
 
 export async function registerOwner(

@@ -7,6 +7,7 @@ import { ArrowRight, CheckCircle, Phone } from "lucide-react";
 import { intakeCategories, intakeServiceName } from "@/config/intake";
 import { coverageMessage } from "@/config/coverage";
 import { business, diagnosticTerms, smsDisclosure } from "@/config/business";
+import { shortReference } from "@/lib/reference";
 
 export default function RequestForm({
   initialService,
@@ -141,7 +142,7 @@ export default function RequestForm({
           <strong>{t("This is not a confirmed appointment.", "Esto no es una cita confirmada.")}</strong>
         </p>
         <div className="notice">
-          {t("Reference:", "Referencia:")} <strong>{done.slice(0, 8).toUpperCase()}</strong>
+          {t("Reference:", "Referencia:")} <strong>{shortReference(done)}</strong>
         </div>
         <p>{terms}</p>
         <a className="button" href={business.workPhone.tel}>

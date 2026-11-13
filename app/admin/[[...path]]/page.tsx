@@ -1,4 +1,3 @@
-import { intakeServiceName } from "@/config/intake";
 import Link from "next/link";
 import { getAdmin } from "@/lib/auth/server";
 import {
@@ -7,7 +6,10 @@ import {
   ContentEditor,
   TeamAccess,
 } from "@/components/admin";
-import { logout, markReviewed } from "@/app/admin/actions";
+import { logout } from "@/app/admin/actions";
+import RequestTracker from "@/components/request-tracker";
+import { loadAllRequests } from "@/lib/admin/load-requests";
+import { parseTrackerParams, statusCounts } from "@/lib/admin/request-tracker";
 import { diagnosticTerms, business } from "@/config/business";
 import { notFound } from "next/navigation";
 export const metadata = {
@@ -39,8 +41,10 @@ const sections = [
 ];
 export default async function Page({
   params,
+  searchParams,
 }: {
   params: Promise<{ path?: string[] }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const path = (await params).path?.join("/") || "dashboard";
   if (!sections.includes(path)) notFound();
@@ -58,11 +62,10 @@ export default async function Page({
           .select("email,role")
           .order("created_at")
       : { data: [] };
-  const { data: requests, error: requestError } = await admin.db
-    .from("website_request_outbox")
-    .select("id,payload,status,created_at")
-    .order("created_at", { ascending: false })
-    .limit(100);
+  const requests = ["dashboard", "service-requests"].includes(path)
+    ? await loadAllRequests(admin.db)
+    : { rows: [], error: false, truncated: false };
+  const requestError = requests.error;
   const { data: settings } = await admin.db
     .from("website_settings")
     .select("*")
@@ -121,12 +124,9 @@ export default async function Page({
             </p>
             <div className="metric-grid">
               <div className="metric">
-                Requests awaiting review
+                New requests awaiting review
                 <strong>
-                  {requestError
-                    ? "Unavailable"
-                    : requests?.filter((r) => r.status === "received").length ||
-                      0}
+                  {requestError ? "Unavailable" : statusCounts(requests.rows).new}
                 </strong>
               </div>
               <div className="metric">
@@ -148,7 +148,7 @@ export default async function Page({
                 are shown here.
               </p>
               <Link className="text-link" href="/admin/service-requests">
-                Review service requests ↗
+                Track service requests by reference number ↗
               </Link>
             </div>
           </>
@@ -156,61 +156,18 @@ export default async function Page({
         {path === "service-requests" && (
           <>
             <div className="notice">
-              These requests are stored in the website outbox. They have not
-              been sent to Volteira or confirmed as appointments. Review and
-              contact customers manually.
+              Every request submitted on the website, newest first, with the
+              reference number the customer was shown. These are not confirmed
+              appointments; contact customers to arrange the work.
             </div>
             {requestError ? (
               <p>Requests could not be loaded. Try again.</p>
-            ) : !requests?.length ? (
-              <div className="empty-state">
-                <h2>No requests yet.</h2>
-                <p>Submitted website requests will appear here.</p>
-              </div>
             ) : (
-              requests.map((r) => (
-                <article
-                  className="panel"
-                  style={{ marginBottom: 18 }}
-                  key={r.id}
-                >
-                  <span className="badge">{r.status}</span>
-                  <h2 style={{ marginTop: 12 }}>
-                    {r.payload.firstName} {r.payload.lastName}
-                  </h2>
-                  <p>
-                    {intakeServiceName(r.payload.service)} ·{" "}
-                    {new Intl.DateTimeFormat("en-US", {
-                      timeZone: business.timezone,
-                      dateStyle: "medium",
-                      timeStyle: "short",
-                    }).format(new Date(r.created_at))}
-                  </p>
-                  <p>
-                    {r.payload.phone}
-                    {r.payload.email ? ` · ${r.payload.email}` : ""}
-                    <br />
-                    {[r.payload.address, r.payload.city, r.payload.postalCode]
-                      .filter(Boolean)
-                      .join(", ")}
-                  </p>
-                  <p style={{ whiteSpace: "pre-wrap" }}>
-                    {r.payload.description || "No description provided."}
-                  </p>
-                  <p>
-                    Preferred times:{" "}
-                    {r.payload.preferredTimes || "None specified"}
-                    <br />
-                    Preferred language: {r.payload.preferredLanguage === "es" ? "Spanish" : "English"}<br />
-                    Preferred contact: {r.payload.contactMethod}
-                    <br />
-                    Text consent: {r.payload.smsConsent ? "Yes" : "No"}
-                  </p>
-                  <form action={markReviewed.bind(null, r.id)}>
-                    <button className="button small">Mark reviewed</button>
-                  </form>
-                </article>
-              ))
+              <RequestTracker
+                rows={requests.rows}
+                params={parseTrackerParams(await searchParams)}
+                truncated={requests.truncated}
+              />
             )}
           </>
         )}
