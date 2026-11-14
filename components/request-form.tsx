@@ -361,7 +361,7 @@ export default function RequestForm({
             required={values.contactMethod === "text"}
             onChange={(e) => setSms(e.target.checked)}
           />
-          <span>{disclosure}{values.contactMethod === "text" && t(" Select this consent to receive a text response, or choose Phone call instead.", " Marque este consentimiento para recibir una respuesta por texto, o elija una llamada telefónica.")}</span>
+          <span>{disclosure}{values.contactMethod === "text" && t(" Required for a text response, or choose Phone call instead. *", " Obligatorio para recibir una respuesta por texto, o elija una llamada telefónica. *")}</span>
         </label>
       </fieldset>
       <p className="notice">

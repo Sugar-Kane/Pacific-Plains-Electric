@@ -42,7 +42,7 @@ const themeScript = `try{var t=localStorage.getItem('ppe-theme');document.docume
 export default async function Layout({ children }: { children: React.ReactNode }) {
   const spanish = (await headers()).get("x-ppe-language") === "es";
   return (
-    <html lang={spanish ? "es" : "en"} suppressHydrationWarning>
+    <html lang={spanish ? "es" : "en"} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
