@@ -475,3 +475,18 @@ test("the light switch paddle pivots only when flipped, by mouse or keyboard", a
   expect(await page.locator("html").getAttribute("class")).not.toContain("theme-fade");
   expect(await lights.evaluate((n) => n.getAnimations({ subtree: true }).length)).toBe(0);
 });
+
+test("text consent is marked required and enforced when Text message is the contact method", async ({ page }) => {
+  await page.goto("/request-service");
+  const method = page.locator("#contactMethod");
+  const sms = page.locator("label.checkbox").nth(1);
+  await method.selectOption("text");
+  await expect(sms).toContainText("*");
+  expect(await sms.locator("input").evaluate((n: HTMLInputElement) => n.required)).toBe(true);
+  expect(await sms.locator("input").evaluate((n: HTMLInputElement) => n.checkValidity())).toBe(false);
+  await sms.locator("input").check();
+  expect(await sms.locator("input").evaluate((n: HTMLInputElement) => n.checkValidity())).toBe(true);
+  await method.selectOption("phone");
+  await expect(sms).not.toContainText("*");
+  expect(await sms.locator("input").evaluate((n: HTMLInputElement) => n.required)).toBe(false);
+});
