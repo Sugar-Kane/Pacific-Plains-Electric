@@ -59,10 +59,6 @@ package.json
 playwright.config.ts
 proxy.ts
 public/brand/favicon.svg
-public/brand/logo-dark.svg
-public/brand/logo-mark.svg
-public/brand/logo-wordmark.svg
-public/brand/logo.svg
 public/fonts/Arimo-OFL.txt
 public/fonts/arimo-bold-web.woff2
 public/fonts/arimo-regular-web.woff2

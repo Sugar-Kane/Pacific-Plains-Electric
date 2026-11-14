@@ -1,13 +1,15 @@
 /**
- * Raster brand assets search engines and devices expect:
+ * Brand assets search engines, browsers and devices expect:
  *   node scripts/build-brand-assets.mjs
  *
+ *   public/brand/favicon.svg         browser-tab icon (app/layout.tsx)
  *   public/brand/logo-512.png        square logo for structured data
  *   public/brand/icon-192.png        web app manifest
  *   public/brand/icon-512.png        web app manifest
  *   public/brand/apple-touch-icon.png
  *   public/images/og-default.jpg     1200×630 social share image
  */
+import { writeFile } from "node:fs/promises";
 import sharp from "sharp";
 
 const FOREST = "#1f4d3c";
@@ -27,6 +29,15 @@ const squareIcon = (size, padding) => {
     <svg x="${padding}" y="${padding}" width="${inner}" height="${inner}" viewBox="0 0 64 64">${mark(OCHRE, 3)}</svg>
   </svg>`);
 };
+
+// Favicon: the same ochre-on-forest square as the PNG icons, with rounded
+// corners, less padding and a heavier stroke so it reads at 16–32px.
+const favicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="${FOREST}"/>
+  <svg x="5" y="5" width="54" height="54" viewBox="0 0 64 64">${mark(OCHRE, 4)}</svg>
+</svg>
+`;
+await writeFile("public/brand/favicon.svg", favicon);
 
 await sharp(squareIcon(512, 72)).png().toFile("public/brand/logo-512.png");
 await sharp(squareIcon(512, 96)).png().toFile("public/brand/icon-512.png");
