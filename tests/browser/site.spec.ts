@@ -490,3 +490,16 @@ test("text consent is marked required and enforced when Text message is the cont
   await expect(sms).not.toContainText("*");
   expect(await sms.locator("input").evaluate((n: HTMLInputElement) => n.required)).toBe(false);
 });
+
+test("every new page starts at the top, without a smooth scroll back up", async ({ page }) => {
+  for (const [from, link] of [["/", 'footer a[href="/about"]'], ["/", 'a[href^="/request-service?service="]'], ["/services", 'footer a[href="/faq"]'], ["/es", 'footer a[href="/es/faq"]']]) {
+    await page.goto(from);
+    const target = page.locator(link + ":visible").first();
+    await target.scrollIntoViewIfNeeded();
+    await expect.poll(() => page.evaluate(() => scrollY)).toBeGreaterThan(200);
+    await target.click();
+    await page.waitForURL((u) => u.pathname !== from);
+    await page.waitForTimeout(100);
+    expect(await page.evaluate(() => scrollY), `${from} → ${page.url()}`).toBe(0);
+  }
+});
